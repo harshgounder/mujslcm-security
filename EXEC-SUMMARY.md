@@ -6,7 +6,7 @@ recon-grade, no destructive testing, no auth bypass attempts.
 
 ## What this campaign produced
 
-- 110 parallel.ai deep-research runs, 109 reports saved (~4.2M chars)
+- 110 parallel.ai runs launched, 109 unique reports saved (~4.3M chars)
 - Every report read to EOF and digested (109 digests with evidence labels)
 - 3 domain syntheses (vuln classes, surface map, context/precedent)
 - Hands-on verified findings below, each with raw evidence saved in recon/
@@ -120,7 +120,7 @@ F5. Credential delivery by design: onboarding guide states SLCM username
 ## Repository map
 
 - findings/FINDINGS-W0.md (verified), TEST-PLAN.md, AGGRESSIVE-PLAYBOOK.md,
-  ATTACK-SURFACE-MAP.md
+  ATTACK-SURFACE-MAP.md, REAUDIT-2026-08-25.md (lie-hunt corrections)
 - research/ 109 reports + digests/ 109 digests + 3 syntheses + DIGEST-W1/W2
 - recon/ raw evidence (headers, YSOD pages, PDFs, DNS, CT, wayback)
 - scripts/ launcher + watcher + brief generator (reusable for wave 4+)

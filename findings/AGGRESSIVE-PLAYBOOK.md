@@ -45,7 +45,9 @@ on first proof. Tiers: [P] passive/recon anytime, [A] needs authorization,
   responses side by side.
 - Known-surface candidates after auth: /Student/Academic/
   AttendanceSummaryForStudent, TimeTableForStudent, GradesForStudent
-  (routes CONFIRMED to exist pre-auth via 302), /Student/Profile,
+  (route NAMES from third-party client code w2c-20 + reports; pre-auth
+  302 does NOT prove existence, the catch-all gate redirects every
+  <=3-segment path, see REAUDIT-2026-08-25), /Student/Profile,
   document handlers under /Student/ (uploaded docs per onboarding guide),
   /api/* if any appears in post-login traffic.
 - Look for GUIDs vs sequential ints vs registration-number-keyed objects

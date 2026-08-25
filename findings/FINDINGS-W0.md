@@ -50,7 +50,8 @@ Implication: customErrors is off; ANY unhandled exception leaks stack
 ### F5. https://muj.slcm.jaipur.manipal.edu exists (alternate SLCM host) [INFO]
 
 - From cert transparency + search engine index; resolves to Azure
-  (20.244.94.89) while mujslcm is behind Akamai (98.70.14.50).
+  (20.244.94.89) while mujslcm resolves directly to AS8075 Azure
+  (98.70.14.50; corrected: NOT Akamai, see REAUDIT-2026-08-25).
 - NOT probed (out of stated scope). Club should ask the university what
   this host is; same-codebase risk applies if it is a dev/alt instance.
 - Evidence: recon/notes-2026-08-25.md
@@ -103,7 +104,8 @@ Implication: customErrors is off; ANY unhandled exception leaks stack
   (NoPaperForms CRM), www.jaipur.manipal.edu/pay-fee-online.php (fees).
 - Campus domain stack (DNS): Microsoft 365 mail (MX outlook) + SPF
   includes Brightspace + Cisco Webex domain verification. SLCM sits on
-  IIS behind Akamai; cert Entrust DV, issued 2025-12-22, one SAN.
+     IIS served from Microsoft Azure AS8075 (corrected: NOT Akamai, see
+     REAUDIT-2026-08-25); cert Entrust DV, issued 2025-12-22, one SAN.
 - Wayback: first mujslcm capture 2025-01-10 (Home/Index). Jan 2025
   build had a Faculty login tab (dvFacultyLogin) that the current build
   dropped. Faculty/authz flows changed since launch.
