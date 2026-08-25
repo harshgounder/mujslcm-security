@@ -114,3 +114,22 @@ Mistakes are logged in full, they are part of the asset.
 - 30 commits, tree clean, remote synced, kit docs written and pushed.
 - Nothing running. Target untouched since 22:45.
 - Decision menu for next session: 9A-9F in CONTINUATION-PROMPT.md.
+## 23:20-23:45 CLOSING + EXTERNAL-REVIEW session
+
+- User supplied an external AI deep-dive on the target, asked for my
+  take, then asked to close the window with the what's-next in the kit.
+- Verified the report live: bank data VERIFIED (account + SWIFT on the
+  public fee page), 5/6 repos exist + Karan-Palan confirmed 404,
+  Salesforce CNAMEs confirmed, third-party surfaces all resolve,
+  csd-test on the Ibus /24 confirmed.
+- Corrected: SAP SLcM CVE section = WRONG for this instance (our header
+  evidence: IIS/ASP.NET MVC, not SAP NetWeaver); captcha narrative =
+  STALE (current form has no captcha); personnel emails UNVERIFIED
+  (not on homepage); Scribd SMB creds PARTIAL (doc exists + indexed,
+  strings unconfirmable off-campus, bot-walled).
+- Wrote findings/OSINT-EXTERNAL-REVIEW.md (graded table + adoptions +
+  SMB standing line + corpus corrections). Committed + pushed.
+- Closing: killed the last leftover watcher (proc_3952ccfccd13, stuck
+  in a 404-retry loop on the wave-4 relaunch), updated the kit menu
+  (A-F freshest), regenerated INDEX.md, committed, pushed, verified
+  remote == local. NOTHING RUNNING. Window closed.

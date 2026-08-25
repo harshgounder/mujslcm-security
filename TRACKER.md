@@ -42,16 +42,24 @@ Clean tests (no issue): no user enumeration, anti-CSRF filter active,
 server-side validation active, verb lockout, no WebDAV, no tilde 8.3,
 no rewrite-header bypass, XFF no trace unlock.
 
-## Open items (decision menu)
+## Open items (decision menu, freshest 2026-08-25 close)
 
 - A wave 5 (needs nothing): machineKey hunt, legacy-origin forensics,
   port-122 story, post-login route confirmation AFTER auth, sibling
   grade cards. RECOMMENDED next.
-- B letter pre-fill (club details only).
-- C disclosure timing plan.
+- B Scribd verification (USER on campus, doc 406368004) + IT Infra
+  disclosure draft around the expected SMB creds. NEVER test them.
+- C registrar letter path: fill disclosures/DISCLOSURE-LETTER.md, get
+  2 test accounts, run scripts/authtests/ in order.
 - D pipeline skill conversion.
 - E reactivation monitor cron.
 - F campus-wide responsible-security one-pager.
+
+## Closed (2026-08-25)
+
+- OSINT-EXTERNAL-REVIEW integrated (graded table, adoptions, SMB
+  standing line). Kit files written. Last watcher killed (404-retry
+  loop). Tree synced. Window closed clean.
 
 ## Blocked
 

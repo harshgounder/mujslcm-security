@@ -303,13 +303,17 @@ HOD can get registrar sign-off), (b) two test accounts named in it.
 Until those exist: recon-grade probes only, and the reaudit script is
 the only live-touch tool.
 
-OPEN (agent can do now, user must pick):
+OPEN (agent can do now, user must pick). Freshest menu, 2026-08-25 close:
   A. Wave 5 research fleet (~15-20 briefs, ultra8x for machineKey hunt
-     + legacy-origin forensics; ultra for rest). Zero prerequisites.
-  B. Letter draft pre-filled with club details (advisor, SPOC, dates)
-     so only the signature is missing.
-  C. Disclosure-timing plan: immediate per-finding vs end-of-engagement
-     report vs after remediation.
+     + legacy-origin forensics incl. 202.131.155.150 port-122 story;
+     ultra for rest). Zero prerequisites. RECOMMENDED.
+  B. Scribd verification (USER, on campus) + IT Infra disclosure draft
+     around it. Doc 406368004, expected SMB creds muj\cbi / muj#1234.
+     NEVER test the creds; they are evidence for disclosure, see
+     findings/OSINT-EXTERNAL-REVIEW.md.
+  C. Registrar letter path: fill disclosures/DISCLOSURE-LETTER.md, sign,
+     get 2 test accounts, then scripts/authtests/ in order (session,
+     role, idor-sweep 13 routes, csrf, upload).
   D. Skill conversion: package the fleet pipeline (briefs -> launch ->
      watch -> digest -> synthesize -> reaudit) as a reusable skill.
   E. Cron candidate: monitor dmsmuj/helpdesk/npfslcm/reactivation and
@@ -317,6 +321,11 @@ OPEN (agent can do now, user must pick):
      telegram if wired).
   F. Campus-wide writeup: take this package and generalize it into the
      club's "responsible security program" one-pager for exec apps.
+
+CLOSING STATE 2026-08-25: window closed clean. All processes killed
+(last leftover: wave-4 watcher stuck in a 404-retry loop, killed).
+Tree synced to origin. Read order next window: this file -> README ->
+EXEC-SUMMARY -> findings/REAUDIT-2026-08-25 -> this menu.
 
 KNOWN UNVERIFIED (do not upgrade without evidence):
   - All wave-2/3 report claims that never got a live re-probe.
