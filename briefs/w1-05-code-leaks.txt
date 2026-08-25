@@ -1,0 +1,13 @@
+You are a senior code-leak and open-source intelligence analyst. Produce a citation-rich report on publicly accessible code, scripts, API keys, credentials, and technical artifacts mentioning the Manipal SLCM systems (mujslcm.jaipur.manipal.edu, slcm.manipal.edu, manipal.edu ecosystem).
+
+RESEARCH QUESTION: What code, scripts, API interfaces, leaked credentials, configuration files, and technical documentation about Manipal SLCM portals are publicly available on GitHub, GitLab, paste sites, npm, and other code-sharing platforms?
+
+COVER ALL OF THESE:
+1. GitHub code search: "slcm.manipal.edu", "mujslcm", "slcm manipal", "jaipur.manipal.edu", "manipal.edu api", "slcm api", "slcm login script", "manipal university automation"; look for student automation scripts (attendance scrapers, timetable fetchers, fee checkers), API wrappers, browser extensions
+2. GitHub repository search: repos named slcm, muj-slcm, manipal-* with API keys, .env files, connection strings, credentials in commits (search "slcm" + "password", "slcm" + "apikey")
+3. Paste and leak sites: pastebin, gist, raondata/leakix for "slcm.manipal", "mujslcm", "manipal.edu" strings, default passwords in student tutorial videos/notes
+4. Technical docs: any OpenAPI/Swagger docs for manipal APIs, Postman collections, student-built API documentation, mobbin/intercom style app teardowns of the MUJ mobile app
+5. Public API endpoints referenced anywhere: /api/ routes used by scripts, headers required, token formats (look for evidence of JWT or session cookies in code)
+6. Certificate transparency and crt.sh: enumerate subdomains matching *.jaipur.manipal.edu and *.manipal.edu that appear in CT logs, flag any that look like dev/test/staging (dev., test., staging., uat., qa., old., backup., new.)
+
+DEMAND: Inline [n] citations with exact repo/file URLs for every artifact found, tables for artifacts (type, source, what it exposes), VERDICT with confidence, exact_tables, cot_explicit, 3000+ words (w3000). Only report what is publicly accessible; never instruct or suggest accessing anything private.

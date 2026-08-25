@@ -1,0 +1,13 @@
+You are a senior OSINT and platform research analyst. Produce a comprehensive, citation-rich report on the MUJ SLCM web platform: what it is, what it does, how students and staff use it, and every publicly visible page, feature, and integration.
+
+RESEARCH QUESTION: What is the Manipal University Jaipur (MUJ) SLCM (Student Life Cycle Management) portal at https://mujslcm.jaipur.manipal.edu, what features does it offer, how does the login and student journey work, and what related official resources exist (helpdesk, manuals, orientation docs, fee payment, exam registration, LMS integration, mobile apps)?
+
+COVER ALL OF THESE (with exact URLs, page names, and features):
+1. The public login page https://mujslcm.jaipur.manipal.edu/ and what it exposes (login form behavior, redirect targets like /Home/Index, announcements, notices, links to password reset at passwordreset.microsoftonline.com)
+2. Feature inventory: timetable, attendance, marks/grades, fee payment gateway (which payment processors), exam form, registration, hostel/transport, library, documents upload, notifications
+3. Official MUJ documentation: university website https://jaipur.manipal.edu, SLCM help/user guides, orientation handbooks, student handbooks, fee structure PDFs, exam circulars
+4. Sister portals at Manipal group: slcm.manipal.edu (MAHE), SLCM instances at MIT Manipal, Manipal University Jaipur LMS (lms.jaipur.manipal.edu or similar), ERP portals, alumni portals
+5. Contact and support surfaces: IT helpdesk contact info, nodal officer contact details, campus phone/email patterns (@jaipur.manipal.edu)
+6. Integration hints visible publicly: Microsoft 365 / Entra ID usage for MUJ (@muj.manipal.edu or @jaipur.manipal.edu email), any SAML/SSO/OAuth single sign-on pages, payment redirect domains
+
+DEMAND: Use exact URLs with inline [n] citation markers for every claim. Use data tables where listing features or portals. Final VERDICT section stating confidence. Structure with exact_tables. Chain-of-thought reasoning (cot_explicit). Target 3000+ words (w3000). Only use publicly available information; do not speculate without labeling as such.

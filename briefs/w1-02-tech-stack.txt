@@ -1,0 +1,16 @@
+You are a senior web application fingerprinting analyst. Produce a citation-rich report identifying the exact technology stack and infrastructure of the MUJ SLCM portal at https://mujslcm.jaipur.manipal.edu and the parent instance https://slcm.manipal.edu, using only publicly observable evidence.
+
+RESEARCH QUESTION: What exact technologies, frameworks, libraries, hosting, and infrastructure serve the MUJ SLCM portal?
+
+CONFIRMED BASELINE (already observed, verify and extend): HTTP/2, server Microsoft-IIS/10.0, x-aspnet-version 4.0.30319, x-aspnetmvc-version 5.3 (ASP.NET MVC 5.3, .NET Framework 4.x), x-powered-by ASP.NET, X-Frame-Options SAMEORIGIN on mujslcm (absent on slcm.manipal.edu), __RequestVerificationToken anti-CSRF cookie, ASP.NET_SessionId cookie on slcm.manipal.edu, jQuery 1.10.2 / jquery.validate / jquery.validate.unobtrusive on the login page, Keenthemes "keen" admin theme demo1 asset paths (/keen/themes/keen/theme/demo1/dist/assets/...), login form fields UserName + Password + hidden EmailFor/LoginFor posted to "/", redirect to /Home/Index, link to https://passwordreset.microsoftonline.com/.
+
+COVER ALL OF THESE:
+1. ASP.NET MVC version specifics from x-aspnetmvc-version 5.3, what that implies for framework patching, known CVEs affecting MVC 5.x
+2. jQuery 1.10.2 exposure: known CVEs (XSS, prototype pollution), what an attacker-side or defender-side implication is, which pages still load it
+3. Keenthemes Keen/Metronic theme: version identification from asset paths, known theme vulnerabilities or licensing artifacts, whether other Indian universities use the same theme (search for "keen/themes/keen/theme/demo1")
+4. IIS 10.0: Windows Server version guesses, IIS 10 known issues, whether HTTP/2 and TLS settings leak info (check https://mujslcm.jaipur.manipal.edu TLS/SSL info via public SSL test data)
+5. Hosting and network: reverse DNS for mujslcm.jaipur.manipal.edu and slcm.manipal.edu, ASN/ISP hosting, CDN presence (Cloudflare/Akamai/Indian DC), certificates (issuer, expiry, SANs) from public certificate transparency data
+6. Security headers audit: headers present vs missing (X-Content-Type-Options, Content-Security-Policy, Strict-Transport-Security, Referrer-Policy, Permissions-Policy) using publicly documented behavior
+7. Backend hints: database guesses from public error pages, Stack Exchange / Google indexed error pages, "Object moved" redirect behaviors, any exposed /Home/Index or MVC route structure from public crawls
+
+DEMAND: Inline [n] citations with exact URLs for every claim, data tables for header audits and CVE lists, VERDICT section with confidence, exact_tables structure, cot_explicit reasoning, 3000+ words (w3000). Only public evidence; label inference explicitly.

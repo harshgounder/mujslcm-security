@@ -1,0 +1,8 @@
+# Page-all code comes from research briefs. Page is a production portal.
+# Repo conventions: never commit raw key material, run ledgers are fine.
+
+__pycache__/
+*.pyc
+.env
+.DS_Store
+research/*.md.part

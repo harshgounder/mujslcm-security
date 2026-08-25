@@ -1,0 +1,13 @@
+You are a senior mobile and API reverse-engineering reconnaissance analyst (OSINT only). Produce a citation-rich report on mobile apps and API surfaces used by Manipal University Jaipur students and the SLCM ecosystem.
+
+RESEARCH QUESTION: Which mobile apps (Android/iOS) serve MUJ students, what public documentation exists about their APIs, and what API endpoints, base URLs, and authentication flows are publicly documented or referenced?
+
+COVER ALL OF THESE:
+1. App inventory: official and student-community apps for MUJ: "MUJ" app, Manipal University Jaipur app, SLCM mobile app, attendance apps, "Manipal App", LMS apps; search Google Play store listings, Apple App Store, and web for each; note publisher, last update, permissions
+2. API documentation: any public API docs (Swagger/OpenAPI), Postman collections, blog posts, or GitHub repos describing SLCM web services; .asmx/.svc/.aspx service endpoints referenced publicly
+3. Traffic analysis hints: public writeups (medium, dev.to, reddit) of students intercepting app traffic, endpoints seen, token formats (ASP.NET session, JWT, OAuth), base URL patterns like https://mujslcm.jaipur.manipal.edu/api/...
+4. Push notification and analytics SDKs referenced in app listings (Firebase, OneSignal) that hint at backend choices
+5. Payment integrations in apps: fee payment flows referencing gateways (BillDesk, Razorpay, CCAvenue, SBI ePay) with any public documentation of the integration
+6. Web-to-app bridges: deep links, universal links, login redirects between app and web portal
+
+DEMAND: Inline [n] citations with exact URLs for every app/endpoint found, tables for the app inventory and API surfaces, VERDICT with confidence, exact_tables, cot_explicit, 3000+ words (w3000). Public information only.

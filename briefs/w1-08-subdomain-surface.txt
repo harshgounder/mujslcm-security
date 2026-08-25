@@ -1,0 +1,13 @@
+You are a senior subdomain enumeration and attack-surface mapping analyst. Produce a citation-rich report mapping the public DNS and subdomain surface of the Manipal University Jaipur (jaipur.manipal.edu) and Manipal group (manipal.edu) domains, focused on student-facing portals.
+
+RESEARCH QUESTION: What subdomains exist under jaipur.manipal.edu and manipal.edu that serve student systems (SLCM, LMS, ERP, portals, mail, WiFi, payment), and what does each expose (technology, purpose, public footprint)?
+
+COVER ALL OF THESE:
+1. Certificate transparency data: query crt.sh for *.jaipur.manipal.edu and *.manipal.edu and list all subdomains in results with first/last seen dates
+2. Known naming conventions: slcm., mujslcm., lms., erp., portal., mail., webmail., wifi., library., alumni., exam., fee., admission., student., staff., api., dev., test., uat., staging. variants under both domains; verify which resolve publicly
+3. Public DNS records: A/AAAA/CNAME/TXT/MX/NS records for the main domains and found subdomains via public DNS; note cloud providers (Azure/Microsoft 365 evidence via MX records, AWS, on-prem IIS)
+4. Archive evidence: web.archive.org captures of slcm.manipal.edu and mujslcm.jaipur.manipal.edu over time: first capture date, historical page structures, old login page versions, removed features
+5. Technology affinity: which subdomains run IIS vs other servers (from public scans like Shodan/Censys entries if findable in public results: server banners for manipal.edu ranges)
+6. Sister campus systems: instances under manipal.edu used by Sikkim Manipal, Manipal Dubai, MIT Manipal that mirror MUJ systems
+
+DEMAND: Inline [n] citations with exact sources for every subdomain/record, tables for the subdomain inventory (name, resolves, purpose guess, evidence), VERDICT with confidence, exact_tables, cot_explicit, 3000+ words (w3000). Public data sources only.

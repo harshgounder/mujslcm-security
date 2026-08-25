@@ -1,0 +1,13 @@
+You are a senior OSINT analyst focused on public data exposure. Produce a citation-rich report on how much student, staff, and institutional data connected to the Manipal University Jaipur SLCM ecosystem is publicly reachable, and where.
+
+RESEARCH QUESTION: What student data (names, register/enrollment numbers, marks, attendance, email addresses, phone numbers) and institutional data tied to MUJ and the SLCM portals is publicly exposed via documents, directories, APIs, or misconfigured public resources?
+
+COVER ALL OF THESE:
+1. Public document spill: Google-indexed PDFs/Docs/Sheets on manipal.edu domains containing student lists, register numbers, marks lists, attendance sheets, seat allotment, hostel allotment; search queries like site:jaipur.manipal.edu filetype:pdf register, site:manipal.edu "register number", "j.manipal.edu" marks
+2. Register number format intelligence: the MUJ register number format (e.g. 24JTEECS001 style), what information the format encodes (year, branch code, campus), how that helps enumeration testing planning (public info only)
+3. Directory listings and public folders: any publicly indexed directory indexes, /uploads/, /documents/, /files/ paths on manipal subdomains; web archive captures (web.archive.org) of slcm pages revealing historical structure, old endpoints, removed pages
+4. API data exposure: public references to SLCM web services (ASMX/WCF .asmx endpoints, /api/ JSON endpoints) that return student info without auth, documented in forums or student scripts
+5. Email & phone patterns: university email formats (@muj.manipal.edu, @jaipur.manipal.edu), staff directories, faculty pages with contact details on jaipur.manipal.edu
+6. Google/Bing indexed SLCM pages: search site:mujslcm.jaipur.manipal.edu and site:slcm.manipal.edu for indexed pages that reveal route structure (/Home/, /Student/, /Staff/, /Examination/, /Fee/ paths)
+
+DEMAND: Inline [n] citations with exact URLs for every finding, tables for document spills and indexed routes, VERDICT with confidence, exact_tables, cot_explicit, 3000+ words (w3000). Public information only; do not describe or suggest access to non-public data.

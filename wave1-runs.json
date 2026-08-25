@@ -1,0 +1,52 @@
+[
+ {
+  "name": "w1-01-platform-overview",
+  "run_id": "trun_4d1ac36b0f3b4ffd829f36a494d3e8d2",
+  "brief": "w1-01-platform-overview.txt"
+ },
+ {
+  "name": "w1-02-tech-stack",
+  "run_id": "trun_4d1ac36b0f3b4ffd85008c1e7d2cd8cd",
+  "brief": "w1-02-tech-stack.txt"
+ },
+ {
+  "name": "w1-03-vendor-family",
+  "run_id": "trun_4d1ac36b0f3b4ffdaf9286a9d7a09a47",
+  "brief": "w1-03-vendor-family.txt"
+ },
+ {
+  "name": "w1-04-security-history",
+  "run_id": "trun_4d1ac36b0f3b4ffda39a79c36547f818",
+  "brief": "w1-04-security-history.txt"
+ },
+ {
+  "name": "w1-05-code-leaks",
+  "run_id": "trun_61e27307c9f74ca395e543819ff216fd",
+  "brief": "w1-05-code-leaks.txt"
+ },
+ {
+  "name": "w1-06-student-data-osint",
+  "run_id": "trun_61e27307c9f74ca381c095f6599e6a01",
+  "brief": "w1-06-student-data-osint.txt"
+ },
+ {
+  "name": "w1-07-mobile-app-apis",
+  "run_id": "trun_61e27307c9f74ca3ada8e907096707cb",
+  "brief": "w1-07-mobile-app-apis.txt"
+ },
+ {
+  "name": "w1-08-subdomain-surface",
+  "run_id": "trun_61e27307c9f74ca38d16c9774982ba42",
+  "brief": "w1-08-subdomain-surface.txt"
+ },
+ {
+  "name": "w1-09-attack-surface-checklist",
+  "run_id": "trun_61e27307c9f74ca3b17f6304afed784b",
+  "brief": "w1-09-attack-surface-checklist.txt"
+ },
+ {
+  "name": "w1-10-sso-entra",
+  "run_id": "trun_61e27307c9f74ca3800a67fcd3fb20b9",
+  "brief": "w1-10-sso-entra.txt"
+ }
+]

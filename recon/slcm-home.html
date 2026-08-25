@@ -1,0 +1,173 @@
+
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><meta charset="utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge" /><meta name="viewport" content="width=device-width, initial-scale=1" /><title>
+	MU SLcM
+</title><link rel="shortcut icon" href="images/fevicon.png" /><link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css" /><link rel="stylesheet" href="assets/css/common.css" />
+    <script type="text/javascript" lang="javascript">
+        function DisableBackButton() {
+            window.history.forward()
+        }
+        DisableBackButton();
+        window.onload = DisableBackButton;
+        window.onpageshow = function (evt) { if (evt.persisted) DisableBackButton() }
+        window.onunload = function () { void (0) }
+    </script>
+    <style>
+        .btn-warning-border {
+            border:0;
+            border-radius:0;
+            margin-bottom:10px;
+        }
+    </style>
+    <style>
+        #imgCaptcha{
+            height: 55px;
+                width:268px;
+        }
+    </style>
+</head>
+<body class="login_page">
+    <div class="login_header p-10"><a href="https://manipal.edu/" target="_blank"><img src="images/logo.png"/></a></div>
+	<div class="carousel slide carousel-fade" data-ride="carousel" data-interval="3000" data-pause="false">
+		<div class="carousel-inner" role="listbox">
+			<div class="item active"></div>
+			<div class="item"></div>
+			<div class="item"></div>
+		</div>
+	</div>
+    <div>
+    <form method="post" action="./" id="form1">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTEzNDQyNzIyMTcPZBYCAgMPZBYCAgMPZBYCZg9kFgQCAQ9kFgQCAw8QZGQWAGQCBw8PFgIeCEltYWdlVXJsBSdHZW5lcmF0ZUNhcHRjaGEuYXNweD82MzkyMzI3NDUyOTgzOTk3MjVkZAIDDw8WAh4HVmlzaWJsZWhkZGSzxsNW5b4rEuTUnWyNbkxoaT8vXMcL0Y74vaR4wh8a/Q==" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['form1'];
+if (!theForm) {
+    theForm = document.form1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/WebResource.axd?d=7hZ5-TgwAKFEWQHGSVxG1u2DwZR5rl_B2xLcxneyF3FOy2gMBj8trfgsISg8AUxDR-hETZWsys_NGCWgyfH06Nqh2XxtgJV-fTYqaLmh5BA1&amp;t=639191031332169432" type="text/javascript"></script>
+
+
+<script src="Scripts/WebForms/MsAjax/MicrosoftAjax.js" type="text/javascript"></script>
+<script src="Scripts/WebForms/MsAjax/MicrosoftAjaxWebForms.js" type="text/javascript"></script>
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="6ED0046F" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAAg50mLKmpI4+5lpyZGFyBmPdR78oILfrSzgm87C/a1IYZxpWckI3qdmfEJVCu2f5cGZf5MUp2golT/J9ICuDcwjCZbGJXbEzuosssstDQ73AKKeKEbp39eHc9mbdvkCgxB1RG6Y67qugE8XEGiC0bR3gcV6u3YyFUMOCJk99OqIyf3t/6IcwUGKzKMEndcpqi5c/U2WGE0oQBxdKcnnpfE0" />
+</div>
+        <script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ScriptManager1', 'form1', ['tupdpnl','updpnl'], [], [], 90, '');
+//]]>
+</script>
+
+        <div id="updpnl">
+	
+                <div id="pnlSignIn">
+		
+                    <div class="login_form">
+                        <p class="m-0 p-5">Sign in to your account</p>
+                        <div class="p-20">
+                            <div class="form-group mt-35 mb-20">
+                                <input name="txtUserid" type="text" maxlength="30" id="txtUserid" class="form-control" autocomplet="off" placeholder="Username" />
+                            </div>
+                            <div class="form-group mt-35 mb-20">
+                                
+                            </div>
+                            <div class="form-group mt-35 mb-20">
+                                <input name="txtpassword" type="password" maxlength="30" id="txtpassword" class="form-control" autocomplet="off" placeholder="Password" />
+                            </div>
+                            <div class="form-group">
+                                
+                                <img id="imgCaptcha" src="GenerateCaptcha.aspx?639232745298399725" />
+                                <input name="txtCaptcha" type="text" maxlength="30" id="txtCaptcha" class="form-control" autocomplet="off" placeholder="Verify Above Code" />
+                                <a id="hrpConfirmation" class="forgetpassword mt-5" href="javascript:__doPostBack(&#39;hrpConfirmation&#39;,&#39;&#39;)">Forgot Password</a>
+                                <span id="labelerror" style="color:Red;font-size:Small;"></span>
+                            </div>
+                            <div class="form-group text-c">
+                                <span id="lblHRUserId"></span>
+                                <input type="submit" name="btnLogin" value="Sign in" id="btnLogin" class="btn btn-success signin" />
+                                <input type="submit" name="txtRefreshCaptcha" value="Refresh Captcha" id="txtRefreshCaptcha" class="btn btn-warning btn-warning-border" />
+                            </div>
+                        </div>
+                    </div>
+                
+	</div>
+
+                
+            
+</div>
+
+        <div id="confirmModal" class="modal fade confirm-modal" role="dialog">
+            <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Confirmation</h4>
+                    </div>
+                    <div class="modal-body text-center">
+                        <p>Are You Sure?</p>
+                    </div>
+                    <div class="modal-footer">
+                        <input type="button" name="hrpForgot" value="Yes" onclick="javascript:__doPostBack(&#39;hrpForgot&#39;,&#39;&#39;)" id="hrpForgot" data-dismiss="modal" class="btn btn-success" />
+                        <button type="button" class="btn btn-danger" id="btnNo" data-dismiss="modal">No</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </form>
+        </div>
+    <div>
+    <form id="form2" >
+        
+
+        
+
+    </form>
+        </div>
+		
+    <div class="login_footer p-10">©2017 Manipal Academy of Higher Education, manipal.edu, Madhav Nagar, Manipal-576104, Karnataka.</div>
+	<script src="assets/plugins/jQuery-lib/2.0.3/jquery.min.js"></script>
+    <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+   <script>
+       $(document).keypress(function (e) {
+
+
+           var x = document.getElementById("confirmModal");
+           if (x.style.display == "block") {
+               if (e.which == 13) {
+                   $('#btnNo').trigger('click');
+               }
+           }
+           else {
+               if (e.which == 13) {
+                   $('#btnLogin').trigger('click');
+               }
+           }
+           //if (e.which == 13) {
+           //    $('#btnLogin').trigger('click');
+           //}
+       });
+    </script>
+  
+           
+</body>
+</html>

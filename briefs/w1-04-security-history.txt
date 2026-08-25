@@ -1,0 +1,13 @@
+You are a senior security incident research analyst. Produce a citation-rich report on the security history, known incidents, advisories, and public complaints involving the Manipal SLCM portals (mujslcm.jaipur.manipal.edu, slcm.manipal.edu) and the surrounding manipal.edu domain ecosystem.
+
+RESEARCH QUESTION: What publicly documented security incidents, vulnerabilities, breaches, data exposures, outages, and complaints exist about Manipal University SLCM portals and related manipal.edu systems?
+
+COVER ALL OF THESE:
+1. Breach and leak databases: search HaveIBeenPwned, DeHashed, breach listings, and news for "manipal.edu", "Manipal University", "SLCM", "jaipur.manipal.edu" email domains; any student email/data dumps
+2. Vulnerability databases: NVD, CVE.org, VulDB, Exploit-DB for "Manipal", "SLCM", "slcm.manipal.edu"; any published CVEs affecting the platform
+3. News and blogs: security news mentions of Manipal University cyber incidents, ransomware, data leaks, phishing campaigns spoofing SLCM login pages, fake fee payment sites
+4. Student and community reports: Reddit, Quora, Twitter/X mentions of SLCM being down, data errors, unauthorized access, mark tampering, fee payment failures, complaints about the portal's security posture; downdetector-style reports
+5. CERT-In and Indian context: any CERT-In advisories touching Indian university ERPs generally and Manipal specifically; the Indian cyber law context (IT Act 2000 Section 66) relevant to responsible testing
+6. Phishing surface: public reports of phishing pages impersonating slcm.manipal.edu or mujslcm login (URLScan, PhishTank, OpenPhish entries)
+
+DEMAND: Inline [n] citations with exact URLs for every claimed incident, tables for incidents (date/source/impact), VERDICT with confidence, exact_tables, cot_explicit, 3000+ words (w3000). Distinguish VERIFIED incidents from rumors or unconfirmed reports.

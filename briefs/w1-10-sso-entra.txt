@@ -1,0 +1,13 @@
+You are a senior identity and federation analyst. Produce a citation-rich report on the Microsoft 365 / Entra ID (Azure AD) integration visible on the MUJ SLCM portal and the surrounding identity infrastructure of Manipal University Jaipur.
+
+RESEARCH QUESTION: MUJ SLCM's login page links to passwordreset.microsoftonline.com, indicating Microsoft Entra ID federation. What is publicly known about MUJ's Microsoft 365 / Entra ID tenant, the SSO federation between SLCM and Microsoft identity, and the associated identity attack surface (all public info)?
+
+COVER ALL OF THESE:
+1. Tenant discovery: Microsoft Entra tenant info publicly discoverable for MUJ domains: autodiscover/openid-configuration endpoints for @jaipur.manipal.edu and @muj.manipal.edu (well-known URLs like https://login.microsoftonline.com/<domain>/.well-known/openid-configuration), tenant IDs, federation metadata (FedMetadata.xml), what that implies about ADFS vs cloud-only auth
+2. Email infrastructure: MX records for jaipur.manipal.edu and manipal.edu (Microsoft 365 evidence), SPF/DMARC/DKIM records publicly visible in DNS, spoofing posture
+3. SSO integration patterns: how ASP.NET MVC portals typically federate with Entra ID (WS-Fed, SAML, OAuth2/OpenID), what login redirect chains are publicly documented for manipal portals, password reset flow at passwordreset.microsoftonline.com implications (self-service password reset enabled?)
+4. MFA posture evidence: any public mentions of MUJ enforcing MFA (news, circulars, student complaints), conditional access hints in public docs
+5. Associated identity surfaces: Office 365 login portals for students, the password reset subdomain, any "manipal.edu" Microsoft tenant public documentation (student onboarding emails, IT circulars)
+6. Risks and responsible tests for federated login: user enumeration via Entra endpoints, password spray caution, token validation issues between portal and IdP, the importance of testing federation only with explicit authorization
+
+DEMAND: Inline [n] citations with exact URLs for every finding, tables for DNS/identity records, VERDICT with confidence, exact_tables, cot_explicit, 3000+ words (w3000). Public information only; clearly distinguish verified records from inference.

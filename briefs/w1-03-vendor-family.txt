@@ -1,0 +1,12 @@
+You are a senior infrastructure and vendor lineage analyst. Produce a citation-rich report tracing the SLCM product family across the Manipal education group and identifying the vendor, shared codebase instances, and sister portals.
+
+RESEARCH QUESTION: Who built/maintains the SLCM system used at Manipal University Jaipur, which other campuses and institutions use the same or similar SLCM product, and what shared infrastructure or sister portals exist?
+
+COVER ALL OF THESE:
+1. Vendor identification: search for who develops "SLCM" (Student Life Cycle Management) used by Manipal institutions. Look for software vendors like "Crucia/ITL/other ERP vendors", any "Manipal Technologies", "Jain Group" tech arms, or in-house development teams. Search terms: "SLCM Manipal", "mujslcm", "slcm.manipal.edu", "SLCM software campus", "Student Life Cycle Management ERP vendor"
+2. Instance map: slcm.manipal.edu (MAHE Manipal), mujslcm.jaipur.manipal.edu (MUJ), any MIT Manipal, Manipal Institute of Technology, Manipal University Dubai, Sikkim Manipal University instances; same login page design patterns
+3. Sister systems: Manipal LMS platforms, Manipal exam portals, "Timetable Manipal", "MUJ ERP", "MUJ portal", alumni portals (alumni.jaipur.manipal.edu), attendance apps
+4. Public tech chatter: student forums (Reddit r/Manipal, r/Manipal_Academics, Quora), LinkedIn posts by developers who worked on SLCM, GitHub organizations related to manipal slcm integrations, job postings mentioning SLCM maintenance
+5. Shared-risk implication: if one instance's public findings (e.g. slcm.manipal.edu) apply to mujslcm (same codebase), list concrete examples of public vulnerabilities, error messages, or API behaviors documented for one that likely affect the other
+
+DEMAND: Inline [n] citations for every claim, tables for the instance map, VERDICT with confidence, exact_tables, cot_explicit, 3000+ words (w3000). Public sources only; label inference explicitly.
