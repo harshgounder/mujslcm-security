@@ -5,18 +5,23 @@ Method: single low-rate HTTP requests + public OSINT. Non-destructive.
 
 ## VERIFIED FINDINGS
 
-### F1. Verbose .NET error pages (YSOD) — information disclosure [P3]
+### F1. Verbose .NET error pages (YSOD) — information disclosure, MULTIPATH [P3]
 
-- Probe: POST / with UserName+Password but NO __RequestVerificationToken
-- Result: HTTP 500, 8319 bytes, full ASP.NET yellow screen of death
-- Leaks: full MVC 5 stack trace (System.Web.Helpers.AntiXsrf.*,
-  AsyncControllerActionInvoker frames), exception type
-  HttpAntiForgeryException (0x80004005), exact runtime versions:
+Two confirmed trigger paths, both 500 with full stack trace + versions:
+
+- POST / with UserName+Password but NO __RequestVerificationToken:
+  HttpAntiForgeryException (0x80004005), full MVC 5 async stack,
   ".NET Framework Version:4.0.30319; ASP.NET Version:4.7.4136.0"
-- Implication: customErrors is off or RemoteOnly from our vantage; exact
-  patch levels aid exploit targeting; stack traces map internal classnames.
+- GET /Home/Index?enc=zz (garbage in the protected-route param):
+  FormatException "Invalid length for a Base-64 char array or string"
+  in System.Convert.FromBase64String, full stack. enc is Base64-
+  decoded then processed; valid-base64 garbage would hit the
+  decryption layer next (machineKey-adjacent surface, do not forge).
+
+Implication: customErrors is off; ANY unhandled exception leaks stack
++ exact patch level (CWE-209). Helps precise exploit targeting.
 - Fix: customErrors On / redirect error pages, remove x-powered-by.
-- Evidence: recon/mujslcm-post500.html (saved raw)
+- Evidence: recon/mujslcm-post500.html + recon/enc500.html (saved raw)
 
 ### F2. trace.axd returns 403 (exists, restricted) [P3]
 

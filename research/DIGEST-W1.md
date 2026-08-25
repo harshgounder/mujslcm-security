@@ -107,11 +107,31 @@ w1-10 44,955 (full)
    password = spray risk; that is a disclosure-path finding for MUJ,
    not something we execute.
 
+## w1-08 subdomain-surface (landed, digested)
+
+- MUJ dual portals ARE distinct identity surfaces: mujslcm (98.70.14.50,
+  @muj.manipal.edu) vs muj.slcm (20.244.94.89, @jaipur.manipal.edu),
+  both IIS10/ASP.NET on AS8075. My live digs confirm both A records
+  (report's NODATA rows for these, mujerp, rms are wrong rows; A table
+  is correct).
+- Dangling CNAMEs: mycampus + testmycampus.jaipur.manipal.edu ->
+  edtech366.azurewebsites.net (NXDOMAIN). Subdomain-takeover class:
+  report + we recommend REPORT ONLY, no claiming.
+- uat.manipal.edu live via Azure Front Door (uat-ci-mahe-ep-….azurefd.net
+  -> 150.171.110.195); exam.jaipur.manipal.edu on NIB (59.91.192.229);
+  webmail.manipal.edu NIB; api.manipal.edu AWS Node/Express; lms ->
+  Brightspace; sis.manipal.edu -> Fee Kart; hms/portal/mujslcm.manipal.edu
+  unproven purposes.
+- CT history: 25 jaipur names incl npfslcm, lcs, dms, dmsmuj, pms, idp,
+  helpdesk (NXDOMAIN today, watch reactivation).
+
 ## Open items
 
-- w1-08 subdomain-surface (running)
 - w2x-00 tech-stack redo (launched; w1-02 was too thin)
-- Wave 2 fleet: 84 runs in flight (families B-G + redo)
+- Wave 2 fleet: 84 runs in flight, 11 landed at write time (families
+  B-G + redo); digest batches after bulk lands
 - Verify: projectzero.google URL, Brinztech claim, Scribd student-list
   files, slcm-api.ml/slcm-app.herokuapp.com status, async details
-- Re-OCR: First-Year-Students-Profile-Registration-Guide.pdf
+- Re-OCR: First-Year-Students-Profile-Registration-Guide.pdf (DONE
+  successfully, see recon/profile-guide.txt)
+- Wave 1 coverage: 10/10 reports read to EOF + digested (audit above)
