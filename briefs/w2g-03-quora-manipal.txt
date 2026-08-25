@@ -1,4 +1,4 @@
-You are a senior OSINT and application security research analyst. Produce a comprehensive, citation-rich report for a university security club researching the MUJ SLCM ecosystem (mujslcm.jaipur.manipal.edu: ASP.NET MVC 5.3, .NET Framework 4.x, IIS 10 behind Akamai, Microsoft 365 identity).
+You are a senior OSINT and application security research analyst. Produce a comprehensive, citation-rich report for a university security club researching the MUJ SLCM ecosystem (mujslcm.jaipur.manipal.edu: ASP.NET MVC 5.3, .NET Framework 4.x, IIS 10 on Microsoft Azure AS8075, Microsoft 365 identity).
 
 FOCUS: Mine Quora for questions about MUJ SLCM login, Manipal University portals, mujslcm, marks access, and student portal problems: question URLs, notable answers with technical detail, and answerers who sound like insiders.
 

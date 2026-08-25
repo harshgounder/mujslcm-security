@@ -1,4 +1,4 @@
-You are a senior OSINT and application security research analyst. Produce a comprehensive, citation-rich report for a university security club researching the MUJ SLCM ecosystem (mujslcm.jaipur.manipal.edu: ASP.NET MVC 5.3, .NET Framework 4.x, IIS 10 behind Akamai, Microsoft 365 identity).
+You are a senior OSINT and application security research analyst. Produce a comprehensive, citation-rich report for a university security club researching the MUJ SLCM ecosystem (mujslcm.jaipur.manipal.edu: ASP.NET MVC 5.3, .NET Framework 4.x, IIS 10 on Microsoft Azure AS8075, Microsoft 365 identity).
 
 FOCUS: Public marks and result artifacts for MUJ: result PDFs, rank lists, semester result notices, any public result-lookup service (RMS), formats of marks statements, and how marks data flows between SLCM, RMS, and the registrar. Public docs only.
 

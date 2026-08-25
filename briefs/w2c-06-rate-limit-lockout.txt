@@ -1,4 +1,4 @@
-You are a senior OSINT and application security research analyst. Produce a comprehensive, citation-rich report for a university security club researching the MUJ SLCM ecosystem (mujslcm.jaipur.manipal.edu: ASP.NET MVC 5.3, .NET Framework 4.x, IIS 10 behind Akamai, Microsoft 365 identity).
+You are a senior OSINT and application security research analyst. Produce a comprehensive, citation-rich report for a university security club researching the MUJ SLCM ecosystem (mujslcm.jaipur.manipal.edu: ASP.NET MVC 5.3, .NET Framework 4.x, IIS 10 on Microsoft Azure AS8075, Microsoft 365 identity).
 
 FOCUS: Account lockout and rate limiting in ASP.NET Identity and custom auth: threshold defaults, lockout bypass via different casing/unicode usernames, IP rotation limits, CAPTCHA absence, OWASP ASVS auth requirements; design the non-destructive test plan for SLCM login with a throwaway account.
 

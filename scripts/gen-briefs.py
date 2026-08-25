@@ -13,7 +13,7 @@ HEADER = ("You are a senior OSINT and application security research analyst. "
           "Produce a comprehensive, citation-rich report for a university "
           "security club researching the MUJ SLCM ecosystem "
           "(mujslcm.jaipur.manipal.edu: ASP.NET MVC 5.3, .NET Framework 4.x, "
-          "IIS 10 behind Akamai, Microsoft 365 identity).")
+          "IIS 10 on Microsoft Azure AS8075, Microsoft 365 identity).")
 
 DEMAND = ("\n\nDEMAND: Inline [n] citation markers with exact URLs for every claim. "
           "Data tables where listing anything. Final VERDICT section with confidence "

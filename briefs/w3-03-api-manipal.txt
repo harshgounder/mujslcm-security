@@ -1,4 +1,4 @@
-You are a senior OSINT and application security research analyst. Produce a comprehensive, citation-rich report for a university security club researching the MUJ SLCM ecosystem (mujslcm.jaipur.manipal.edu: ASP.NET MVC 5.3, .NET Framework 4.x, IIS 10 behind Akamai, Microsoft 365 identity).
+You are a senior OSINT and application security research analyst. Produce a comprehensive, citation-rich report for a university security club researching the MUJ SLCM ecosystem (mujslcm.jaipur.manipal.edu: ASP.NET MVC 5.3, .NET Framework 4.x, IIS 10 on Microsoft Azure AS8075, Microsoft 365 identity).
 
 FOCUS: api.manipal.edu runs nginx 1.18.0 + Node.js + Express on AWS EC2 (43.205.223.7) and serves opaque JSON data at root. Research: documented endpoints, mobile app dependencies, GitHub references, Swagger/OpenAPI presence, auth model, historical versions, and related api.* hosts in the Manipal family.
 

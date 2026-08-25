@@ -1,7 +1,7 @@
 # Family F: infrastructure and stack deep-dives. Each spec: (slug, focus_text)
 SPECS = [
 ("w2f-01-iis10-cve-sweep",
- "IIS 10.0 known vulnerabilities and misconfig classes with dates/patches: HTTP/2 issues, request smuggling classes (header parsing), short-name disclosure, WebDAV states, TLS config CVEs; which apply when behind Akamai and which only matter at origin."),
+ "IIS 10.0 known vulnerabilities and misconfig classes with dates/patches: HTTP/2 issues, request smuggling classes (header parsing), short-name disclosure, WebDAV states, TLS config CVEs; which apply when behind the Azure edge layer and which only matter at origin."),
 ("w2f-02-dotnet-patch-level",
  "ASP.NET runtime 4.7.4136.0: which .NET Framework 4.x servicing level this build corresponds to, known security fixes before/after that build (CVE list), and what an unpatched 4.x runtime implies for a portal in 2026."),
 ("w2f-03-jquery-cve-sweep",
@@ -11,7 +11,7 @@ SPECS = [
 ("w2f-05-keen-theme-cve",
  "Keenthemes Keen theme security research: version fingerprinting from asset paths (/keen/themes/keen/theme/demo1/dist/...), publicly reported XSS in Keen/Metronic theme JS, licensing artifacts, and how many sites reuse the exact demo1 login template."),
 ("w2f-06-akamai-edge",
- "Akamai edge behavior research for edu portals: Akamai IP ranges (98.70.x.x evidence), header fingerprints, WAF default rule sets, origin masking techniques, known origin-discovery methods from public data (DNS history, cert SANs, error pages), and whether the MUJ SLCM origin leaks anywhere publicly."),
+ "Azure edge behavior research for edu portals: Azure Front Door/App Gateway fingerprints (AS8075 evidence: 98.70.14.50 = Azure Cloud central india), WAF default rule sets, origin masking techniques, known origin-discovery methods from public data (DNS history, cert SANs, error pages), and whether the MUJ SLCM origin leaks anywhere publicly."),
 ("w2f-07-entra-tenant-enum",
  "Microsoft Entra tenant enumeration and posture for universities: openid-configuration/federation metadata discovery for @jaipur.manipal.edu and @muj.manipal.edu, tenant ID disclosure, user enumeration via GetCredentialType, SSPR config hints, mailbox autodiscover, and typical MFA gaps in Indian university tenants. Public evidence only."),
 ("w2f-08-brightspace-security",
@@ -23,5 +23,5 @@ SPECS = [
 ("w2f-11-dns-hygiene",
  "DNS hygiene for jaipur.manipal.edu and manipal.edu: NS servers, DNSSEC presence, zone transfer risk, axfr checks from public tools, subdomain sprawl, TXT record leaks (cisco-ci, brightspace, outlook markers observed), and spoofing implications."),
 ("w2f-12-waf-fingerprint",
- "WAF detection and fingerprinting: Akamai behaviors (403 bodies, headers, challenge pages), ruleset fingerprints (OWASP core rules), IP allowlist patterns, and how to identify WAF vs app-layer responses on mujslcm without triggering rate limits."),
+ "WAF detection and fingerprinting: Azure Front Door/App Gateway WAF behaviors (403 bodies, headers, challenge pages), ruleset fingerprints (OWASP core rules), IP allowlist patterns, and how to identify WAF vs app-layer responses on mujslcm without triggering rate limits."),
 ]

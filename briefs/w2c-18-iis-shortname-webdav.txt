@@ -1,4 +1,4 @@
-You are a senior OSINT and application security research analyst. Produce a comprehensive, citation-rich report for a university security club researching the MUJ SLCM ecosystem (mujslcm.jaipur.manipal.edu: ASP.NET MVC 5.3, .NET Framework 4.x, IIS 10 behind Akamai, Microsoft 365 identity).
+You are a senior OSINT and application security research analyst. Produce a comprehensive, citation-rich report for a university security club researching the MUJ SLCM ecosystem (mujslcm.jaipur.manipal.edu: ASP.NET MVC 5.3, .NET Framework 4.x, IIS 10 on Microsoft Azure AS8075, Microsoft 365 identity).
 
 FOCUS: IIS-specific disclosures: 8.3 short filename enumeration (tilde tricks), WebDAV enabled/disabled detection, OPTIONS/PUT/DELETE verb behavior (observed PUT 411, others 404), system.webServer config fingerprints, and known IIS 10 misconfig patterns in edu deployments.
 

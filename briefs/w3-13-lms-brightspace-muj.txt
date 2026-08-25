@@ -1,4 +1,4 @@
-You are a senior OSINT and application security research analyst. Produce a comprehensive, citation-rich report for a university security club researching the MUJ SLCM ecosystem (mujslcm.jaipur.manipal.edu: ASP.NET MVC 5.3, .NET Framework 4.x, IIS 10 behind Akamai, Microsoft 365 identity).
+You are a senior OSINT and application security research analyst. Produce a comprehensive, citation-rich report for a university security club researching the MUJ SLCM ecosystem (mujslcm.jaipur.manipal.edu: ASP.NET MVC 5.3, .NET Framework 4.x, IIS 10 on Microsoft Azure AS8075, Microsoft 365 identity).
 
 FOCUS: MUJ Online runs D2L Brightspace (learning.onlinemanipal.com, CNAME chain via learner-mahe.onlinemanipal.com). Research: the Brightspace instance scope, SSO integration with Microsoft accounts (App Store reviews mention auth callback failures), API surfaces, D2L security advisories relevant to this deployment, and what student data it holds.
 

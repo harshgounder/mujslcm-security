@@ -2,7 +2,7 @@
 # focus_text is the unique angle for that host. Generator wraps with shared blocks.
 SPECS = [
 ("w2b-01-muj-slcm-alt",
- "Alternate SLCM host muj.slcm.jaipur.manipal.edu: public evidence of what it is (same app? dev instance? backend?), its Azure IP (20.244.94.89), any pages/documents mentioning it, and how it relates to the Akamai-fronted mujslcm.jaipur.manipal.edu. Only OSINT; do not test it."),
+ "Alternate SLCM host muj.slcm.jaipur.manipal.edu: public evidence of what it is (same app? dev instance? backend?), its Azure IP (20.244.94.89), any pages/documents mentioning it, and how it relates to the Azure-hosted mujslcm.jaipur.manipal.edu. Only OSINT; do not test it."),
 ("w2b-02-mujerp",
  "MUJ ERP portal mujerp.jaipur.manipal.edu (Azure 20.244.0.229): purpose (staff/faculty ERP?), features, login flow, public mentions, and whether any public docs describe its data (attendance, payroll, academic records). OSINT only."),
 ("w2b-03-mujone",

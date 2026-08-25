@@ -1,4 +1,4 @@
-You are a senior OSINT and application security research analyst. Produce a comprehensive, citation-rich report for a university security club researching the MUJ SLCM ecosystem (mujslcm.jaipur.manipal.edu: ASP.NET MVC 5.3, .NET Framework 4.x, IIS 10 behind Akamai, Microsoft 365 identity).
+You are a senior OSINT and application security research analyst. Produce a comprehensive, citation-rich report for a university security club researching the MUJ SLCM ecosystem (mujslcm.jaipur.manipal.edu: ASP.NET MVC 5.3, .NET Framework 4.x, IIS 10 on Microsoft Azure AS8075, Microsoft 365 identity).
 
 FOCUS: CSRF in ASP.NET MVC 5 with the observed __RequestVerificationToken cookie+field pair: how the anti-forgery system works (machine key HMAC), known bypass patterns (token reuse within session, cookie-only tokens, subdomain token issues, JSON in-body tokens with custom antiforgery handlers), and what to test on the SLCM login and post-login forms.
 

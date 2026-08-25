@@ -10,7 +10,7 @@ SPECS = [
 ("w2c-15-payment-flow-manipulation",
  "Fee payment flow manipulation in Indian university ERPs: gateway integration patterns (BillDesk/Razorpay/CCAvenue redirect + return checksum), amount/currency tampering, order-reference forgery, receipt IDOR, refund abuse, and published incidents in Indian edu payment portals. Map a non-destructive test plan for the fee module."),
 ("w2c-16-ssrf-mvc",
- "SSRF patterns in ASP.NET MVC: image URL import, webhooks, PDF generation from URLs, XML external entity in document processors; .NET-specific constraints (WebRequest, HttpWebRequest), loopback protections that fail on IIS/Akamai, and how to plan SSRF tests without causing outbound damage."),
+ "SSRF patterns in ASP.NET MVC: image URL import, webhooks, PDF generation from URLs, XML external entity in document processors; .NET-specific constraints (WebRequest, HttpWebRequest), loopback protections that fail on IIS/Azure-hosted apps, and how to plan SSRF tests without causing outbound damage."),
 ("w2c-17-deserialization-net",
  ".NET deserialization risk surface: BinaryFormatter usages in MVC apps, ViewState MAC on WebForms pages (sis.manipal.edu-style remnants), machineKey exposure consequences, ysoserial.net classes (ObjectStateFormatter, LosFormatter), and older .NET 4.x patch level implications (observed ASP.NET 4.7.4136.0)."),
 ("w2c-18-iis-shortname-webdav",
@@ -22,5 +22,5 @@ SPECS = [
 ("w2c-21-jwt-session-tokens",
  "Token formats and JWT pitfalls in student portal ecosystems: where JWTs appear (third-party apps: MUJ Connect, Brightspace), alg confusion, missing signature validation, short/long expiry, and how SLCM session cookies compare. Public evidence only."),
 ("w2c-22-third-party-integrations",
- "Third-party integration seams: Microsoft 365 / Entra (observed), Brightspace LMS, Cisco Webex (domain verification TXT), NoPaperForms (admissions CNAME), Akamai edge: data flows between them (who provisions accounts, who syncs grades/fees), integration misconfig patterns (shared secrets, webhook unauthenticated endpoints), and public docs describing these integrations."),
+ "Third-party integration seams: Microsoft 365 / Entra (observed), Brightspace LMS, Cisco Webex (domain verification TXT), NoPaperForms (admissions CNAME), Azure edge: data flows between them (who provisions accounts, who syncs grades/fees), integration misconfig patterns (shared secrets, webhook unauthenticated endpoints), and public docs describing these integrations."),
 ]

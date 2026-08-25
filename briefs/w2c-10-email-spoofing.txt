@@ -1,4 +1,4 @@
-You are a senior OSINT and application security research analyst. Produce a comprehensive, citation-rich report for a university security club researching the MUJ SLCM ecosystem (mujslcm.jaipur.manipal.edu: ASP.NET MVC 5.3, .NET Framework 4.x, IIS 10 behind Akamai, Microsoft 365 identity).
+You are a senior OSINT and application security research analyst. Produce a comprehensive, citation-rich report for a university security club researching the MUJ SLCM ecosystem (mujslcm.jaipur.manipal.edu: ASP.NET MVC 5.3, .NET Framework 4.x, IIS 10 on Microsoft Azure AS8075, Microsoft 365 identity).
 
 FOCUS: Email spoofing posture for jaipur.manipal.edu and manipal.edu: observed SPF (include outlook + brightspace, -all), DMARC and DKIM records if publicly visible, subdomain spoofing gaps, lookalike domain risks (manipal-edu variants), and phishing scenarios against SLCM users. Public DNS evidence only.
 
