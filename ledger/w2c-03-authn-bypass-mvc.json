@@ -1,9 +1,6 @@
 {
-  "name": "w2c-03-authn-bypass-mvc",
-  "run_id": "trun_4f77acf09e76419694d7108c41d2890b",
-  "processor": "ultra8x",
-  "key_tail": "ORB1Iw",
-  "launched": "2026-08-25T17:40:28Z",
-  "done": false,
-  "type": "task"
+  "key_tail": "27XAeB",
+  "done": true,
+  "completed": "2026-08-25T20:08:25Z",
+  "out_chars": 49029
 }
