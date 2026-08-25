@@ -1,4 +1,4 @@
-# EXEC-SUMMARY — MUJ SLCM security research (club deliverable)
+# EXEC-SUMMARY : MUJ SLCM security research (club deliverable)
 
 Date: 2026-08-25. Repo: github.com/harshgounder/mujslcm-security (private).
 Scope: ONE target, https://mujslcm.jaipur.manipal.edu. All methods were

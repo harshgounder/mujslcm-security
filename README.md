@@ -1,98 +1,70 @@
-# mujslcm-recon
+# mujslcm-security : MUJ CyberSpace Club offensive-research project
 
-Security research project for the MUJ Cyberspace Club: reconnaissance and bug
-hunting on https://mujslcm.jaipur.manipal.edu/ (MUJ Student Life Cycle
-Management portal).
+Private repo, github.com/harshgounder/mujslcm-security (owner: user).
+Local clone: ~/mujslcm-recon, branch main.
 
-## Scope (field universe)
+## What this is
 
-ONE target: **https://mujslcm.jaipur.manipal.edu/**
+A complete, evidence-backed security-research package on ONE target:
+https://mujslcm.jaipur.manipal.edu (MUJ Student Life Cycle Management
+portal). Built 2026-08-25 for the CyberSpace club. Everything is
+recon-grade and non-destructive: no scanners, no auth attempts, no
+other hosts touched. The aggressive phase is packaged and gated behind
+a signed registrar letter + two test accounts.
 
-Everything else in this repo is evidence, not targets:
+## Read order
 
-- sister instances of the same SLCM product (e.g. slcm.manipal.edu) are read
-  only, for product-family intelligence. Same codebase means findings
-  transfer, but we never send test traffic there.
-- jaipur.manipal.edu / manipal.edu DNS and certificate transparency data is
-  passive OSINT about the target's own infrastructure.
-- GitHub / paste sites / web archives are read-only sources of code and
-  history that mention the target.
+1. EXEC-SUMMARY.md        the pitch doc, start here
+2. findings/REAUDIT-2026-08-25.md   what a second-pass lie-hunt found and fixed
+3. findings/FINDINGS-W0.md + FINDINGS-DEEPROBE.md   verified findings F1-F10
+4. findings/ATTACK-SURFACE-MAP.md  the terrain
+5. findings/TEST-PLAN.md + AGGRESSIVE-PLAYBOOK.md  what to test, how, in what order
+6. research/DIGEST-W1.md + DIGEST-W2.md + the 3 syntheses  the 4.3M-char corpus distilled
+7. scripts/authtests/README.md  the authorized-phase suite
+8. disclosures/DISCLOSURE-LETTER.md  the template that unlocks it
 
-Testing rules (club discipline, in force from day 1):
+## Numbers
 
-1. Non-destructive only. No data modification, no deletion, no DoS, no
-   volume spraying, no automated scanners hammering the origin.
-2. Low request rates. Manual and scripted probes stay far below thresholds
-   that could be felt as an outage.
-3. No credential guessing against real accounts. One throwaway test account
-   if the club provides one, nothing else.
-4. Nothing is ever published. Findings live in this private repo and go to
-   the club lead / university nodal officer via the disclosure path in
-   findings/.
-5. If something looks live and exploitable (auth bypass, data exposure),
-   verify with a minimal PoC on our own test account, document, stop, and
-   report. Do not chain further.
-6. Workplace consent: club task = authorized testing of this portal per the
-   club's mandate. We keep evidence of scope (club brief, lead contact) in
-   findings/SCOPE.md.
+- 110 parallel.ai runs launched, 109 unique reports saved (~4.3M chars)
+- 109 digests, every one read-to-EOF proven, style-gated, evidence-labelled
+- 3 domain syntheses (VULN-CLASS, SURFACE, CONTEXT)
+- 10 verified findings (F1-F10), 1 documented error caught by reaudit (E1)
+- 20/20 live rechecks confirmed in the lie-hunt
+- 529 tracked files, 110 replayable briefs, 8 tooling scripts, 6 auth-phase scripts
 
-## Repo layout
+## Verified stack (short version)
 
-    briefs/     research briefs (one per angle, w1 = wave 1)
-    research/   parallel.ai deep-research reports (raw outputs)
-    recon/      hands-on passive recon artifacts (headers, HTML, notes)
-    findings/   curated findings, severity, evidence, disclosure log
-    scripts/    launcher + watcher + recon helpers
-    ledger/     per-run ledger JSONs
-    wave1-runs.json   wave 1 run index (run_id per brief)
+IIS 10, ASP.NET MVC 5.3, .NET Framework 4.7.4136.0, Microsoft Azure
+AS8075 (98.70.14.50, NOT Akamai), Entrust DV cert (single SAN),
+Entra/M365 identity (3 tenants), DMARC p=none. Verbose YSODs everywhere
+(customErrors off), password echo on failed login, machineKey-protected
+ReturnUrl blob, anti-CSRF cookie without Secure flag.
 
-## Wave 1 (in flight)
+## Standing orders (hard rules)
 
-10 parallel ultra8x deep-research runs, each a separate angle on the target:
+- NON-DESTRUCTIVE until a signed scope letter exists. Single low-rate
+  GETs, synthetic data, no scanners, no auth attempts, no sibling hosts.
+- Even with the letter: no credential stuffing, no exfiltration, no DoS,
+  no live payment tampering, no persistence. IDOR sweeps stop at first proof.
+- Repo hygiene: never commit raw key material (ledgers hold key tails
+  only), no em dashes anywhere, no AI-tell words, private repo stays private.
+- Git identity: liebert511 <liebert511@users.noreply.github.com>.
 
-| brief | angle |
-|---|---|
-| w1-01 | platform overview: features, login journey, integrations |
-| w1-02 | tech stack: MVC 5.3, IIS 10, Keen theme, jQuery 1.10.2, headers |
-| w1-03 | vendor family: SLCM product lineage, sister instances |
-| w1-04 | security history: incidents, leaks, complaints |
-| w1-05 | code leaks: GitHub/paste artifacts referencing the portal |
-| w1-06 | student data OSINT: indexed pages, register formats, docs |
-| w1-07 | mobile apps + API surfaces that talk to the portal |
-| w1-08 | subdomain surface under jaipur.manipal.edu (passive data) |
-| w1-09 | attack surface checklist + India disclosure framework |
-| w1-10 | Entra ID / Microsoft 365 federation evidence |
+## Reusing the pipeline
 
-## Confirmed recon so far (hands-on, 2026-08-25)
-
-Target: https://mujslcm.jaipur.manipal.edu/
-
-- HTTP/2, server: Microsoft-IIS/10.0, Windows .NET 4.0.30319
-- ASP.NET MVC 5.3 (x-aspnetmvc-version: 5.3)
-- x-powered-by: ASP.NET (version disclosure, minor)
-- X-Frame-Options: SAMEORIGIN present (good) on mujslcm; absent on
-  slcm.manipal.edu for comparison
-- __RequestVerificationToken anti-CSRF cookie + hidden field on login (MVC
-  anti-forgery)
-- Login POSTs UserName + Password + hidden EmailFor/LoginFor to "/"
-- Password field has no client-side min-length validation
-- Redirect target after login: /Home/Index
-- Keenthemes "keen" admin theme asset tree
-- jQuery 1.10.2 (2013) + jquery.validate + unobtrusive on login page
-- Password reset hand-off to https://passwordreset.microsoftonline.com/
-  (Microsoft Entra ID tenant in use)
-- robots.txt redirects to /Home/Index (no real robots policy)
-- slcm.manipal.edu (MAHE instance): IIS 10.0, classic ASP.NET_SessionId
-  cookie, no XFO header
-
-## How to rerun the wave
-
-    python3 scripts/launch-wave1.py     # launches 10 runs, ledger + index
-    python3 scripts/watch-wave1.py      # polls, saves research/<name>.md
-
-Keys: parallel.ai pool via local key tracker; launch script picks task-alive
-keys only and rotates on 402.
+1. briefs/ holds 110 self-contained prompts (regenerate: python3
+   scripts/gen-briefs.py; family specs in scripts/brief-specs-*.py)
+2. Launch: python3 scripts/launch-waveN.py (reads briefs, round-robins
+   task-alive parallel.ai keys, writes ledgers + waveN-runs.json)
+3. Watch: python3 scripts/watch-wave1.py [--once] (key-scoped status/
+   result fetches, dict-or-str result handling, saves to research/)
+4. Digest: dispatch subagents on research/*.md with the digest contract
+   (see research/digests/ samples), then synthesize
+5. Verify: scripts/reaudit.py (live re-probe of every claim)
+6. Execute under auth: scripts/authtests/ (SLCM_USER1/2 env contract)
 
 ## Status
 
-Wave 1 launched 2026-08-25, 10/10 runs accepted. Watch: scripts/watch-wave1.py.
+Campaign complete and pushed. No active processes. Waiting on decision:
+wave-5 research now, or the signed letter first (see CONTINUATION-PROMPT.md
+section 9 for the decision menu).
