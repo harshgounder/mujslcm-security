@@ -4,6 +4,8 @@
   "processor": "ultra8x",
   "key_tail": "ijVx55",
   "launched": "2026-08-25T17:13:41Z",
-  "done": false,
-  "type": "task"
+  "done": true,
+  "type": "task",
+  "completed": "2026-08-25T17:23:30Z",
+  "out_chars": 37468
 }
