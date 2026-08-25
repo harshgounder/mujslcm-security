@@ -4,6 +4,8 @@
   "processor": "ultra8x",
   "key_tail": "RRBi_6",
   "launched": "2026-08-25T17:41:17Z",
-  "done": false,
-  "type": "task"
+  "done": true,
+  "type": "task",
+  "completed": "2026-08-25T17:50:22Z",
+  "out_chars": 34487
 }

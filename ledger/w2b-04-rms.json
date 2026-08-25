@@ -4,6 +4,8 @@
   "processor": "ultra",
   "key_tail": "ThZeca",
   "launched": "2026-08-25T17:40:00Z",
-  "done": false,
-  "type": "task"
+  "done": true,
+  "type": "task",
+  "completed": "2026-08-25T17:51:38Z",
+  "out_chars": 11445
 }

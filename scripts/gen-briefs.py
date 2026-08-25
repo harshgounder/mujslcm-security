@@ -21,7 +21,8 @@ DEMAND = ("\n\nDEMAND: Inline [n] citation markers with exact URLs for every cla
           "(cot_explicit). Target 3000+ words (w3000). Public information only; "
           "label every inference as such; never instruct unauthorized access.")
 
-FAMILIES = ["b", "c1", "c2", "d", "e", "f", "g"]
+FAMILIES = ["b", "c1", "c2", "d", "e", "f", "g", "w3"]
+EXTRA_SPECS = []  # injected by callers before main()
 
 def load(fam):
     path = os.path.join(HERE, f"brief-specs-{fam}.py")
@@ -35,17 +36,22 @@ def main():
     written = 0
     for fam in FAMILIES:
         for slug, focus in load(fam):
-            body = f"{HEADER}\n\nFOCUS: {focus}\n" + DEMAND + "\n"
-            if len(focus) < 100:
-                print(f"WARN thin focus: {slug} ({len(focus)}), skipping")
-                continue
-            assert "<" not in body and "TEMPLATE" not in body, f"{slug} placeholder leak"
-            out = os.path.join(BRIEFS, f"{slug}.txt")
-            with open(out, "w") as f:
-                f.write(body)
-            written += 1
-            print(f"wrote {slug} ({len(body)} chars)")
+            written += write_one(slug, focus)
+    for fam, specs in EXTRA_SPECS:
+        for slug, focus in specs:
+            written += write_one(slug, focus)
     print(f"TOTAL: {written} briefs")
+
+def write_one(slug, focus):
+    body = f"{HEADER}\n\nFOCUS: {focus}\n" + DEMAND + "\n"
+    if len(focus) < 100:
+        print(f"WARN thin focus: {slug} ({len(focus)}), skipping")
+        return 0
+    assert "<" not in body and "TEMPLATE" not in body, f"{slug} placeholder leak"
+    with open(os.path.join(BRIEFS, f"{slug}.txt"), "w") as f:
+        f.write(body)
+    print(f"wrote {slug} ({len(body)} chars)")
+    return 1
 
 if __name__ == "__main__":
     main()

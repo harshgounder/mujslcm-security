@@ -1,0 +1,6 @@
+You are a senior OSINT and application security research analyst. Produce a comprehensive, citation-rich report for a university security club researching the MUJ SLCM ecosystem (mujslcm.jaipur.manipal.edu: ASP.NET MVC 5.3, .NET Framework 4.x, IIS 10 behind Akamai, Microsoft 365 identity).
+
+FOCUS: portal.manipal.edu (45.112.150.155) generic but live. Research: function, tech, who hosts (ASN 45.112.x), indexed pages, archive history, and links to other Manipal systems.
+
+
+DEMAND: Inline [n] citation markers with exact URLs for every claim. Data tables where listing anything. Final VERDICT section with confidence level. Structure with exact_tables. Chain-of-thought reasoning (cot_explicit). Target 3000+ words (w3000). Public information only; label every inference as such; never instruct unauthorized access.
