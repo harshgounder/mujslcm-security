@@ -105,7 +105,7 @@ def main():
             ld = {}
             if os.path.exists(lf):
                 ld = json.load(open(lf))
-            tail = ld.get("key_tail")
+            tail = ld.get("key_tail") or r.get("key_tail")
             key = key_for_tail(tail) if isinstance(tail, str) else None
             if not key:
                 key = lead_key()
@@ -128,7 +128,7 @@ def main():
                 done[name] = True
                 print(f"SAVED {name}: {size} chars -> {mp}", flush=True)
                 ld["done"] = True
-                ld["key_tail"] = r.get("key_tail") or tail or ""
+                ld["key_tail"] = ld.get("key_tail") or r.get("key_tail") or tail or ""
                 ld["completed"] = time.strftime("%Y-%m-%dT%H:%M:%SZ")
                 ld["out_chars"] = size
                 json.dump(ld, open(lf, "w"), indent=2)
