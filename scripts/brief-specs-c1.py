@@ -1,0 +1,26 @@
+# Family C1: vuln-class deep dives for the MUJ SLCM stack (ASP.NET MVC 5.3, .NET 4.x, IIS 10).
+# Each spec: (slug, focus_text)
+SPECS = [
+("w2c-01-csrf-mvc5",
+ "CSRF in ASP.NET MVC 5 with the observed __RequestVerificationToken cookie+field pair: how the anti-forgery system works (machine key HMAC), known bypass patterns (token reuse within session, cookie-only tokens, subdomain token issues, JSON in-body tokens with custom antiforgery handlers), and what to test on the SLCM login and post-login forms."),
+("w2c-02-session-management",
+ "Session management in classic ASP.NET MVC on IIS: ASP.NET_SessionId cookie properties (HttpOnly, SameSite, Secure), session fixation vectors, idle/sliding timeouts, session regeneration after login, concurrent session policy, and server-side session store risks. Map each to a test for the SLCM portal."),
+("w2c-03-authn-bypass-mvc",
+ "Authentication bypass patterns in ASP.NET MVC 5 apps with centralized [Authorize] gates: route parameter tricks, trailing dot/slash/IIS path normalization bypasses, backslash tricks, Unicode normalization, case sensitivity gaps, extensionless routing conflicts, static-file handler shadows, and direct-url access to controller actions that lack [Authorize]. Map each to SLCM route guesses (/Home/, /Student/, /Staff/, /api/)."),
+("w2c-04-idor-university-erp",
+ "IDOR in university student portals: sequential IDs in marks, fee receipts, notifications, document downloads, timetable endpoints, profile updates; parameterized IDs vs GUIDs; object-level authorization failures; proven examples from Indian university portal writeups. Build an IDOR test map for SLCM-class apps."),
+("w2c-05-register-number-enum",
+ "Register number scheme analysis for MUJ (example 2506040062): batch/stream/campus encoding, where register numbers appear publicly (PDFs, docs, circulars, LinkedIn), how predictable enumeration is, and what enumeration enables (username derivation, IDOR candidates, credential attacks). Public info only."),
+("w2c-06-rate-limit-lockout",
+ "Account lockout and rate limiting in ASP.NET Identity and custom auth: threshold defaults, lockout bypass via different casing/unicode usernames, IP rotation limits, CAPTCHA absence, OWASP ASVS auth requirements; design the non-destructive test plan for SLCM login with a throwaway account."),
+("w2c-07-password-reset-flows",
+ "Password reset flows when a portal delegates to Microsoft Entra SSPR (passwordreset.microsoftonline.com): SSPR enablement markers, self-service questions, admin reset paths, email/SMS OTP interception risks, MFA bypass patterns in reset flows, and what public MUJ docs say about resets (FAQ says outlook password = SLCM password)."),
+("w2c-08-header-hardening",
+ "Complete security header audit for IIS+MVC5: present (XFO SAMEORIGIN) vs missing (CSP, HSTS, X-Content-Type-Options, Referrer-Policy, Permissions-Policy, Cross-Origin-Opener-Policy), what each missing header enables (MIME sniffing, mixed content, clickjacking on non-XFO pages), and Akamai edge header interactions."),
+("w2c-09-tls-config",
+ "TLS posture for mujslcm.jaipur.manipal.edu: observed HTTP/2 and TLS handshake, cert (Entrust DV, issued 2025-12-22, single SAN), Akamai edge TLS settings, known weak cipher/TLS1.1 exposure patterns on Akamai-fronted edu sites, and what the public SSL test data says. OSINT/public data only."),
+("w2c-10-email-spoofing",
+ "Email spoofing posture for jaipur.manipal.edu and manipal.edu: observed SPF (include outlook + brightspace, -all), DMARC and DKIM records if publicly visible, subdomain spoofing gaps, lookalike domain risks (manipal-edu variants), and phishing scenarios against SLCM users. Public DNS evidence only."),
+("w2c-11-subdomain-takeover",
+ "Subdomain takeover patterns in edu: dangling CNAMEs to decommissioned SaaS (Azure, Heroku, GitHub Pages, NoPaperForms), observed CNAMEs in the MUJ ecosystem (admissions -> nopaperforms), how to check takeover eligibility from public DNS, and known Indian university takeover cases."),
+]

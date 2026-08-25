@@ -18,7 +18,8 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 REPO = os.path.dirname(HERE)
 LEDGER_DIR = os.path.join(REPO, "ledger")
 RESULTS_DIR = os.path.join(REPO, "research")
-WAVE_INDEX = os.path.join(REPO, "wave1-runs.json")
+WAVE_INDEXES = [os.path.join(REPO, f) for f in os.listdir(REPO)
+                if f.startswith("wave") and f.endswith("-runs.json")]
 
 ONCE = "--once" in sys.argv
 
@@ -84,7 +85,13 @@ def save_content(name, content):
 
 
 def main():
-    runs = json.load(open(WAVE_INDEX))
+    runs = []
+    for idx in WAVE_INDEXES:
+        try:
+            runs.extend(json.load(open(idx)))
+        except Exception as e:
+            print(f"skip index {idx}: {e}", flush=True)
+    runs = [r for r in runs if r.get("run_id")]
     os.makedirs(RESULTS_DIR, exist_ok=True)
     done = {n["name"]: True for n in runs
             if os.path.exists(os.path.join(RESULTS_DIR, n["name"] + ".md"))}

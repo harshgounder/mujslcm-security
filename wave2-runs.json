@@ -1,0 +1,506 @@
+[
+ {
+  "name": "w2b-01-muj-slcm-alt",
+  "run_id": "trun_754d2e0addef4c19ac10b778c4b541cb",
+  "brief": "w2b-01-muj-slcm-alt.txt",
+  "processor": "ultra"
+ },
+ {
+  "name": "w2b-02-mujerp",
+  "run_id": "trun_7a1242654c4c4d0cba825adf54b8d9c2",
+  "brief": "w2b-02-mujerp.txt",
+  "processor": "ultra"
+ },
+ {
+  "name": "w2b-03-mujone",
+  "run_id": "trun_e2dd90b9f41e47b48441d4777e1aeb2e",
+  "brief": "w2b-03-mujone.txt",
+  "processor": "ultra"
+ },
+ {
+  "name": "w2b-04-rms",
+  "run_id": "trun_3b0b3ee687574ecdbc06b44f05509e71",
+  "brief": "w2b-04-rms.txt",
+  "processor": "ultra"
+ },
+ {
+  "name": "w2b-05-helpdesk",
+  "run_id": "trun_3b0b3ee687574ecd935286c5ec439d0b",
+  "brief": "w2b-05-helpdesk.txt",
+  "processor": "ultra"
+ },
+ {
+  "name": "w2b-06-admissions-nopaperforms",
+  "run_id": "trun_218669a117b449cea4950ad72b94ca8f",
+  "brief": "w2b-06-admissions-nopaperforms.txt",
+  "processor": "ultra"
+ },
+ {
+  "name": "w2b-07-student-mujonline",
+  "run_id": "trun_136bce6e17604013a67bc53681a9aada",
+  "brief": "w2b-07-student-mujonline.txt",
+  "processor": "ultra"
+ },
+ {
+  "name": "w2b-08-learning-onlinemanipal",
+  "run_id": "trun_f18ab953687c4351bd40defadc78a514",
+  "brief": "w2b-08-learning-onlinemanipal.txt",
+  "processor": "ultra"
+ },
+ {
+  "name": "w2b-09-mujconnect",
+  "run_id": "trun_136bce6e176040139069f19fed5c8779",
+  "brief": "w2b-09-mujconnect.txt",
+  "processor": "ultra"
+ },
+ {
+  "name": "w2b-10-sis-manipal",
+  "run_id": "trun_bb5e6f8c8ba14df39a38adbae86c2f0f",
+  "brief": "w2b-10-sis-manipal.txt",
+  "processor": "ultra"
+ },
+ {
+  "name": "w2b-11-pay-fee-online",
+  "run_id": "trun_f18ab953687c435187ec1b188973c071",
+  "brief": "w2b-11-pay-fee-online.txt",
+  "processor": "ultra"
+ },
+ {
+  "name": "w2b-12-jaipur-main-site",
+  "run_id": "trun_3f562c0a76034469847d6426bee09b70",
+  "brief": "w2b-12-jaipur-main-site.txt",
+  "processor": "ultra"
+ },
+ {
+  "name": "w2b-13-parents-campus-life",
+  "run_id": "trun_bb5e6f8c8ba14df38a76d987c1e42f11",
+  "brief": "w2b-13-parents-campus-life.txt",
+  "processor": "ultra"
+ },
+ {
+  "name": "w2b-14-manipal-edu-group",
+  "run_id": "trun_0214ead193f24ad8b32f4955f21cf17f",
+  "brief": "w2b-14-manipal-edu-group.txt",
+  "processor": "ultra"
+ },
+ {
+  "name": "w2c-01-csrf-mvc5",
+  "run_id": "trun_4f77acf09e76419689f3ff30e8e43c74",
+  "brief": "w2c-01-csrf-mvc5.txt",
+  "processor": "ultra8x"
+ },
+ {
+  "name": "w2c-02-session-management",
+  "run_id": "trun_61e27307c9f74ca3acd7d2faa683fa23",
+  "brief": "w2c-02-session-management.txt",
+  "processor": "ultra8x"
+ },
+ {
+  "name": "w2c-03-authn-bypass-mvc",
+  "run_id": "trun_4f77acf09e76419694d7108c41d2890b",
+  "brief": "w2c-03-authn-bypass-mvc.txt",
+  "processor": "ultra8x"
+ },
+ {
+  "name": "w2c-04-idor-university-erp",
+  "run_id": "trun_61e27307c9f74ca3b3ce4fe298fde847",
+  "brief": "w2c-04-idor-university-erp.txt",
+  "processor": "ultra8x"
+ },
+ {
+  "name": "w2c-05-register-number-enum",
+  "run_id": "trun_4f77acf09e76419696f4751b7dea0af1",
+  "brief": "w2c-05-register-number-enum.txt",
+  "processor": "ultra8x"
+ },
+ {
+  "name": "w2c-06-rate-limit-lockout",
+  "run_id": "trun_8e76224575aa4dd29d382f0e647f3ee7",
+  "brief": "w2c-06-rate-limit-lockout.txt",
+  "processor": "ultra8x"
+ },
+ {
+  "name": "w2c-07-password-reset-flows",
+  "run_id": "trun_4f77acf09e76419698e39269c5869155",
+  "brief": "w2c-07-password-reset-flows.txt",
+  "processor": "ultra8x"
+ },
+ {
+  "name": "w2c-08-header-hardening",
+  "run_id": "trun_4f77acf09e7641969abb3e257c3aba33",
+  "brief": "w2c-08-header-hardening.txt",
+  "processor": "ultra8x"
+ },
+ {
+  "name": "w2c-09-tls-config",
+  "run_id": "trun_4f77acf09e76419692c1a65fb37b537e",
+  "brief": "w2c-09-tls-config.txt",
+  "processor": "ultra8x"
+ },
+ {
+  "name": "w2c-10-email-spoofing",
+  "run_id": "trun_4f77acf09e764196ab806d7d50d9839b",
+  "brief": "w2c-10-email-spoofing.txt",
+  "processor": "ultra8x"
+ },
+ {
+  "name": "w2c-11-subdomain-takeover",
+  "run_id": "trun_06f6dcfc8a8d450b853f7214c34c978d",
+  "brief": "w2c-11-subdomain-takeover.txt",
+  "processor": "ultra8x"
+ },
+ {
+  "name": "w2c-12-clickjacking-frames",
+  "run_id": "trun_8e76224575aa4dd2a63d96b793265154",
+  "brief": "w2c-12-clickjacking-frames.txt",
+  "processor": "ultra8x"
+ },
+ {
+  "name": "w2c-13-open-redirect-mvc",
+  "run_id": "trun_8e76224575aa4dd29a7aad0eae3d21f9",
+  "brief": "w2c-13-open-redirect-mvc.txt",
+  "processor": "ultra8x"
+ },
+ {
+  "name": "w2c-14-file-upload-surfaces",
+  "run_id": "trun_8e76224575aa4dd28cb0da8779b2528e",
+  "brief": "w2c-14-file-upload-surfaces.txt",
+  "processor": "ultra8x"
+ },
+ {
+  "name": "w2c-15-payment-flow-manipulation",
+  "run_id": "trun_8e76224575aa4dd282ccd21c839807bf",
+  "brief": "w2c-15-payment-flow-manipulation.txt",
+  "processor": "ultra8x"
+ },
+ {
+  "name": "w2c-16-ssrf-mvc",
+  "run_id": "trun_8e76224575aa4dd2b260994ded823cc9",
+  "brief": "w2c-16-ssrf-mvc.txt",
+  "processor": "ultra8x"
+ },
+ {
+  "name": "w2c-17-deserialization-net",
+  "run_id": "trun_8e76224575aa4dd2875067aad8774286",
+  "brief": "w2c-17-deserialization-net.txt",
+  "processor": "ultra8x"
+ },
+ {
+  "name": "w2c-18-iis-shortname-webdav",
+  "run_id": "trun_8e76224575aa4dd2a38e78bfef336675",
+  "brief": "w2c-18-iis-shortname-webdav.txt",
+  "processor": "ultra8x"
+ },
+ {
+  "name": "w2c-19-machinekey-viewstate",
+  "run_id": "trun_1d77d4fcc80c49f3942e7cd5f9e65b67",
+  "brief": "w2c-19-machinekey-viewstate.txt",
+  "processor": "ultra8x"
+ },
+ {
+  "name": "w2c-20-api-security",
+  "run_id": "trun_06f6dcfc8a8d450baa43921980febfa7",
+  "brief": "w2c-20-api-security.txt",
+  "processor": "ultra8x"
+ },
+ {
+  "name": "w2c-21-jwt-session-tokens",
+  "run_id": "trun_06f6dcfc8a8d450bb18c0505461cee90",
+  "brief": "w2c-21-jwt-session-tokens.txt",
+  "processor": "ultra8x"
+ },
+ {
+  "name": "w2c-22-third-party-integrations",
+  "run_id": "trun_06f6dcfc8a8d450ba3041a7c0a411ec8",
+  "brief": "w2c-22-third-party-integrations.txt",
+  "processor": "ultra8x"
+ },
+ {
+  "name": "w2d-01-regnum-format",
+  "run_id": "trun_06f6dcfc8a8d450b99e8fb3051a7f448",
+  "brief": "w2d-01-regnum-format.txt",
+  "processor": "ultra"
+ },
+ {
+  "name": "w2d-02-marks-results",
+  "run_id": "trun_06f6dcfc8a8d450ba01165bc725158ad",
+  "brief": "w2d-02-marks-results.txt",
+  "processor": "ultra"
+ },
+ {
+  "name": "w2d-03-fee-documents",
+  "run_id": "trun_06f6dcfc8a8d450bbfd61ad8d995ed27",
+  "brief": "w2d-03-fee-documents.txt",
+  "processor": "ultra"
+ },
+ {
+  "name": "w2d-04-exam-circulars",
+  "run_id": "trun_06f6dcfc8a8d450ba84e5316a1002387",
+  "brief": "w2d-04-exam-circulars.txt",
+  "processor": "ultra"
+ },
+ {
+  "name": "w2d-05-hostel-transport",
+  "run_id": "trun_06f6dcfc8a8d450ba280e9758d4ab5eb",
+  "brief": "w2d-05-hostel-transport.txt",
+  "processor": "ultra"
+ },
+ {
+  "name": "w2d-06-orientation-docs",
+  "run_id": "trun_06f6dcfc8a8d450b96ebb9a8f521fba5",
+  "brief": "w2d-06-orientation-docs.txt",
+  "processor": "ultra"
+ },
+ {
+  "name": "w2d-07-library-integration",
+  "run_id": "trun_06f6dcfc8a8d450bbb6a003782be570d",
+  "brief": "w2d-07-library-integration.txt",
+  "processor": "ultra"
+ },
+ {
+  "name": "w2d-08-placement-data",
+  "run_id": "trun_06f6dcfc8a8d450b8b9863e35df291e1",
+  "brief": "w2d-08-placement-data.txt",
+  "processor": "ultra"
+ },
+ {
+  "name": "w2d-09-staff-directory",
+  "run_id": "trun_06f6dcfc8a8d450b9707d1f38c46cb86",
+  "brief": "w2d-09-staff-directory.txt",
+  "processor": "ultra"
+ },
+ {
+  "name": "w2e-01-india-uni-breach-history",
+  "run_id": "trun_06f6dcfc8a8d450bb474d9c48e51be76",
+  "brief": "w2e-01-india-uni-breach-history.txt",
+  "processor": "ultra8x"
+ },
+ {
+  "name": "w2e-02-india-uni-vdp",
+  "run_id": "trun_06f6dcfc8a8d450ba65d1b8f775aae17",
+  "brief": "w2e-02-india-uni-vdp.txt",
+  "processor": "ultra8x"
+ },
+ {
+  "name": "w2e-03-disclosure-case-studies",
+  "run_id": "trun_06f6dcfc8a8d450b81dbc3bfd9d19b4c",
+  "brief": "w2e-03-disclosure-case-studies.txt",
+  "processor": "ultra8x"
+ },
+ {
+  "name": "w2e-04-slcm-vendor-id",
+  "run_id": "trun_5f5afbfddbdb44f9800593c14cb7ed6e",
+  "brief": "w2e-04-slcm-vendor-id.txt",
+  "processor": "ultra8x"
+ },
+ {
+  "name": "w2e-05-india-erp-vendors",
+  "run_id": "trun_1d77d4fcc80c49f3afdd010f5b73793f",
+  "brief": "w2e-05-india-erp-vendors.txt",
+  "processor": "ultra8x"
+ },
+ {
+  "name": "w2e-06-mit-manipal-systems",
+  "run_id": "trun_1d77d4fcc80c49f3810898b188b1e8cb",
+  "brief": "w2e-06-mit-manipal-systems.txt",
+  "processor": "ultra8x"
+ },
+ {
+  "name": "w2e-07-manipal-dubai",
+  "run_id": "trun_1d77d4fcc80c49f3be10157294c26c61",
+  "brief": "w2e-07-manipal-dubai.txt",
+  "processor": "ultra8x"
+ },
+ {
+  "name": "w2e-08-sikkim-manipal",
+  "run_id": "trun_1d77d4fcc80c49f3a81b2b2351c168de",
+  "brief": "w2e-08-sikkim-manipal.txt",
+  "processor": "ultra8x"
+ },
+ {
+  "name": "w2e-09-manipal-malaysia",
+  "run_id": "trun_1d77d4fcc80c49f3ba192dbfd37526bb",
+  "brief": "w2e-09-manipal-malaysia.txt",
+  "processor": "ultra8x"
+ },
+ {
+  "name": "w2e-10-keentheme-portals",
+  "run_id": "trun_1d77d4fcc80c49f3b68ddc306390469d",
+  "brief": "w2e-10-keentheme-portals.txt",
+  "processor": "ultra8x"
+ },
+ {
+  "name": "w2e-11-iis-mvc-student-portals",
+  "run_id": "trun_1d77d4fcc80c49f383a469092beafee4",
+  "brief": "w2e-11-iis-mvc-student-portals.txt",
+  "processor": "ultra8x"
+ },
+ {
+  "name": "w2e-12-certin-bugbounty",
+  "run_id": "trun_d0858e3af18d4b7eab25e42c0db2b8bc",
+  "brief": "w2e-12-certin-bugbounty.txt",
+  "processor": "ultra8x"
+ },
+ {
+  "name": "w2f-01-iis10-cve-sweep",
+  "run_id": "trun_5f5afbfddbdb44f9998479431c5a026d",
+  "brief": "w2f-01-iis10-cve-sweep.txt",
+  "processor": "ultra8x"
+ },
+ {
+  "name": "w2f-02-dotnet-patch-level",
+  "run_id": "trun_5f5afbfddbdb44f981bb926da7ef3905",
+  "brief": "w2f-02-dotnet-patch-level.txt",
+  "processor": "ultra8x"
+ },
+ {
+  "name": "w2f-03-jquery-cve-sweep",
+  "run_id": "trun_5f5afbfddbdb44f9983e831010b3d2b6",
+  "brief": "w2f-03-jquery-cve-sweep.txt",
+  "processor": "ultra8x"
+ },
+ {
+  "name": "w2f-04-mvc53-known-issues",
+  "run_id": "trun_5f5afbfddbdb44f9a2536b3204588f61",
+  "brief": "w2f-04-mvc53-known-issues.txt",
+  "processor": "ultra8x"
+ },
+ {
+  "name": "w2f-05-keen-theme-cve",
+  "run_id": "trun_5f5afbfddbdb44f9a456a998b8a0194d",
+  "brief": "w2f-05-keen-theme-cve.txt",
+  "processor": "ultra8x"
+ },
+ {
+  "name": "w2f-06-akamai-edge",
+  "run_id": "trun_5f5afbfddbdb44f99961570f6c337872",
+  "brief": "w2f-06-akamai-edge.txt",
+  "processor": "ultra8x"
+ },
+ {
+  "name": "w2f-07-entra-tenant-enum",
+  "run_id": "trun_5f5afbfddbdb44f98a4d45fa1865fac1",
+  "brief": "w2f-07-entra-tenant-enum.txt",
+  "processor": "ultra8x"
+ },
+ {
+  "name": "w2f-08-brightspace-security",
+  "run_id": "trun_e8e1b85f89a04b918788c4edc05fc1de",
+  "brief": "w2f-08-brightspace-security.txt",
+  "processor": "ultra8x"
+ },
+ {
+  "name": "w2f-09-campus-ad-patterns",
+  "run_id": "trun_d0858e3af18d4b7ea348786fef9d545b",
+  "brief": "w2f-09-campus-ad-patterns.txt",
+  "processor": "ultra8x"
+ },
+ {
+  "name": "w2f-10-ct-cert-patterns",
+  "run_id": "trun_d0858e3af18d4b7e878a922ca4ca5487",
+  "brief": "w2f-10-ct-cert-patterns.txt",
+  "processor": "ultra8x"
+ },
+ {
+  "name": "w2f-11-dns-hygiene",
+  "run_id": "trun_d0858e3af18d4b7ead2826bde2a00ef3",
+  "brief": "w2f-11-dns-hygiene.txt",
+  "processor": "ultra8x"
+ },
+ {
+  "name": "w2f-12-waf-fingerprint",
+  "run_id": "trun_d0858e3af18d4b7ea7915097bc2027ea",
+  "brief": "w2f-12-waf-fingerprint.txt",
+  "processor": "ultra8x"
+ },
+ {
+  "name": "w2g-01-reddit-r-manipal",
+  "run_id": "trun_d0858e3af18d4b7e8f0b46c925ea1e9f",
+  "brief": "w2g-01-reddit-r-manipal.txt",
+  "processor": "ultra"
+ },
+ {
+  "name": "w2g-02-reddit-india-academics",
+  "run_id": "trun_d0858e3af18d4b7e84b3e248ff3d939b",
+  "brief": "w2g-02-reddit-india-academics.txt",
+  "processor": "ultra"
+ },
+ {
+  "name": "w2g-03-quora-manipal",
+  "run_id": "trun_d0858e3af18d4b7ea1f17ccc4182ad20",
+  "brief": "w2g-03-quora-manipal.txt",
+  "processor": "ultra"
+ },
+ {
+  "name": "w2g-04-twitter-x",
+  "run_id": "trun_d0858e3af18d4b7e9957e07de482e556",
+  "brief": "w2g-04-twitter-x.txt",
+  "processor": "ultra"
+ },
+ {
+  "name": "w2g-05-youtube-tutorials",
+  "run_id": "trun_d0858e3af18d4b7eba2db43bceb44037",
+  "brief": "w2g-05-youtube-tutorials.txt",
+  "processor": "ultra"
+ },
+ {
+  "name": "w2g-06-github-orgs-clubs",
+  "run_id": "trun_d0858e3af18d4b7eb67e4382aed21d38",
+  "brief": "w2g-06-github-orgs-clubs.txt",
+  "processor": "ultra"
+ },
+ {
+  "name": "w2g-07-github-code-muj",
+  "run_id": "trun_d0858e3af18d4b7eba75171221b2a55e",
+  "brief": "w2g-07-github-code-muj.txt",
+  "processor": "ultra"
+ },
+ {
+  "name": "w2g-08-linkedin-sicm-devs",
+  "run_id": "trun_d0858e3af18d4b7ebfb37c55aabd21c2",
+  "brief": "w2g-08-linkedin-sicm-devs.txt",
+  "processor": "ultra"
+ },
+ {
+  "name": "w2g-09-job-postings",
+  "run_id": "trun_d0858e3af18d4b7eb371b566a94114fa",
+  "brief": "w2g-09-job-postings.txt",
+  "processor": "ultra"
+ },
+ {
+  "name": "w2g-10-stackoverflow",
+  "run_id": "trun_d0858e3af18d4b7e9fee3b7c4dd7199a",
+  "brief": "w2g-10-stackoverflow.txt",
+  "processor": "ultra"
+ },
+ {
+  "name": "w2g-11-npm-pypi",
+  "run_id": "trun_d0858e3af18d4b7eacc3e8112e7137c2",
+  "brief": "w2g-11-npm-pypi.txt",
+  "processor": "ultra"
+ },
+ {
+  "name": "w2g-12-google-dorks",
+  "run_id": "trun_d0858e3af18d4b7ebfb4a19b79de4c38",
+  "brief": "w2g-12-google-dorks.txt",
+  "processor": "ultra"
+ },
+ {
+  "name": "w2g-13-telegram-discord",
+  "run_id": "trun_d0858e3af18d4b7e95583098429ea9cd",
+  "brief": "w2g-13-telegram-discord.txt",
+  "processor": "ultra"
+ },
+ {
+  "name": "w2g-14-wayback-family",
+  "run_id": "trun_d0858e3af18d4b7eb44c51c47a80e7b9",
+  "brief": "w2g-14-wayback-family.txt",
+  "processor": "ultra"
+ },
+ {
+  "name": "w2x-00-tech-stack-redo",
+  "run_id": "trun_d0858e3af18d4b7ea9eeab4ab7622ab5",
+  "brief": "w2x-00-tech-stack-redo.txt",
+  "processor": "ultra8x"
+ }
+]

@@ -1,0 +1,6 @@
+You are a senior OSINT and application security research analyst. Produce a comprehensive, citation-rich report for a university security club researching the MUJ SLCM ecosystem (mujslcm.jaipur.manipal.edu: ASP.NET MVC 5.3, .NET Framework 4.x, IIS 10 behind Akamai, Microsoft 365 identity).
+
+FOCUS: Authentication bypass patterns in ASP.NET MVC 5 apps with centralized [Authorize] gates: route parameter tricks, trailing dot/slash/IIS path normalization bypasses, backslash tricks, Unicode normalization, case sensitivity gaps, extensionless routing conflicts, static-file handler shadows, and direct-url access to controller actions that lack [Authorize]. Map each to SLCM route guesses (/Home/, /Student/, /Staff/, /api/).
+
+
+DEMAND: Inline [n] citation markers with exact URLs for every claim. Data tables where listing anything. Final VERDICT section with confidence level. Structure with exact_tables. Chain-of-thought reasoning (cot_explicit). Target 3000+ words (w3000). Public information only; label every inference as such; never instruct unauthorized access.

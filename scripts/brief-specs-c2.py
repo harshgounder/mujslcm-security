@@ -1,0 +1,26 @@
+# Family C2: vuln-class deep dives, second half.
+# Each spec: (slug, focus_text)
+SPECS = [
+("w2c-12-clickjacking-frames",
+ "Clickjacking surface: XFO SAMEORIGIN present on mujslcm (good) but missing on slcm.manipal.edu; frame-ancestors CSP absent; legacy Keen theme UI with many iframe-able actions; test plan for frame busting, drag-and-drop clickjacking, and double-frame bypasses."),
+("w2c-13-open-redirect-mvc",
+ "Open redirect patterns in MVC login flows: observed ReturnUrl -> encrypted 'enc' parameter appended to /Home/Index; how the enc parameter might be generated (machine key encryption? plain base64? HMAC?), validation behavior, and classic MVC redirect pitfalls (Url.Local vs full URLs, //host tricks)."),
+("w2c-14-file-upload-surfaces",
+ "File upload surfaces in student portals: document upload for verification (the FAQ says mandatory documents), fee proof uploads, avatar images; extension/content-type filtering gaps, .NET HttpPostedFile pitfalls, filename traversal in downloads, malware delivery risk, and what upload paths typically exist in SLCM-class apps."),
+("w2c-15-payment-flow-manipulation",
+ "Fee payment flow manipulation in Indian university ERPs: gateway integration patterns (BillDesk/Razorpay/CCAvenue redirect + return checksum), amount/currency tampering, order-reference forgery, receipt IDOR, refund abuse, and published incidents in Indian edu payment portals. Map a non-destructive test plan for the fee module."),
+("w2c-16-ssrf-mvc",
+ "SSRF patterns in ASP.NET MVC: image URL import, webhooks, PDF generation from URLs, XML external entity in document processors; .NET-specific constraints (WebRequest, HttpWebRequest), loopback protections that fail on IIS/Akamai, and how to plan SSRF tests without causing outbound damage."),
+("w2c-17-deserialization-net",
+ ".NET deserialization risk surface: BinaryFormatter usages in MVC apps, ViewState MAC on WebForms pages (sis.manipal.edu-style remnants), machineKey exposure consequences, ysoserial.net classes (ObjectStateFormatter, LosFormatter), and older .NET 4.x patch level implications (observed ASP.NET 4.7.4136.0)."),
+("w2c-18-iis-shortname-webdav",
+ "IIS-specific disclosures: 8.3 short filename enumeration (tilde tricks), WebDAV enabled/disabled detection, OPTIONS/PUT/DELETE verb behavior (observed PUT 411, others 404), system.webServer config fingerprints, and known IIS 10 misconfig patterns in edu deployments."),
+("w2c-19-machinekey-viewstate",
+ "machineKey management in ASP.NET 4.x: auto-generated vs fixed keys, key reuse across instances (mujslcm vs muj.slcm if same app), ViewState/data protection consequences, and how to test for default machineKey exposure from public artifacts."),
+("w2c-20-api-security",
+ "API surface security in SLCM-class portals: ASP.NET Web API routes, ASMX/SVC web services, JSON endpoints behind MVC, token handling (session cookie vs bearer), CORS misconfigs, verbose error responses, and public evidence of API routes in student scripts and docs."),
+("w2c-21-jwt-session-tokens",
+ "Token formats and JWT pitfalls in student portal ecosystems: where JWTs appear (third-party apps: MUJ Connect, Brightspace), alg confusion, missing signature validation, short/long expiry, and how SLCM session cookies compare. Public evidence only."),
+("w2c-22-third-party-integrations",
+ "Third-party integration seams: Microsoft 365 / Entra (observed), Brightspace LMS, Cisco Webex (domain verification TXT), NoPaperForms (admissions CNAME), Akamai edge: data flows between them (who provisions accounts, who syncs grades/fees), integration misconfig patterns (shared secrets, webhook unauthenticated endpoints), and public docs describing these integrations."),
+]

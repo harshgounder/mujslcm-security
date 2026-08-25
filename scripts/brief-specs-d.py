@@ -1,0 +1,21 @@
+# Family D: student-data category mining. Each spec: (slug, focus_text)
+SPECS = [
+("w2d-01-regnum-format",
+ "MUJ register number format science: examples like 2506040062 across years/batches, batch-prefix patterns, stream/branch code mappings, campus codes, where the format is documented publicly (admission letters, PDFs, LinkedIn titles), and the enumeration math (how many valid usernames are derivable). Public info only."),
+("w2d-02-marks-results",
+ "Public marks and result artifacts for MUJ: result PDFs, rank lists, semester result notices, any public result-lookup service (RMS), formats of marks statements, and how marks data flows between SLCM, RMS, and the registrar. Public docs only."),
+("w2d-03-fee-documents",
+ "Fee-related public artifacts: fee structure PDFs per program, hostel/transport fees, payment receipt formats, due-date circulars, late-fee rules, fee waiver docs, and any public portal screenshots showing the fee module UI."),
+("w2d-04-exam-circulars",
+ "Exam-related public artifacts: exam form processes, hall ticket formats, exam timetables, back-paper procedures, results grievance windows, and public mentions of exam-marks disputes that hint at update paths in the backend."),
+("w2d-05-hostel-transport",
+ "Hostel and transport allotment artifacts: allotment lists (often published as PDFs with student names and register numbers), room change procedures, transport routes, and privacy implications of published lists."),
+("w2d-06-orientation-docs",
+ "Orientation and onboarding artifacts: orientation handbooks, SLCM step-by-step login guides (PDFs/PPT), first-time login instructions, default password language, and account provisioning descriptions (who creates the account, when)."),
+("w2d-07-library-integration",
+ "MUJ library systems and their link to SLCM: library portal URLs, OPAC brands, student ID integration, overdue/fine flows, and any public library API or search endpoint exposing student-related data."),
+("w2d-08-placement-data",
+ "Placement-related public data: placement brochures, salary statistics PDFs, training (T&P) portal links, and how placement portals authenticate (same SLCM account? separate?). Public info only."),
+("w2d-09-staff-directory",
+ "MUJ staff/faculty directory data: faculty pages on jaipur.manipal.edu (names, emails, photos), department pages, extension lists, and how much of the staff directory is publicly enumerable."),
+]
