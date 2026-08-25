@@ -123,11 +123,13 @@ class Session:
                 f"&__RequestVerificationToken={tok.group(1)}")
         st, h, b = self._req("POST", "/", data)
         body = b.decode(errors="replace")
-        for k, v in (h.get("Set-Cookie", "") or "").split(","):
-            kv = v.strip().split(";")[0]
-            if "=" in kv:
-                kk, vv = kv.split("=", 1)
-                self.cookies[kk] = vv
+        sc = h.get("Set-Cookie") or ""
+        if sc:
+            for piece in sc.split(","):
+                kv = piece.strip().split(";")[0]
+                if "=" in kv:
+                    kk, vv = kv.split("=", 1)
+                    self.cookies[kk] = vv
         ok = st == 200 and "Invalid" not in body[:4000] and "__RequestVerificationToken" in body
         self.ev("login", ok=ok, st=st, size=len(b), cookies=list(self.cookies))
         return ok
