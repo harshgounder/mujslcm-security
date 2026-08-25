@@ -4,6 +4,8 @@
   "processor": "ultra",
   "key_tail": "BepFko",
   "launched": "2026-08-25T17:40:07Z",
-  "done": false,
-  "type": "task"
+  "done": true,
+  "type": "task",
+  "completed": "2026-08-25T18:00:42Z",
+  "out_chars": 54600
 }

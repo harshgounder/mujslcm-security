@@ -4,6 +4,8 @@
   "processor": "ultra",
   "key_tail": "NZMgu9",
   "launched": "2026-08-25T17:41:04Z",
-  "done": false,
-  "type": "task"
+  "done": true,
+  "type": "task",
+  "completed": "2026-08-25T18:00:48Z",
+  "out_chars": 41816
 }
