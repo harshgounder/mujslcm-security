@@ -54,14 +54,20 @@ Status: verified hands-on 2026-08-25 (recon phase). Evidence: recon/ dir.
   Permissions-Policy, COOP
 - x-powered-by: ASP.NET exposed (F3)
 
-## Route surface (observed)
+## Route surface (observed) — CORRECTED 2026-08-25 (REAUDIT E1)
 
-- /Home/Index : login page (all unauth routes 302 there)
-- /Account/Login, /Student/Index, /Staff/Index, /api/values,
-  /Home/About, /Home/Error, faculty-guessed paths: all 302 (auth gate)
-- /Home/Index?ReturnUrl=... : enc parameter injection (studied)
+- /Home/Index : login page
+- ALL <=3-segment paths 302 to the auth gate, including junk
+  (/zzz.aspx, /Content/nonexistent.css, /api/values, /Home/zzz):
+  302 does NOT prove a route exists. Only 4+ segment paths 404
+  (/Foo/Bar/Baz/Quux) and .axd handlers diverge (trace 403, elmah 404).
+- /Home/Index?enc=... : enc parameter injection (studied: F1b/F8:
+  FormatException on non-base64, CryptographicException on valid
+  base64 = machineKey-protected blob)
 - /elmah.axd : 404 (clean)
 - /trace.axd : 403 (exists, restricted) (F2)
+- Route-name candidates after auth come from third-party client code
+  (w2c-20: 13 routes incl. attendance/marks/timetable/OTP), NOT probes.
 - /robots.txt : redirects to /Home/Index
 - Verbs: GET/POST normal; PUT 411/404, TRACE/DELETE/PATCH 404,
   OPTIONS 404
