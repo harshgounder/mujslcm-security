@@ -1,0 +1,11 @@
+{
+  "name": "w5-g-01-reflected-stored-and-dom-cross-site-scripting",
+  "run_id": "trun_a14d9af30652453e9dc6b014af54ec46",
+  "processor": "ultra",
+  "key_tail": "d0rbQA",
+  "launched": "2026-09-13T11:01:58Z",
+  "done": true,
+  "type": "task",
+  "state": "completed",
+  "chars": 47244
+}

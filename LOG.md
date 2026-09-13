@@ -154,3 +154,9 @@ Mistakes are logged in full, they are part of the asset.
   ledger per run, wave5-runs.json as the index
 - every brief carries the measured live facts and the authorization split (what is safe before the
   letter, what needs the letter and the test accounts)
+
+## 2026-09-13: wave 5 landed and digested
+- 25/25 reports saved, 1,186,037 chars, all completed, zero NOT_FOUND, key spread KJ2lhZ 19 / jhBOeM 5 / d0rbQA 1
+- scripts/digest-w5.py (deterministic, no model calls) -> research/DIGEST-W5.md + research/w5-rows.json
+- parsed: 472 tool rows, 106 no-tool gap rows, 64 build candidates
+- the byok gap register (catalog/59) now carries the wave-5 rows alongside the WEBHACK and wave-universe rows

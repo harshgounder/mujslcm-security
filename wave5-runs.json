@@ -1,0 +1,152 @@
+[
+ {
+  "name": "w5-g-01-reflected-stored-and-dom-cross-site-scripting",
+  "run_id": "trun_a14d9af30652453e9dc6b014af54ec46",
+  "brief": "w5-g-01-reflected-stored-and-dom-cross-site-scripting.txt",
+  "processor": "ultra"
+ },
+ {
+  "name": "w5-g-02-sql-and-nosql-injection",
+  "run_id": "trun_8e2613952c244c29929fa6d38ce6e10b",
+  "brief": "w5-g-02-sql-and-nosql-injection.txt",
+  "processor": "ultra8x"
+ },
+ {
+  "name": "w5-g-03-server-side-request-forgery-and-internal-plane-a",
+  "run_id": "trun_8e2613952c244c29b54f891d1b438d2c",
+  "brief": "w5-g-03-server-side-request-forgery-and-internal-plane-a.txt",
+  "processor": "ultra"
+ },
+ {
+  "name": "w5-g-04-cross-site-request-forgery-under-authentication",
+  "run_id": "trun_8e2613952c244c29b2b68d9324edbc17",
+  "brief": "w5-g-04-cross-site-request-forgery-under-authentication.txt",
+  "processor": "ultra"
+ },
+ {
+  "name": "w5-g-05-client-side-and-browser-layer-classes-cors-postm",
+  "run_id": "trun_8e2613952c244c29ae73c4eb7acc597f",
+  "brief": "w5-g-05-client-side-and-browser-layer-classes-cors-postm.txt",
+  "processor": "ultra"
+ },
+ {
+  "name": "w5-g-06-xml-external-entities-and-file-format-parsing",
+  "run_id": "trun_8e2613952c244c29967a4cd822c3f554",
+  "brief": "w5-g-06-xml-external-entities-and-file-format-parsing.txt",
+  "processor": "ultra"
+ },
+ {
+  "name": "w5-g-07-server-side-template-injection-and-expression-la",
+  "run_id": "trun_8e2613952c244c29a1f81b9ee788b722",
+  "brief": "w5-g-07-server-side-template-injection-and-expression-la.txt",
+  "processor": "ultra"
+ },
+ {
+  "name": "w5-g-08-request-smuggling-and-cache-poisoning-at-the-azu",
+  "run_id": "trun_8e2613952c244c299d87658a8c55ccc3",
+  "brief": "w5-g-08-request-smuggling-and-cache-poisoning-at-the-azu.txt",
+  "processor": "ultra"
+ },
+ {
+  "name": "w5-g-09-business-logic-state-machines-and-race-condition",
+  "run_id": "trun_8e2613952c244c29b097b23dc4240dee",
+  "brief": "w5-g-09-business-logic-state-machines-and-race-condition.txt",
+  "processor": "ultra8x"
+ },
+ {
+  "name": "w5-g-10-deserialisation-beyond-machinekey-and-viewstate",
+  "run_id": "trun_8e2613952c244c298047c569f8dd667a",
+  "brief": "w5-g-10-deserialisation-beyond-machinekey-and-viewstate.txt",
+  "processor": "ultra"
+ },
+ {
+  "name": "w5-g-11-file-inclusion-path-traversal-and-upload-bypass",
+  "run_id": "trun_8e2613952c244c29bae3f62eb45efe0e",
+  "brief": "w5-g-11-file-inclusion-path-traversal-and-upload-bypass.txt",
+  "processor": "ultra"
+ },
+ {
+  "name": "w5-g-12-access-control-beyond-the-planned-idor-sweep",
+  "run_id": "trun_8e2613952c244c29adfd74aaa35db076",
+  "brief": "w5-g-12-access-control-beyond-the-planned-idor-sweep.txt",
+  "processor": "ultra"
+ },
+ {
+  "name": "w5-g-13-graphql-and-api-shape-abuse",
+  "run_id": "trun_8e2613952c244c29bf570c012ffc86e9",
+  "brief": "w5-g-13-graphql-and-api-shape-abuse.txt",
+  "processor": "ultra"
+ },
+ {
+  "name": "w5-g-14-authentication-and-token-abuse-beyond-the-login-",
+  "run_id": "trun_8e2613952c244c29b238698967f8855c",
+  "brief": "w5-g-14-authentication-and-token-abuse-beyond-the-login-.txt",
+  "processor": "ultra"
+ },
+ {
+  "name": "w5-g-15-web-application-firewall-and-edge-control-bypass",
+  "run_id": "trun_8e2613952c244c29b626a23a2860f240",
+  "brief": "w5-g-15-web-application-firewall-and-edge-control-bypass.txt",
+  "processor": "ultra"
+ },
+ {
+  "name": "w5-g-16-subdomain-takeover-verification-to-the-provider-",
+  "run_id": "trun_8e2613952c244c29828105d816847303",
+  "brief": "w5-g-16-subdomain-takeover-verification-to-the-provider-.txt",
+  "processor": "ultra"
+ },
+ {
+  "name": "w5-g-17-clickjacking-with-real-frame-rendering",
+  "run_id": "trun_8e2613952c244c299c6325aa61cee752",
+  "brief": "w5-g-17-clickjacking-with-real-frame-rendering.txt",
+  "processor": "ultra"
+ },
+ {
+  "name": "w5-g-18-the-azure-control-plane-under-the-app",
+  "run_id": "trun_8e2613952c244c29a9028ecb506e50e7",
+  "brief": "w5-g-18-the-azure-control-plane-under-the-app.txt",
+  "processor": "ultra8x"
+ },
+ {
+  "name": "w5-g-19-the-entra-and-m365-identity-control-plane",
+  "run_id": "trun_8e2613952c244c2997535de959f42c48",
+  "brief": "w5-g-19-the-entra-and-m365-identity-control-plane.txt",
+  "processor": "ultra8x"
+ },
+ {
+  "name": "w5-g-20-detection-engineering-and-defensive-validation-f",
+  "run_id": "trun_8e2613952c244c299b825113b3ce8c57",
+  "brief": "w5-g-20-detection-engineering-and-defensive-validation-f.txt",
+  "processor": "ultra8x"
+ },
+ {
+  "name": "w5-g-21-data-protection-law-and-the-reporting-chain-as-t",
+  "run_id": "trun_7770efd00f9045c1a49b3e4e2ec55e25",
+  "brief": "w5-g-21-data-protection-law-and-the-reporting-chain-as-t.txt",
+  "processor": "ultra8x"
+ },
+ {
+  "name": "w5-g-22-supply-chain-and-dependency-handling-for-a-net-a",
+  "run_id": "trun_7770efd00f9045c1ba65faefcf6a8f84",
+  "brief": "w5-g-22-supply-chain-and-dependency-handling-for-a-net-a.txt",
+  "processor": "ultra"
+ },
+ {
+  "name": "w5-g-23-mobile-client-static-analysis",
+  "run_id": "trun_7770efd00f9045c19b43a44a611c1161",
+  "brief": "w5-g-23-mobile-client-static-analysis.txt",
+  "processor": "ultra"
+ },
+ {
+  "name": "w5-g-24-social-engineering-and-human-vector-classes",
+  "run_id": "trun_7770efd00f9045c18c76e7e4999a96a8",
+  "brief": "w5-g-24-social-engineering-and-human-vector-classes.txt",
+  "processor": "ultra"
+ },
+ {
+  "name": "w5-g-25-fix-verification-and-the-retest-loop",
+  "run_id": "trun_7770efd00f9045c1a4c8da338ad2d508",
+  "brief": "w5-g-25-fix-verification-and-the-retest-loop.txt",
+  "processor": "ultra"
+ }
+]
