@@ -146,3 +146,11 @@ Mistakes are logged in full, they are part of the asset.
 - Tooling: wafw00f 2.4.2, testssl.sh 3.3dev, dockerised nmap 7.98, projectdiscovery nuclei 3.11.1
   (local lab only, 12 findings, 2114 requests), openssl 3.x, Cloudflare DoH, crt.sh
 - Held back on purpose: no scanners, no fuzzing, no auth attempts at the target (standing order 3.1).
+
+## 2026-09-13: wave 5 fired from the gap register
+- scripts/gen-wave5-briefs.py reads the byok gap register (catalog/59) and emits 25 briefs, w5-g-01
+  to w5-g-25, so the research cannot drift from the register
+- scripts/launch-wave5.py fired them, ultra8x for the technique universes and ultra for the rest,
+  ledger per run, wave5-runs.json as the index
+- every brief carries the measured live facts and the authorization split (what is safe before the
+  letter, what needs the letter and the test accounts)

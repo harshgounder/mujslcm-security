@@ -12,7 +12,7 @@
 | F reaudit lie-hunt | DONE | 20/20 confirmed, E1 fixed, REAUDIT doc |
 | G auth suite + letter | DONE | 6 scripts verified, template ready |
 | H kit (README/INDEX/TRACKER/LOG/CPROMPT) | DONE | this commit |
-| I wave 5 research | QUEUED | decision A |
+| I wave 5 research | FIRED | 25 gap-derived briefs launched 2026-09-13, wave5-runs.json |
 | K layer mapping (live) | DONE | 46 targeted requests, tools: curl, wafw00f, testssl, nmap, openssl, DoH, crt.sh. Scanner class held back, lab run only |
 | J authorized execution | BLOCKED | needs signed letter + 2 test accounts |
 
