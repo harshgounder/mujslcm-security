@@ -1,127 +1,84 @@
-# EXEC-SUMMARY : MUJ SLCM security research (club deliverable)
+# EXEC-SUMMARY: MUJ SLCM security research (club deliverable)
 
-Date: 2026-08-25. Repo: github.com/harshgounder/mujslcm-security (private).
-Scope: ONE target, https://mujslcm.jaipur.manipal.edu. All methods were
-recon-grade, no destructive testing, no auth bypass attempts.
+Date: 2026-09-13 (campaign 2026-08-25, layer pass and gap register 2026-09-13).
+Repo: github.com/harshgounder/mujslcm-security (private).
+Scope: one target, https://mujslcm.jaipur.manipal.edu. Recon-grade throughout, no destructive testing,
+no authentication attempts, no sibling host touched.
 
-## What this campaign produced
+## What this package produced
 
-- 110 parallel.ai runs launched, 109 unique reports saved (~4.3M chars)
-- Every report read to EOF and digested (109 digests with evidence labels)
-- 3 domain syntheses (vuln classes, surface map, context/precedent)
-- Hands-on verified findings below, each with raw evidence saved in recon/
-- Target-specific test plan and disclosure path (findings/TEST-PLAN.md,
-  findings/AGGRESSIVE-PLAYBOOK.md)
+- 135 research launches in this repo: 10 + 84 + 15 + 1 in the campaign, 25 in wave 5
+- 140 report and synthesis files, 5,585,870 chars, every one read to EOF
+- 109 per-run digests plus 3 domain syntheses plus a deterministic wave-5 digest
+- 10 verified hands-on findings, 1 documented error caught by a reaudit, and 4 corrections logged
+  in the layer pass
+- the full layer stack of the portal, L0 to L13, each row with its raw capture
+- a graded gap register against the WSTG spine: 25 gaps, 450 attached tool rows, 84 no-tool gaps,
+  47 build candidates
+- a target test plan, an aggressive-phase playbook, a gated auth-phase suite, and a disclosure letter
+  template
 
-## VERIFIED findings (evidence-backed, hands-on)
+## The picture of the target
 
-F1. Verbose .NET error pages. customErrors is off. Two independent triggers:
-    POST / without CSRF token returns 500 with full MVC stack trace
-    (HttpAntiForgeryException); /Home/Index?enc=zz returns 500 with
-    FormatException in System.Convert.FromBase64String. Exact runtime leaked:
-    .NET Framework 4.0.30319, ASP.NET 4.7.4136.0. CWE-209. Raw: recon/
-    mujslcm-post500.html + enc500.html.
-F2. trace.axd returns 403 (exists, restricted) while elmah.axd is 404.
-    ASP.NET tracing looks enabled but access-gated. If reachable from an
-    allowed network, request traces expose cookies and session IDs.
-F3. Version disclosure headers on every response: IIS 10.0, MVC 5.3,
-    x-powered-by ASP.NET. Aids precise exploit targeting.
-F4. jQuery 1.10.2 (2013) on the login page with known XSS-class CVEs
-    (CVE-2015-9251, CVE-2019-11358, CVE-2020-11022/11023). Client-side only,
-    impact depends on server rendering of user data.
-F5. Credential delivery by design: onboarding guide states SLCM username
-    and password are sent to the student's PERSONAL Gmail by the admissions
-    department, and the same password protects M365 email and SLCM. One
-    credential chain, personal-mail delivery = interception and phishing
-    surface. Username format name.registration-number is public knowledge
-    (example garv.2506040062 in official FAQ).
+IIS 10 with ASP.NET MVC 5.3 and .NET Framework 4.7.4136.0, served from a single Azure address
+(98.70.14.50, AS8075) with only port 443 reachable, no reverse proxy in front, no attributable WAF, TLS
+1.0 through 1.3 all accepted with 3DES and CBC suites, no HSTS, no downgrade protection, and a
+two-generation jQuery load (1.10.2 with 3.4.1 inside a 4.2 MB bundle). Identity is Microsoft 365: the
+portal password is the campus M365 password and usernames follow a public format. The estate around it
+spans Azure, AWS ap-south-1 and on-prem Jaipur ranges, with two live test instances and an identity
+provider host.
 
-## Clean tests (tested, no issue found)
+## Verified findings
 
-- No user enumeration via login response (random vs admin usernames return
-  byte-identical pages)
-- Anti-CSRF filter active on login (it is what triggers F1)
-- Server-side validation on empty credentials (client validation is not
-  the only gate)
-- elmah.axd absent; unknown routes 404; all app routes 302 to the login gate
-- Verb lockdown: PUT/DELETE/PATCH/TRACE 404 or 411
+F1. Verbose .NET error pages, four reproducible triggers, customErrors off, exact runtime leaked.
+F2. trace.axd returns 403, so ASP.NET tracing is enabled and restricted; ELMAH is absent.
+F3. Version banners: IIS 10, ASP.NET 4.0.30319, MVC 5.3, x-powered-by ASP.NET.
+F4. Legacy client stack: jQuery 1.10.2 (2013), confirmed live alongside a bundled 3.4.1.
+F5. Credential design: M365 password, public username format, reset delegated to Entra SSPR.
+F6. Password echo on failed login with a response-size oracle.
+F7. Request validation rejects hostile input by producing a YSOD, which is also what a WAF
+    fingerprinter mistakes for an edge control.
+F8. The `enc` parameter is a machineKey-protected blob. Live work refined this into a three-stage
+    oracle: not base64 gives FormatException at 4,942 bytes, valid base64 that fails decryption gives
+    CryptographicException at 5,084 bytes, and an empty value gives a third family.
+F9. The antiforgery cookie is HttpOnly without Secure, and no SameSite attribute is observed.
+F10. Edge posture at campaign time. Amended: WAF status is UNKNOWN from outside, not absent.
+E1. A route-oracle error the reaudit caught and corrected.
 
-## Attack surface map (topography)
+## What the layer pass added (2026-09-13)
 
-- Stack: IIS 10, ASP.NET MVC 5.3 on .NET Framework 4.x, Windows, Microsoft
-  Azure AS8075 central india (98.70.14.50; NOT Akamai), Entrust DV cert
-  (single SAN, issued 2025-12-22), TLS 1.0/1.1 enabled (SSL Labs grade B)
-- Identity: 3 separate Entra tenants (jaipur.manipal.edu = 7d0726e8-...,
-  muj.manipal.edu = 27282fdd-..., manipal.edu = 29bebd42-...), all Managed,
-  no AD FS. SLCM validates locally but password reset delegates to M365.
-  MFA mandatory since June 2025 per official SOP.
-- Email: SPF hard fail (-all), DKIM selectors present, DMARC p=none on all
-  three domains. Spoofing is possible; phishing against SLCM users is the
-  realistic attack chain.
-- Sibling estate (OSINT only, out of testing scope): muj.slcm (second live
-  SLCM host, Azure), mujerp (Business Central ERP), mujone (HR), rms
-  (research data), hms (hostel, Azure App Gateway), portal (EPF), uat
-  (Next.js behind Azure Front Door), api.manipal.edu (AWS EC2, Express,
-  CORS *), exam (BSNL/NIB), sis (MAHE, Fee Kart), lms (Brightspace),
-  admissions (NoPaperForms).
-- Subdomain takeover candidates: mycampus + testmycampus.jaipur.manipal.edu
-  CNAME to edtech366.azurewebsites.net which is NXDOMAIN. REPORT ONLY, do
-  not claim.
+- DNS: two SPF records on the parent domain (an SPF permerror), DMARC split across the family
+  (none, not published, reject), three DKIM tenants, senders that include SendGrid and Amazon SES
+- TLS measured properly: 1.3 offered (a common scanner misses this), 1.0 and 1.1 also accepted
+- the estate: 30 certificate names, 18 resolving, across Azure, AWS and on-prem, with `idp`, `pms`,
+  `testerp` and `testmycampus` newly identified
+- clean results, now closed rather than assumed: host-header injection, X-Forwarded-Host,
+  absolute-URI targets, trust-based error-detail bypass, verb tampering, server-side validation
+- two error-page families, MVC and IIS, which tells you which stack answers an unmapped path
 
-## Top leads (from 109-report synthesis, evidence-labelled)
+## What is NOT covered, in one line
 
-1. 13 concrete API routes (grades, marks, attendance, timetable, OTP)
-   extracted from a public third-party Flutter client (DK10WS/SLCM_APP).
-   BOLA/IDOR testing on those routes is the highest-value auth-phase test.
-2. Public credential artifacts: KrishGoel repo .env.example with populated
-   credentials, vikrant500 cookies.txt token artifact, public Firebase
-   config (SLCM_APP), Anushkakumar10 Django SECRET_KEY with DEBUG=True.
-3. Library repository credential-like title exposure on mujlibrary (P0
-   check for the club: confirm and redact report).
-4. dmsmuj "MUJ API TESTING!" hostname in CT history (labelled test,
-   monitor reactivation).
-5. Register-number enumeration vector: format is public, batches bounded;
-   stuffing is a realistic risk; report to admins, never execute.
-6. Parent login is OTP-gated per official manual; parent mobile numbers are
-   captured in onboarding (OTP interception class risk to test later).
-7. Fee flow split across SLCM + SpaceBasic + NTT DATA Pay + Razorpay
-   (certificates): payment integrity is a business-logic test class.
-8. Upload surface: onboarding requires PDF docs (max 1MB) + photo (jpg,
-   100KB). File-upload validation testing belongs in the auth phase.
-9. MachineKey/ViewState: MVC 5.3 with WebForms sibling hosts; YSOD proves
-   verbose errors; machineKey exposure unproven but conditionally high
-   impact (code injection if leaked). Check GitHub for keys.
-10. Origin masking: direct A record to Azure, no WAF evidence, no challenge
-    pages observed; WAF posture is unverifiable from outside.
+Post-auth is unwritten, and the campaign holds no brief for XSS, SQLi, CORS, XXE, SSTI, smuggling,
+cache poisoning, race conditions, the Azure or Entra control planes, detection engineering, DPDP
+obligations, supply chain, mobile static analysis, social engineering, or the retest loop. Wave 5 exists
+to answer each of those, one report per gap.
 
-## Disclosure path (do this BEFORE any active test beyond recon)
+## Honest limits
 
-1. Registrar office: registrar@jaipur.manipal.edu (Dr Amit Soni,
-   +91 141-3999100 ext 102) plus IT Infra it.support@jaipur.manipal.edu
-   (ext 144) per official FAQ.
-2. Present the recon packet above; ask for written scope: test accounts,
-   listed in-scope hosts, signed authorization (IT Act 43/66 context).
-3. 90-day private disclosure window; optionally report to CERT-In
-   (RVDCP) after the club resolution.
-4. Never publicize findings before the university responds; no press, no
-   public repos with student data.
+- Nothing here is an exploit. Every finding is information disclosure, transport hardening or design
+  observation, verified with single requests and raw captures.
+- No scanner, fuzzer or authentication attempt has run against the target or any sibling host.
+- The authorized phase needs a signed registrar letter plus two test accounts.
+- Every claim is re-probed before it is restated; corrections are logged, not quietly edited.
 
-## What the club can do with this
+## Assets
 
-- Present the verified recon packet and the target-specific playbook as the
-  club's first deliverable (executives get a working security program, not
-  a CTF demo).
-- Run the auth-phase tests from findings/AGGRESSIVE-PLAYBOOK.md under
-  seniors with written authorization: IDOR on the 13 API routes, upload
-  validation, fee flow integrity, session fixation, role confusion
-  (EmailFor/LoginFor), trace.axd from campus IP.
-- Track reactivation of test-labelled hosts (dmsmuj, helpdesk, npfslcm).
-
-## Repository map
-
-- findings/FINDINGS-W0.md (verified), TEST-PLAN.md, AGGRESSIVE-PLAYBOOK.md,
-  ATTACK-SURFACE-MAP.md, REAUDIT-2026-08-25.md (lie-hunt corrections)
-- research/ 109 reports + digests/ 109 digests + 3 syntheses + DIGEST-W1/W2
-- recon/ raw evidence (headers, YSOD pages, PDFs, DNS, CT, wayback)
-- scripts/ launcher + watcher + brief generator (reusable for wave 4+)
-- briefs/ 110 prompts (replayable)
+| asset | where |
+|---|---|
+| layer map | `findings/LAYER-MAP.md` |
+| findings and playbooks | `findings/` |
+| raw hand evidence | `recon/`, `recon/layers-2026-09-13/` |
+| reports, syntheses, digests | `research/` |
+| briefs and run ledgers | `briefs/`, `ledger/`, `wave*-runs.json` |
+| pipeline | `scripts/` |
+| disclosure template | `disclosures/DISCLOSURE-LETTER.md` |

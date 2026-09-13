@@ -1,78 +1,79 @@
-# TRACKER.md : status board (updated 2026-08-25 end of day)
+# TRACKER.md: status board
+
+Updated 2026-09-13, after the layer pass, wave 5 and the kit rewrite.
 
 ## Phases
 
 | Phase | Status | Notes |
 |---|---|---|
-| A scaffold + fingerprint recon | DONE | headers, routes, PDFs, DNS/CT, wayback |
+| A scaffold and fingerprint recon | DONE | headers, routes, PDFs, DNS, certificate transparency, wayback |
 | B wave 1 fleet (10 ultra8x) | DONE | 10/10 reports, digested |
-| C waves 2+3 fleet (99 runs) | DONE | 109 unique saved incl. w2c-03 relaunch |
-| D digest pipeline (109) | DONE | all read-to-EOF, style-gated, 3 syntheses |
-| E deep probe round | DONE | F6-F10, passive round, findings doc |
-| F reaudit lie-hunt | DONE | 20/20 confirmed, E1 fixed, REAUDIT doc |
-| G auth suite + letter | DONE | 6 scripts verified, template ready |
-| H kit (README/INDEX/TRACKER/LOG/CPROMPT) | DONE | this commit |
-| I wave 5 research | DONE | 25/25 landed (1,186,037 chars). Digest: research/DIGEST-W5.md, 472 tool rows, 106 no-tool gaps, 64 build candidates |
-| K layer mapping (live) | DONE | 46 targeted requests, tools: curl, wafw00f, testssl, nmap, openssl, DoH, crt.sh. Scanner class held back, lab run only |
-| J authorized execution | BLOCKED | needs signed letter + 2 test accounts |
+| C waves 2 and 3 fleet (99 runs) | DONE | 109 unique reports, including one relaunch |
+| D digest pipeline (109) | DONE | all read to EOF, style-gated, 3 syntheses |
+| E deep probe round | DONE | F6 to F10, passive round |
+| F reaudit lie-hunt | DONE | 20 of 20 confirmed, E1 fixed |
+| G auth suite and disclosure letter | DONE | 6 scripts dry-run verified, template ready |
+| H kit (README, INDEX, TRACKER, LOG, continuation) | DONE | rewritten 2026-09-13, INDEX now generated |
+| I layer mapping, live | DONE | 46 requests, 61 evidence files, LAYER-MAP L0 to L13, corrections E2 to E5 |
+| J gap register and wave 5 | DONE | 25 briefs fired from the register, 25 reports, 1,186,037 chars, digested |
+| K scanner toolchain, lab only | DONE | wafw00f, testssl.sh, nmap, nuclei installed; nuclei exercised on a local lab |
+| L authorized execution | BLOCKED | needs the signed letter plus two test accounts |
+| M build candidates | QUEUED | enc_blob_classifier.py first, six more behind it |
 
-## Fleet ledger (single source: wave*-runs.json + ledger/)
+## Fleet ledger
 
-- Launches: 110 (10 + 84 + 15 + 1 relaunch)
-- Unique saved reports: 109 (sizes 11,445 B to 56,898 B, total ~4.0M chars)
-- Failed server-side: w2c-03 (first attempt only; relaunch saved)
-- Digests: 109/109. Syntheses: 3. Style violations: 0 (swept twice).
+Single source: `wave*-runs.json` plus `ledger/`.
+
+- Launches: 135 (10 + 84 + 15 + 1 + 25)
+- Ledger files: 134, key tails only
+- Reports and syntheses on disk: 140 files, 5,585,870 chars
+- Wave 5 key spread: KJ2lhZ 19, jhBOeM 5, d0rbQA 1, no 402 during the wave
+- Failures: one server-side failure in wave 2, relaunched and saved
+- Style violations: 0 (swept after every write)
 
 ## Findings board
 
 | ID | Title | Sev | Status |
 |---|---|---|---|
-| F1 | Verbose YSOD multipath (4 triggers), customErrors off, build leak | P3 | VERIFIED, byte-identical repro |
-| F2 | trace.axd 403 restricted | P4 | VERIFIED |
-| F3 | Version banners (IIS/MVC/.NET/x-powered-by) | P4 | VERIFIED |
-| F4 | jQuery 1.10.2 XSS-class CVEs | P4 | VERIFIED, impact conditional |
-| F5 | Credential design (M365 single pw, Gmail delivery) | P3 | VERIFIED (official PDFs) |
-| F6 | Password echo on failed login (+292 B size oracle) | P4 | VERIFIED, encoded, no XSS |
-| F7 | Request-validation input -> F1 YSOD class | P3 | VERIFIED |
-| F8 | enc = machineKey-protected blob (CryptographicException) | P3 cond | VERIFIED; key-leak = P1 |
-| F9 | Anti-CSRF cookie HttpOnly, no Secure | P4 | VERIFIED |
-| F10 | Edge posture battery all clean | INFO | VERIFIED |
-| E1 | Route oracle error (302 != exists) | FIXED | found by reaudit, cascade-corrected |
-| L1 | Layer map: live layer stack L0-L13 with round-1 to round-3 evidence | INFO | VERIFIED-LIVE 2026-09-13, findings/LAYER-MAP.md |
+| F1 | Verbose YSOD, four triggers, customErrors off, build leak | P3 | VERIFIED, byte-level repro |
+| F2 | trace.axd 403 with ELMAH 404 | P4 | VERIFIED |
+| F3 | Version banners (IIS, ASP.NET, MVC, x-powered-by) | P4 | VERIFIED |
+| F4 | jQuery 1.10.2 legacy client stack | P4 | VERIFIED, and confirmed live next to a bundled 3.4.1 |
+| F5 | Credential design (M365 password, public username format) | P3 | VERIFIED from official PDFs |
+| F6 | Password echo with a response-size oracle | P4 | VERIFIED |
+| F7 | Request validation to YSOD class | P3 | VERIFIED |
+| F8 | machineKey-protected `enc` parameter | P3 conditional | VERIFIED, refined into a three-stage oracle |
+| F9 | Antiforgery cookie HttpOnly without Secure | P4 | VERIFIED live |
+| F10 | Edge posture battery | INFO | VERIFIED at the time, amended: WAF status UNKNOWN from outside |
+| L1 | Layer map: L0 to L13, live, with raw captures | INFO | VERIFIED-LIVE 2026-09-13 |
+| E1 | Route oracle error (302 does not imply existence) | FIXED | caught by the reaudit |
+| E2 to E5 | Corrections: my malformed F8 payload, testssl TLS 1.3 read, wafw00f false positive, WAF wording | RECORDED | in `findings/LAYER-MAP.md` |
 
-Clean tests (no issue): no user enumeration, anti-CSRF filter active,
-server-side validation active, verb lockout, no WebDAV, no tilde 8.3,
-no rewrite-header bypass, XFF no trace unlock.
+## Closed clean (probed, no issue)
 
-## Open items (decision menu, freshest 2026-08-25 close)
+No user enumeration by response diff. Antiforgery enforced server side. Server-side validation active.
+Verb policy tight, GET only in practice. No WebDAV, no tilde short names, no rewrite-header bypass,
+no trust-based error-detail bypass. Host header, X-Forwarded-Host and absolute-URI targets ignored.
+ELMAH absent. Ports 80 and 8080 filtered, 443 the only reachable port.
 
-- A wave 5 (needs nothing): machineKey hunt, legacy-origin forensics,
-  port-122 story, post-login route confirmation AFTER auth, sibling
-  grade cards. RECOMMENDED next.
-- B Scribd verification (USER on campus, doc 406368004) + IT Infra
-  disclosure draft around the expected SMB creds. NEVER test them.
-- C registrar letter path: fill disclosures/DISCLOSURE-LETTER.md, get
-  2 test accounts, run scripts/authtests/ in order.
-- D pipeline skill conversion.
-- E reactivation monitor cron.
-- F campus-wide responsible-security one-pager.
+## Decision menu
 
-## Closed (2026-08-25)
-
-- OSINT-EXTERNAL-REVIEW integrated (graded table, adoptions, SMB
-  standing line). Kit files written. Last watcher killed (404-retry
-  loop). Tree synced. Window closed clean.
+- A: go order for `enc_blob_classifier.py` (spec, opencode, audit, gates, commit). RECOMMENDED.
+- B: wave 6 on the thin areas the wave-5 reports flagged themselves.
+- C: authorized phase once the letter and the two test accounts exist.
+- D: convert the pipeline into a reusable skill.
+- E: campus-wide responsible-security one-pager.
+- F: keep a change monitor on the certificate and the `enc` oracle, so drift is evidence, not memory.
 
 ## Blocked
 
-- J authorized execution: registrar letter (disclosures/
-  DISCLOSURE-LETTER.md) + two test accounts + SLCM_USER1/2 env.
-- Verified-facts changes without re-probe: prohibited by standing
-  order 3.5.
+- Authorized execution: `disclosures/DISCLOSURE-LETTER.md` signed, two test accounts, `SLCM_USER1` and
+  `SLCM_USER2` in the environment.
+- Restating a verified fact without a fresh re-probe is prohibited by standing order.
 
-## Budget/keys
+## Budget and keys
 
-- Pool: ~/Desktop/parallel spams, 285 lines (newest at bottom).
-- Task-alive status: ~/parallel-key-tracker/state/status.json.
-- Spend this campaign: 10 ultra8x (wave 1) + 84 mixed (wave 2) +
-  15 (wave 3) + 1 relaunch. Remaining balance untouched since.
+- Pool: `~/Desktop/parallel spams`, one key per line, newest at the bottom.
+- Status of record: `~/parallel-key-tracker/state/status.json`, tier `TASK_ALIVE` is the launch pool.
+- Wave 5 spend: 25 runs (19 ultra, 6 ultra8x), carried mostly by one key.
+- Note for the next wave: the status file was last probed 2026-09-11, so probe before a large fire.
