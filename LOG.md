@@ -160,3 +160,13 @@ Mistakes are logged in full, they are part of the asset.
 - scripts/digest-w5.py (deterministic, no model calls) -> research/DIGEST-W5.md + research/w5-rows.json
 - parsed: 472 tool rows, 106 no-tool gap rows, 64 build candidates
 - the byok gap register (catalog/59) now carries the wave-5 rows alongside the WEBHACK and wave-universe rows
+
+## 2026-09-13: digest correction (same hour as the wave-5 commit)
+- the first digest run over-counted: it reported 106 no-tool gap rows and 64 build candidates
+- cause: the row filter accepted table headers and rows from neighbouring tables inside the same
+  section (entries like "Candidate", "P0", "G1", "Gap", "#")
+- fix: the filter now rejects label-only first cells, short codes, and rows under 6 chars, and
+  requires a real artifact name
+- corrected counts: 472 tool rows, 84 no-tool gap rows, 47 build candidates
+- the earlier commit ee9a89 carried the wrong counts in its message. left in place, recorded here,
+  because the log is worth more than a tidy history

@@ -6,31 +6,31 @@ Source: 25 saved wave-5 reports under `research/`, 1,186,037 chars total. Genera
 |---|---:|---:|---:|---:|
 | w5-g-01-reflected-stored-and-dom-cross-site-scripting | 47,244 | 38 | 0 | 0 |
 | w5-g-02-sql-and-nosql-injection | 50,978 | 14 | 11 | 0 |
-| w5-g-03-server-side-request-forgery-and-internal-plane-a | 44,561 | 16 | 8 | 0 |
-| w5-g-04-cross-site-request-forgery-under-authentication | 40,569 | 30 | 8 | 0 |
+| w5-g-03-server-side-request-forgery-and-internal-plane-a | 44,561 | 16 | 7 | 0 |
+| w5-g-04-cross-site-request-forgery-under-authentication | 40,569 | 30 | 0 | 0 |
 | w5-g-05-client-side-and-browser-layer-classes-cors-postm | 38,004 | 14 | 0 | 0 |
 | w5-g-06-xml-external-entities-and-file-format-parsing | 49,758 | 19 | 0 | 0 |
 | w5-g-07-server-side-template-injection-and-expression-la | 41,731 | 20 | 0 | 0 |
 | w5-g-08-request-smuggling-and-cache-poisoning-at-the-azu | 45,689 | 15 | 0 | 0 |
 | w5-g-09-business-logic-state-machines-and-race-condition | 49,951 | 20 | 10 | 0 |
 | w5-g-10-deserialisation-beyond-machinekey-and-viewstate | 34,742 | 10 | 0 | 0 |
-| w5-g-11-file-inclusion-path-traversal-and-upload-bypass | 36,576 | 12 | 9 | 0 |
-| w5-g-12-access-control-beyond-the-planned-idor-sweep | 33,319 | 8 | 0 | 8 |
-| w5-g-13-graphql-and-api-shape-abuse | 49,556 | 27 | 11 | 0 |
-| w5-g-14-authentication-and-token-abuse-beyond-the-login- | 48,127 | 11 | 9 | 0 |
+| w5-g-11-file-inclusion-path-traversal-and-upload-bypass | 36,576 | 12 | 1 | 0 |
+| w5-g-12-access-control-beyond-the-planned-idor-sweep | 33,319 | 8 | 0 | 7 |
+| w5-g-13-graphql-and-api-shape-abuse | 49,556 | 27 | 10 | 0 |
+| w5-g-14-authentication-and-token-abuse-beyond-the-login- | 48,127 | 11 | 8 | 0 |
 | w5-g-15-web-application-firewall-and-edge-control-bypass | 50,670 | 22 | 0 | 0 |
-| w5-g-16-subdomain-takeover-verification-to-the-provider- | 49,940 | 16 | 0 | 7 |
+| w5-g-16-subdomain-takeover-verification-to-the-provider- | 49,940 | 16 | 0 | 6 |
 | w5-g-17-clickjacking-with-real-frame-rendering | 49,831 | 26 | 0 | 0 |
-| w5-g-18-the-azure-control-plane-under-the-app | 53,218 | 26 | 0 | 9 |
-| w5-g-19-the-entra-and-m365-identity-control-plane | 48,103 | 0 | 9 | 0 |
-| w5-g-20-detection-engineering-and-defensive-validation-f | 48,629 | 17 | 9 | 0 |
-| w5-g-21-data-protection-law-and-the-reporting-chain-as-t | 53,104 | 25 | 0 | 9 |
+| w5-g-18-the-azure-control-plane-under-the-app | 53,218 | 26 | 0 | 8 |
+| w5-g-19-the-entra-and-m365-identity-control-plane | 48,103 | 0 | 8 | 0 |
+| w5-g-20-detection-engineering-and-defensive-validation-f | 48,629 | 17 | 8 | 0 |
+| w5-g-21-data-protection-law-and-the-reporting-chain-as-t | 53,104 | 25 | 0 | 8 |
 | w5-g-22-supply-chain-and-dependency-handling-for-a-net-a | 53,717 | 28 | 12 | 0 |
-| w5-g-23-mobile-client-static-analysis | 52,956 | 22 | 0 | 11 |
-| w5-g-24-social-engineering-and-human-vector-classes | 56,147 | 15 | 10 | 9 |
-| w5-g-25-fix-verification-and-the-retest-loop | 58,206 | 21 | 0 | 11 |
+| w5-g-23-mobile-client-static-analysis | 52,956 | 22 | 0 | 10 |
+| w5-g-24-social-engineering-and-human-vector-classes | 56,147 | 15 | 9 | 8 |
+| w5-g-25-fix-verification-and-the-retest-loop | 58,206 | 21 | 0 | 0 |
 
-Totals: 472 tool rows, 106 no-tool gap rows, 64 build candidate rows.
+Totals: 472 tool rows, 84 no-tool gap rows, 47 build candidate rows.
 
 ## w5-g-01-reflected-stored-and-dom-cross-site-scripting
 
@@ -78,7 +78,7 @@ Totals: 472 tool rows, 106 no-tool gap rows, 64 build candidate rows.
 ## w5-g-03-server-side-request-forgery-and-internal-plane-a
 
 - verdict head: **Confidence**:
-- tool rows: 16, no-tool gaps: 8, build candidates: 0
+- tool rows: 16, no-tool gaps: 7, build candidates: 0
   - 7 | Cloud metadata access | Server reaches a link-local metadata service and exfiltrates identity | Network-level
   - Burp Collaborator (DSO) | https://portswigger.net/burp/documentation/desktop/tools/collaborator | Not stated on the cited docs page; deeper licensing is implied by Burp Suite Commercial EULA | Public Polling Collaborator server is free with Burp Suite Professional; 
   - Burp Suite Professional (priced) | https://portswigger.net/burp/dast/pricing | Proprietary (PortSwigger) | Paid, ~$499/user/year for Pro as of 2026 (third-party confirmation; PortSwigger pricing page states the model only) [29][30]
@@ -92,7 +92,6 @@ Totals: 472 tool rows, 106 no-tool gap rows, 64 build candidate rows.
   - Gopherus | https://github.com/tarunkant/Gopherus | MIT [45][46] | Free
   - SSRFuzz | https://github.com/SSRFuzz/SSRFuzz | MIT [24] | Free, research prototype
 - no-tool gaps named:
-  - Gap | Why no off-the-shelf tool fully covers it
   - ASP.NET MVC parameter discovery with parameter-type awareness | The OWASP SSRF Prevention Cheat Sheet is language-agnostic; SSRFmap takes a Burp request + a parameter but is not an MVC-route spider [6][1]
   - Microsoft 365 / Entra ID session fingerprinting | None of the surveyed OAST tools know about the `__RequestVerificationToken`, the antiforgery cookie `HttpOnly without Secure` configuration reported on the target, or the Azure trust path
   - Azure App Service impact-path modelling (IMDS-vs-App Service endpoint-vs-VNet) | Microsoft distinguishes VM IMDS (169.254.169.254, `Metadata: true` header required, no `X-Forwarded-For`) from App Service local REST endpoint exposed via `IDENTITY_ENDPOINT` and `X-IDENTITY-HEADER` [
@@ -104,7 +103,7 @@ Totals: 472 tool rows, 106 no-tool gap rows, 64 build candidate rows.
 ## w5-g-04-cross-site-request-forgery-under-authentication
 
 - verdict head: The MUJ SLCM campaign should continue to be HELD at BLOCKED-AUTH. The pre-auth recon chain has produced a complete technique universe, a tool inventory of 25 entries that materially exercise the class, and a defensible detection counterpart map -- and none of those steps require crossing the agency 
-- tool rows: 30, no-tool gaps: 8, build candidates: 0
+- tool rows: 30, no-tool gaps: 0, build candidates: 0
   - Burp Suite Professional (CSRF PoC generator) | https://portswigger.net/burp/documentation/desktop/tools/engagement-tools/generate-csrf-poc | PortSwigger commercial EULA | Paid, BYOK install, optional BApp signature checks
   - Burp Suite Community / DAST | https://portswigger.net | PortSwigger commercial EULA | Community free / Pro paid
   - OWASP ZAP (core) | https://www.zaproxy.org/ | Apache 2.0 | Free, self-host, BYOK Java
@@ -117,15 +116,6 @@ Totals: 472 tool rows, 106 no-tool gap rows, 64 build candidate rows.
   - SecurityCodeScan (Roslyn SAST) | https://security-code-scan.github.io/ | LGPL-2.1 / proprietary rules dual-licensed | Free OSS, BYOK ruleset
   - CodeQL `cs-web-missing-token-validation` | https://codeql.github.com/codeql-query-help/csharp/cs-web-missing-token-validation/ | Open-source under CodeQL repo MIT | Free, BYOK, install CodeQL CLI / add GitHub code-scanning step
   - Semgrep Community + Pro | https://github.com/semgrep/semgrep-rules | Semgrep rules under various OS licences; Pro proprietary | Free community CE; Pro paid
-- no-tool gaps named:
-  - # | Gap
-  - G1 | ASP.NET MVC 5 aware PoC generator
-  - G2 | `enc`-aware three-state oracle
-  - G3 | Antiforgery salt audit
-  - G4 | Login-CSRF (OIDC) probe
-  - G5 | SameSite/Secure-attribute matrix
-  - G6 | Cookie fixator
-  - G7 | Entra-resilient OIDC attacker
 
 ## w5-g-05-client-side-and-browser-layer-classes-cors-postm
 
@@ -239,7 +229,7 @@ Totals: 472 tool rows, 106 no-tool gap rows, 64 build candidate rows.
 ## w5-g-11-file-inclusion-path-traversal-and-upload-bypass
 
 - verdict head: **Confidence**: **medium** on the technique universe (high on the inventoried tools, high on the OWASP / PAT coverage, medium on MUJ-specific IIS-10 idiosyncrasies without source access); **high** on the policy blocker (GET-only is documented and reproducible from the campaign [Recap]); **medium** o
-- tool rows: 12, no-tool gaps: 9, build candidates: 0
+- tool rows: 12, no-tool gaps: 1, build candidates: 0
   - 1 | dotdotpwn | Path traversal fuzzer | Perl
   - 2 | PyDotPwn | Path traversal fuzzer (Python port) | Python
   - 3 | IIS-ShortName-Scanner | IIS 8.3 short-name disclosure | Java
@@ -254,18 +244,11 @@ Totals: 472 tool rows, 106 no-tool gap rows, 64 build candidate rows.
   - 12 | Sigma web-shell ruleset | Post-upload filesystem detection | YAML
 - no-tool gaps named:
   - Gap ID | Gap
-  - GT-1 | **No public Sigma rule for ASP.NET upload request boundaries** (multipart with `.aspx` filename in `Content-Disposition`)
-  - GT-2 | **No Burp extension that tests the ASP.NET `Web.config` upload trick**
-  - GT-3 | **Burp Upload Scanner / File Upload Traverser cannot run pre-auth on a GET-only surface**
-  - GT-4 | **No tool that detects the IIS-10-specific path normalization gap within one semantic request**
-  - GT-5 | **No public polyglot PDF generator that produces an ASPX-valid PDF**
-  - GT-6 | **No generalised like-for-like scanner that compares the IIS 8.3 short-name with the actual file extension**
-  - GT-7 | **No ASP.NET MVC 5.3-specific static-rule analysis tool**
 
 ## w5-g-12-access-control-beyond-the-planned-idor-sweep
 
 - verdict head: **Verdict: Authorization assurance is currently unproven, not demonstrably vulnerable.** Confidence is **high** that BOLA, BFLA, BOPLA, role escalation, tenant isolation, workflow authorization, method authorization, and token-context enforcement are the correct technique families to cover. Confiden
-- tool rows: 8, no-tool gaps: 0, build candidates: 8
+- tool rows: 8, no-tool gaps: 0, build candidates: 7
   - OWASP ZAP Access Control Testing | https://www.zaproxy.org/docs/desktop/addons/access-control-testing/ | ZAP core is Apache License 2.0 [13] (https://github.com/zaproxy/zaproxy/blob/main/LICENSE) | Free and self-hosted
   - Burp Autorize | https://portswigger.net/bappstore/f9bbac8c4acf4aefa4d7dc92a991af2f | Extension source is publicly available; verify repository terms before redistribution | Runs inside Burp; Community is free, Professional is commercial; no external BYOK r
   - Burp AuthMatrix | https://portswigger.net/bappstore/30d8ee9f40c041b0bfec67441aad158e | Repository has a license file; confirm the current license before institutional packaging [14] (https://github.com/PortSwigger/auth-matrix/blob/master/LICENSE) | Extension
@@ -275,7 +258,6 @@ Totals: 472 tool rows, 106 no-tool gap rows, 64 build candidate rows.
   - mitmproxy | https://docs.mitmproxy.org/stable/addons/overview/ | License file is public; official repository describes the tool [20] (https://github.com/mitmproxy/mitmproxy) | Free and self-hosted
   - Nuclei | https://github.com/projectdiscovery/nuclei | MIT [21] (https://github.com/projectdiscovery/nuclei/blob/dev/LICENSE.md) | Free and self-hosted; optional ProjectDiscovery cloud services; templates can use approved credentials
 - build candidates named:
-  - Candidate | Purpose
   - Authorization Matrix Runner | Execute approved route-role-object combinations
   - MVC/Flutter Request Adapter | Make the harness understand client serialization and antiforgery without bypassing controls
   - Business Authorization Oracle | Convert policy into pass/fail decisions
@@ -287,7 +269,7 @@ Totals: 472 tool rows, 106 no-tool gap rows, 64 build candidate rows.
 ## w5-g-13-graphql-and-api-shape-abuse
 
 - verdict head: | Dimension | Verdict |
-- tool rows: 27, no-tool gaps: 11, build candidates: 0
+- tool rows: 27, no-tool gaps: 10, build candidates: 0
   - InQL (Doyensec) | https://github.com/doyensec/inql | Apache-style (per repository) | Free + Burp integration; standalone CLI
   - Clairvoyance | https://github.com/nikitastupin/clairvoyance | Apache-2.0 license header (`License: Apache-2.0 license`) | Free
   - GraphQL Cop | https://github.com/dolevf/graphql-cop | Python utility (license: see repo) | Free
@@ -301,7 +283,6 @@ Totals: 472 tool rows, 106 no-tool gap rows, 64 build candidate rows.
   - Apollo Router request-limit directives | https://www.apollographql.com/docs/deploy-preview/169b12c31342c1bbc0b6bcfb/graphos/routing/security/request-limits | Apache-2.0 (Router) | Free runtime served as a proxy
   - Hive Gateway | https://the-guild.dev/graphql/hive/docs/gateway / https://github.com/graphql-hive/gateway | MIT license (per repo) | Free runtime / Dockerfile / JS package
 - no-tool gaps named:
-  - Gap | Why mainstream tools fail
   - Anti-forgery regression (HttpOnly cookie without Secure) | No mainstream scanner emits a per-cookie report for Secure/HttpOnly/SameSite because this is a header-set issue rather than a runtime query-cost issue
   - MVC overposting detector with property-level authorization diff | No tool is framework-aware of `[Bind]`/`[BindNever]`/`Include` semantics
   - Query-cost analyzer on schema inferred without introspection | Existing tools require a real introspection dump; Clairvoyance outputs JSON but no mainstream cost analyzer consumes its shape
@@ -309,11 +290,12 @@ Totals: 472 tool rows, 106 no-tool gap rows, 64 build candidate rows.
   - Three-stage enc oracle regression script | No tool formalizes a "FormatException -> CryptographicException -> third size" cascade
   - GraphQL endpoint discovery without prior hint | The target has not exposed GraphQL; if it ever does, no mainstream tool wraps a "what if it were at /graphql, /api, /api/graphql, /gql, /api/v{1,2,3}, /m/graphql, /mobile/graphql" sweep with the YSOD 
   - BOPLA coverage on custom JSON mutation endpoints | `Schemathesis` operates on OpenAPI/GraphQL; BOPLA on Aspnet MVC action methods uses a different contract (POST with form/JSON)
+  - Inventory-of-versions scorer with unsupervised discovery | OWASP API9 guidance is qualitative; no tool scores a deployment
 
 ## w5-g-14-authentication-and-token-abuse-beyond-the-login-
 
 - verdict head: **Confidence: High for the technique universe and tool capability mapping; medium for prioritization against the reported MUJ architecture; low for any claim that MUJ is currently vulnerable.**
-- tool rows: 11, no-tool gaps: 9, build candidates: 0
+- tool rows: 11, no-tool gaps: 8, build candidates: 0
   - MUJ portal landing page | Publicly observable identity | Identifies the service as the MUJ portal; it does not establish the authentication design | http://mujslcm.jaipur.manipal.edu/Home/Index [38]
   - Browser DevTools and cookie jar | https://developer.chrome.com/docs/devtools/ | Built into the browser; no separate tester license; local-only observation | Network and Application/Storage panels; save only redacted HAR or screenshots
   - Burp Suite Community and Professional | https://portswigger.net/burp/eula | PortSwigger proprietary. Community is licensed royalty-free for internal business use; Professional and DAST are separately licensed products [23]. Desktop/self-hosted; no BYOK requirement | Configure an 
@@ -326,7 +308,6 @@ Totals: 472 tool rows, 106 no-tool gap rows, 64 build candidate rows.
   - Fiddler Everywhere | https://www.telerik.com/fiddler/fiddler-everywhere/documentation/collaboration/exporting-and-importing | Commercial cross-platform local debugging proxy; purchase plans are published by Telerik [40]; not self-hosted as a service and no BYOK
   - Microsoft Entra and Sentinel | https://learn.microsoft.com/en-us/azure/sentinel/connect-azure-active-directory | Tenant-owned Microsoft service, permission and licensing dependent; not a general token-forging tool and not self-hosted | Export Entra logs through the conne
 - no-tool gaps named:
-  - Gap | Why existing tools do not close it
   - Token-boundary classifier | Proxies see artifacts but do not reliably classify local MVC cookies versus OIDC ID tokens, access tokens, refresh tokens, antiforgery values, and custom encrypted parameters
   - Consent-aware two-account harness | AuthMatrix compares requests but does not manage owner-approved account scope, tenant ownership, or destructive-state gates
   - Tenant and issuer correlator | JWT tools can read claims, but they do not know MUJ's approved mapping of issuer, tid, aud, home tenant, resource tenant, and local account
@@ -334,6 +315,7 @@ Totals: 472 tool rows, 106 no-tool gap rows, 64 build candidate rows.
   - Revocation monitor | A client proxy cannot reliably observe server-side token rejection or CAE propagation
   - Safe oracle harness | Response comparers can flag byte differences but cannot decide whether a difference is parser noise, cryptographic failure, or authorization impact
   - Detection replay simulator | JWT tools generate test artifacts but do not generate the exact operational evidence defenders need
+  - Evidence and privacy pack | General tools often save full tokens and credentials in project files
 
 ## w5-g-15-web-application-firewall-and-edge-control-bypass
 
@@ -355,7 +337,7 @@ Totals: 472 tool rows, 106 no-tool gap rows, 64 build candidate rows.
 ## w5-g-16-subdomain-takeover-verification-to-the-provider-
 
 - verdict head: **Verdict: PARTIAL - fingerprint/dangling-CNAME evidence only.**
-- tool rows: 16, no-tool gaps: 0, build candidates: 7
+- tool rows: 16, no-tool gaps: 0, build candidates: 6
   - Azure App Service Check Name Availability: https://learn.microsoft.com/en-us/rest/api/appservice/check-name-availability | Azure service API; no standalone software license stated; authenticated service, BYOK Azure identity and subscription | `POST` with subscription ID, API version, `name`, `type`, and optional `isFqdn`; OAuth2 is documented | JSON resource-na
   - AzDanglingDnsFinder: https://github.com/davidokeyode/AzDanglingDnsFinder | License not specified in the README evidence; self-hosted PowerShell; BYOK Azure PowerShell login and permissions | Reads `domainnames.txt`, resolves Azure service records, and checks whether resolved Azure service names are available [10] 
   - Microsoft Get-DanglingDnsRecords: https://github.com/Azure/Azure-Network-Security/blob/master/Cross%20Product/DNS%20-%20 | License not stated in the cited article; self-hosted PowerShell; BYOK Reader access and Azure Resource Graph read access | Uses organization DNS/CNAME input and Azure subscription or tenant data; Microsoft says it lists domains whose CNAMEs
@@ -369,7 +351,6 @@ Totals: 472 tool rows, 106 no-tool gap rows, 64 build candidate rows.
   - Nuclei plus takeover templates: https://github.com/projectdiscovery/nuclei and https://github.com/projectdiscovery/nucle | Nuclei engine MIT; self-hosted YAML-template engine; hosted ProjectDiscovery services are separate and are not required for local execution [14] [14] | Targets are passed to the CLI and templates selected with `-t`; Nuclei supports DNS and 
   - SubTake: https://github.com/bowligth/subtake | MIT; self-hosted Python; no hosted fee or BYOK documented | `python subtake.py -d`, `-l` for lists, stdin, worker and timeout options, and `-o` for JSON [24] [24] | `VULNERABLE`, `POTENTIAL`, or safe; `POTENTIAL` requires manual verificatio
 - build candidates named:
-  - Candidate | Proposed function
   - `azure-claimability-readonly` | Call the documented App Service Check Name Availability API for a normalized label and resource type
   - `takeover-evidence-correlator` | Join authoritative DNS, bounded HTTP/TLS, fingerprint, and provider result
   - `azure-owner-inventory` | Wrap the Microsoft dangling-DNS inventory and Resource Graph correlation for client-owned tenants
@@ -397,7 +378,7 @@ Totals: 472 tool rows, 106 no-tool gap rows, 64 build candidate rows.
 ## w5-g-18-the-azure-control-plane-under-the-app
 
 - verdict head: **Verdict: The Azure control-plane campaign is ABSENT, not clean and not compromised.**
-- tool rows: 26, no-tool gaps: 0, build candidates: 9
+- tool rows: 26, no-tool gaps: 0, build candidates: 8
   - **Kudu/SCM presence and exposure** | Azure CLI/PowerShell, Nuclei with owner-approved templates, Prowler/Steampipe where checks exist | Inspect ARM configuration and SCM access rules first. If App Service is confirmed, its documented non-Isolated pattern is `https://<app-name>
   - **cloud_enum** - https://github.com/initstring/cloud_enum | MIT; free, self-hosted [33] | CLI, keyword-based public-resource enumeration | Text, JSON, CSV [33]
   - **MicroBurst** - https://github.com/NetSPI/MicroBurst | BSD 3-Clause; free PowerShell module [43] | PowerShell functions | Module-specific PowerShell/console output; no universal format documented
@@ -411,7 +392,6 @@ Totals: 472 tool rows, 106 no-tool gap rows, 64 build candidate rows.
   - **GraphRunner** - https://github.com/dafthack/GraphRunner | MIT; free, self-hosted [46] | PowerShell, HTML GUI, Microsoft Graph | Command-specific console and exports; no universal schema documented
   - **Prowler** - https://github.com/prowler-cloud/prowler | Apache-2.0; free self-hosted with optional hosted platform [38] | CLI, container, CI, optional SaaS | CSV, JSON, JSON-OCSF, HTML and integrations as supported by current release [38]
 - build candidates named:
-  - Candidate | Input and operation
   - **SLCM Azure Lineage Packager** | Owner-entered resource IDs plus passive DNS/certificate/public-code evidence; correlates rather than brute-forces
   - **App Service Estate Diff** | Read-only ARM exports for app and every slot; compares TLS, HTTPS-only, SCM/FTP policy, auth, identity, access rules, diagnostics, sticky settings, domains
   - **SAS Governance Linter** | Redacted URLs, source files, or deployment artifacts; parses SAS metadata without network use
@@ -419,12 +399,12 @@ Totals: 472 tool rows, 106 no-tool gap rows, 64 build candidate rows.
   - **Slot Swap Risk Modeler** | Production/slot configuration snapshots and documented swap rules
   - **Managed Identity Reach Analyzer** | Resource graph, role assignments, service-specific access policies, slot identity map
   - **SCM Exposure And Telemetry Correlator** | Approved SCM configuration, `AppServiceAuditLogs`, access restrictions, basic-auth policy
+  - **Azure Canary Telemetry Harness** | Owner-created nonproduction slot, canary blob/resource, expected KQL event map
 
 ## w5-g-19-the-entra-and-m365-identity-control-plane
 
-- tool rows: 0, no-tool gaps: 9, build candidates: 0
+- tool rows: 0, no-tool gaps: 8, build candidates: 0
 - no-tool gaps named:
-  - Gap | Why existing tools fall short
   - Three-tenant directional trust diff | Most reports assess one tenant at a time and obscure asymmetric inbound/outbound rules
   - Consent semantics | Tools list scopes but rarely combine publisher status, grant type, owner, credential age, usage, and data sensitivity
   - Canary lifecycle | Manual guest/app tests often leave residual objects, grants, or credentials
@@ -432,11 +412,12 @@ Totals: 472 tool rows, 106 no-tool gap rows, 64 build candidate rows.
   - PRT posture without token theft | Offensive tools focus on obtaining or using tokens, while defenders need a safer control assessment
   - Portal-to-Entra architecture proof | Browser capture can leak secrets and scanners cannot reliably distinguish redirect from backend credential handling
   - App/SP ownership drift | Generic tools flag permissions but may not identify owner-to-credential-to-role attack paths
+  - Evidence normalization | Maester, ScubaGear, Graph, Sentinel, and manual tests emit different formats
 
 ## w5-g-20-detection-engineering-and-defensive-validation-f
 
 - verdict head: **Verdict: DETECTION READINESS UNPROVEN - CAMPAIGN STATUS ABSENT.**
-- tool rows: 17, no-tool gaps: 9, build candidates: 0
+- tool rows: 17, no-tool gaps: 8, build candidates: 0
   - Nmap - https://nmap.org/ | Nmap Public Source License; free source-available builds; commercial terms may apply to redistribution; self-hosted; no BYOK | CLI and NSE scripts | Service/port validation; normal, XML, grepable, and script output
   - curl - https://curl.se/ | curl license; free/open source; self-hosted; no BYOK | CLI or libcurl | Precisely controlled HTTP request; response body/headers, trace text, and `--write-out` measurements
   - httpx - https://github.com/projectdiscovery/httpx | MIT; free/self-hosted; no BYOK [23] | CLI with host lists, raw requests, or Burp input [23] | Status, content length/type, hash, latency, server, technology, IP/ASN/CDN; CSV or JSONL, optionally with request/response [23]
@@ -450,7 +431,6 @@ Totals: 472 tool rows, 106 no-tool gap rows, 64 build candidate rows.
   - ffuf - https://github.com/ffuf/ffuf | MIT; free/self-hosted; no BYOK [20] | CLI with a `FUZZ` position in URL, header, or data [20] | Differential input/path/header testing; filters for status, lines, regex, size, and words; JSON/eJSON/HTML/Markdown/CSV/eCSV [20]
   - Burp Suite Community - https://portswigger.net/burp/communitydownload | Proprietary; Community Edition is a free manual toolkit [38]; desktop self-hosted; no BYOK | GUI proxy, Repeater, Decoder, Comparer, and extensions | Raw request/response evidence and manual differential testing; project/export capabilities
 - no-tool gaps named:
-  - Gap | Why existing tools are insufficient
   - Three-stage `enc` semantics | Scanners see length/status differences but do not know the expected internal reason model
   - Response-to-log reconciliation | DAST reports findings but cannot prove IIS, app, SIEM, and incident evidence all exist
   - Semantic BOLA validation | Response similarity cannot prove object ownership or absence of another user's data
@@ -458,11 +438,12 @@ Totals: 472 tool rows, 106 no-tool gap rows, 64 build candidate rows.
   - Scope enforcement | Powerful tools can exceed approved routes, methods, templates, or rates
   - Error-family drift | Fixed byte lengths vary after deployments, localization, or compression
   - Safe analyst evidence | Raw logs may contain tokens, cookies, student identifiers, or exception details
+  - Unknown edge path | Remote responses cannot establish the actual resource chain
 
 ## w5-g-21-data-protection-law-and-the-reporting-chain-as-t
 
 - verdict head: **Verdict: PARTIAL technically, but LEGALLY UPGRADED and ready for an authorized second phase.**
-- tool rows: 25, no-tool gaps: 0, build candidates: 9
+- tool rows: 25, no-tool gaps: 0, build candidates: 8
   - OWASP ZAP - https://www.zaproxy.org/docs/desktop/addons/report-generation/ | Apache-2.0; free, self-hosted desktop/daemon/container [9] | GUI, CLI, REST API, Automation Framework YAML | Alerts plus HTML, XML, JSON, Markdown, PDF or SARIF templates
   - Burp Suite - https://portswigger.net/burp/documentation/desktop/running-scans/reporting | Proprietary; Community is free with limits, Professional/Enterprise paid | Desktop proxy, Repeater, test workflows, scanner in paid editions | Issue list and HTML report; structured exports vary by edition [15]
   - Nuclei - https://github.com/projectdiscovery/nuclei | MIT; free self-hosted CLI, optional commercial cloud [22] | CLI or CI using signed/reviewed YAML templates | Console, JSONL, SARIF and report integrations
@@ -476,7 +457,6 @@ Totals: 472 tool rows, 106 no-tool gap rows, 64 build candidate rows.
   - RESTler - https://github.com/microsoft/restler-fuzzer | MIT; free self-hosted [21] | Compile OpenAPI to grammar, then check/test/fuzz | `grammar.json`, compiler logs, test logs and bug buckets [53]
   - Newman - https://github.com/postmanlabs/newman | Apache-2.0; free self-hosted Postman collection runner [14] | CLI, Node API, Docker and CI | CLI, JSON and JUnit reports; additional reporters available
 - build candidates named:
-  - Candidate | Minimum viable behavior
   - **Indian obligation compiler** | Versioned YAML/JSON for SPDI, CERT-In and phased DPDP duties, effective dates, evidence and owners
   - **Incident clock broker** | Start clock, classify CERT/DPDP applicability, collect available facts, warn at internal SLOs, archive receipts
   - **Two-account privacy harness** | Compare seeded objects, roles and documents while redacting identifiers
@@ -484,6 +464,7 @@ Totals: 472 tool rows, 106 no-tool gap rows, 64 build candidate rows.
   - **Rights-and-erasure verifier** | Seed a record, exercise correction/erasure, then verify database, cache, index and processor state
   - **Cross-tenant evidence correlator** | Join Entra correlation IDs, application request IDs and Azure log records across the three tenants
   - **Privacy-safe evidence packager** | Hash artifacts, redact tokens/Aadhaar/medical content, preserve timestamps and generate a disclosure appendix
+  - **Retention proof sampler** | Select synthetic records approaching expiry and verify deletion jobs and exceptions
 
 ## w5-g-22-supply-chain-and-dependency-handling-for-a-net-a
 
@@ -514,7 +495,7 @@ Totals: 472 tool rows, 106 no-tool gap rows, 64 build candidate rows.
 ## w5-g-23-mobile-client-static-analysis
 
 - verdict head: **Overall confidence: HIGH in the methodology and authorization boundary; LOW in any SLCM_APP-specific security conclusion because the APK has not yet been statically analyzed.**
-- tool rows: 22, no-tool gaps: 0, build candidates: 11
+- tool rows: 22, no-tool gaps: 0, build candidates: 10
   - MobSF | https://mobsf.org/ | GPLv3 [27] | Free/self-host and offline modes are documented; no BYOK is needed for local static analysis [27]
   - JADX | https://github.com/skylot/jadx | Apache-2.0 [2] | Free/self-host; no BYOK
   - Apktool | https://github.com/iBotPeaches/Apktool | Apache-2.0 [3] | Free/self-host; no BYOK
@@ -528,7 +509,6 @@ Totals: 472 tool rows, 106 no-tool gap rows, 64 build candidate rows.
   - DroidLysis | https://github.com/cryptax/droidlysis | MIT [26] | Free/self-host; no BYOK
   - Quark Engine | https://quark-engine.readthedocs.io/en/v26.1.1/quark_reports.html | Not stated in the reviewed report documentation | Self-host posture and licensing require repository review; no BYOK stated
 - build candidates named:
-  - Candidate | Build objective
   - Evidence intake pack | Make every run reproducible
   - Flutter AOT evidence extractor | Correlate Blutter output with SLCM route candidates
   - Route and secret correlation graph | Avoid treating isolated strings as findings
@@ -536,11 +516,12 @@ Totals: 472 tool rows, 106 no-tool gap rows, 64 build candidate rows.
   - Pinning evidence pack | Detect all trust paths without claiming runtime proof
   - Multi-scanner secret normalizer | Reduce false positives
   - Native and AOT review bundle | Make low-level evidence accessible to a club
+  - Authorization-aware runner | Prevent accidental live testing
 
 ## w5-g-24-social-engineering-and-human-vector-classes
 
 - verdict head: **Overall confidence: High for the technique taxonomy, safety boundary, and detection architecture; Medium for tool inventory completeness and current commercial licensing details.** The public sources clearly establish the T1566, T1598, and T1204 universe, the distinction between delivery, informat
-- tool rows: 15, no-tool gaps: 10, build candidates: 9
+- tool rows: 15, no-tool gaps: 9, build candidates: 8
   - Gophish - https://github.com/gophish/gophish | MIT license; free/open source and self-hosted. [41] | Local web interface and campaign configuration; the README documents binary releases and a local browser interface. [22] External mail or hosting is **BYOK by inference** because the ope
   - King Phisher - https://github.com/CrimsonForge-io/king-phisher | BSD 3-clause; free/open source and self-hosted. [20] [20] | Client/server architecture, message and server templates, and plugins; no attack steps are provided here. [20] [20] | Campaign events, landing-page interactions, geolocation, SMS c
   - Phishing Frenzy - https://github.com/pentestgeek/phishing-frenzy | GPLv3, free copyleft software. [39] | A Ruby on Rails phishing framework; the cited README provides the project identity but not a safe operating procedure. [42] | The cited public material does not specify a canonical report format or comp
@@ -554,7 +535,6 @@ Totals: 472 tool rows, 106 no-tool gap rows, 64 build candidate rows.
   - Cofense PhishMe SAT - https://cofense.com/phishme-security-awareness-training-(sat)-platform | Vendor-hosted commercial service; public page does not state an open-source license or public price. | Vendor describes realistic simulations delivered through active email and awareness workflows. [48] | Board-ready reporting and analytics
   - Hoxhunt - https://hoxhunt.com/ | Vendor-hosted commercial service; public page does not state an open-source license or public price. | Vendor describes simulations across email, SMS, phone calls, and Teams with personalized training. [49] | Dashboard and microtraining out
 - no-tool gaps named:
-  - Gap | Why existing tools do not close it
   - No human-vector baseline | The supplied campaign is ABSENT; tools can generate events but cannot create historical user behavior.
   - No personal-Gmail evidence path | Microsoft mail controls focus on controlled mailboxes, while ATT&CK treats personal webmail as a third-party service. [31]
   - No voice and SMS evidence | Email tools do not automatically prove behavior on phone or SMS channels.
@@ -562,8 +542,8 @@ Totals: 472 tool rows, 106 no-tool gap rows, 64 build candidate rows.
   - No zero-secret credential measurement | Several open-source tools can capture real credentials or tokens, but that is unnecessary and unsafe. [28] [14]
   - No normalized event schema | Gophish exports CSV and optional DOCX, AST exports CSV, and other tools have vendor-specific dashboards. [25] [46]
   - No difficulty calibration | A click rate without message difficulty can mislead. NIST Phish Scale exists for this purpose. [23]
+  - No documented tool assurance | Some projects do not document a canonical output format, safe mode, or retention behavior. [42]
 - build candidates named:
-  - Candidate | Safe design
   - Zero-secret simulation orchestrator | Submit static training URLs and inert attachments only to the two test accounts. Generate one-time random correlation tokens that cannot authenticate.
   - Three-tenant identity evidence adapter | Read approved audit events from each Entra tenant and normalize tenant ID, application, actor, timestamp, permission change, and correlation ID. Entra logs expose timestamps, service, activity, status
   - Mail and URL evidence joiner | Join Message trace, Safe Links or `UrlClickEvents`, campaign token, and report timestamp.
@@ -571,11 +551,12 @@ Totals: 472 tool rows, 106 no-tool gap rows, 64 build candidate rows.
   - Voice and SMS safe harness | Use test numbers, preapproved scripts, an immediate stop phrase, and a static page.
   - NIST difficulty annotator | Store Phish Scale rationale for each message before launch.
   - Recovery and training tracker | Record report, password-reset advice delivered, consent revocation, and training completion after the exercise.
+  - DMARC observability dashboard | Consume authorized aggregate DMARC reports and compare aligned sources over time. RFC 7489 describes aggregate reporting feedback. [26]
 
 ## w5-g-25-fix-verification-and-the-retest-loop
 
 - verdict head: **Verdict: CAMPAIGN STATUS TO BEAT remains ABSENT.** The available facts show a useful initial non-destructive baseline, but they do not yet constitute a retest harness or a university-acceptable closure system. The immediate decision is to build the P0 ReTestSpec, safe runner, response fingerprint 
-- tool rows: 21, no-tool gaps: 0, build candidates: 11
+- tool rows: 21, no-tool gaps: 0, build candidates: 0
   - OWASP ZAP: https://www.zaproxy.org/docs/ | ZAP documentation describes it as free and open source [17]. The core license is Apache 2.0 [34]. It can run locally or in Docker; no third-party hosted account is needed for the local mode. | Baseline CLI uses `zap-baseline.py -t`; the Aut
   - Burp Suite: https://portswigger.net/burp/downloads | PortSwigger's download page identifies Community Edition as the core manual toolkit and Professional as the penetration tester edition [53]. The Professional model is a subscription [54]. The cited official pages do not  | Authenticated Sca
   - Nuclei: https://github.com/projectdiscovery/nuclei and https://docs.projectdiscovery.io/opensource/nuclei/overview | The repository identifies an MIT license [21]. It is a self-hostable CLI, and the project also describes a free cloud tier [21]. Templates are code-like detection logic, so review them before use. | Supply target URLs/hosts with `-target` o
@@ -588,12 +569,3 @@ Totals: 472 tool rows, 106 no-tool gap rows, 64 build candidate rows.
   - CodeQL CLI: https://docs.github.com/en/code-security/reference/code-scanning/codeql/codeql-cli/sarif-output | The cited page documents the CLI output format, not a universal license or permission to scan private university code [24]. Use it under the applicable GitHub CodeQL terms and keep the query pack/version. | Build a CodeQL database from the 
   - Trivy: https://github.com/aquasecurity/trivy/blob/main/LICENSE and https://trivy.dev/docs/latest/configuration/reporting | The repository license is Apache 2.0 [44]. It is a local CLI/container tool; the cited reporting page documents formats rather than a hosted-account requirement. | Scan the supplied filesystem, repository, image, or SBOM. Pin the database a
   - OWASP Dependency-Check: https://owasp.org/www-project-dependency-check and https://dependency-check.github.io/Dependency | OWASP describes it as an open-source SCA suite [60]. The project publishes its license page at https://dependency-check.github.io/DependencyCheck/licenses.html; record the version and license page with the evidence. | Scan the exact build d
-- build candidates named:
-  - Priority | Candidate
-  - P0 | ReTestSpec
-  - P0 | Safe HTTP runner
-  - P0 | Response fingerprint engine
-  - P0 | Evidence packager
-  - P1 | Two-account auth fixture
-  - P1 | ASP.NET error regression pack
-  - P1 | TLS/header snapshot

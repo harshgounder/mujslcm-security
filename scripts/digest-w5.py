@@ -33,8 +33,15 @@ def rows(text, require_url=True):
         joined = " | ".join(cells)
         if require_url and not re.search(r"https?://", joined):
             continue
-        if not require_url and (not cells[0] or cells[0].startswith("---")):
-            continue
+        if not require_url:
+            c0 = cells[0].strip().strip("*`_ ")
+            low = c0.lower()
+            JUNK = {"candidate", "gap", "name", "id", "rank", "priority", "phase", "table", "row",
+                    "q", "note", "notes", "item", "test", "gate", "evidence"}
+            if (not c0 or c0.startswith("---") or low in JUNK
+                    or re.fullmatch(r"[A-Z]\d{1,2}", c0) or re.fullmatch(r"P\d", c0)
+                    or re.fullmatch(r"[#\-_=]{1,3}", c0) or len(c0) < 6):
+                continue
         out.append({"name": cells[0][:120], "cells": [c[:220] for c in cells[1:6]],
                     "head": head[:7] if head else None})
     return out

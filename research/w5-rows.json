@@ -868,15 +868,6 @@
   ],
   "no_tool_gaps": [
    {
-    "name": "Gap",
-    "cells": [
-     "Why no off-the-shelf tool fully covers it",
-     "Evidence",
-     "Risk if unmitigated"
-    ],
-    "head": null
-   },
-   {
     "name": "ASP.NET MVC parameter discovery with parameter-type awareness",
     "cells": [
      "The OWASP SSRF Prevention Cheat Sheet is language-agnostic; SSRFmap takes a Burp request + a parameter but is not an MVC-route spider [6][1]",
@@ -1270,88 +1261,7 @@
     "head": null
    }
   ],
-  "no_tool_gaps": [
-   {
-    "name": "#",
-    "cells": [
-     "Gap",
-     "What exists nearby",
-     "Build candidate (description)",
-     "Why it matters for MUJ"
-    ],
-    "head": null
-   },
-   {
-    "name": "G1",
-    "cells": [
-     "ASP.NET MVC 5 aware PoC generator",
-     "Generic Burp CSRF PoC generator",
-     "Build a Python helper that ingests a Burp capture, lifts the `__RequestVerificationToken` form field, and rewrites the generated `f.submit()` HTML so the field appears as a static hidden input regardless of the cookie pa",
-     "Cuts PoC authoring time for every real CSRF chain by ~95%."
-    ],
-    "head": null
-   },
-   {
-    "name": "G2",
-    "cells": [
-     "`enc`-aware three-state oracle",
-     "none",
-     "Build a small CLI that GETs `?enc=<b64>` and reports `(4,942 -> FormatException, 5,084 -> CryptographicException)` plus empty-state detection; emits SARIF or JSON for triage.",
-     "A first-of-its-kind discriminator for MachineKey.Protect, useful for *every* Classic ASP.NET building on Azure."
-    ],
-    "head": null
-   },
-   {
-    "name": "G3",
-    "cells": [
-     "Antiforgery salt audit",
-     "SecurityCodeScan + CodeQL",
-     "Static rule that walks every `[HttpPost, ValidateAntiForgeryToken(Actions=...)]` and computes whether `AdditionalDataProvider` is set when salts differ across controllers.",
-     "Reasonable to ship as a Semgrep rule with `pattern: $X.ValidateAntiForgeryToken(...)` + meta `validation: AFD-data-provider-set-or-default`."
-    ],
-    "head": null
-   },
-   {
-    "name": "G4",
-    "cells": [
-     "Login-CSRF (OIDC) probe",
-     "manual",
-     "Build a Burp Collaborator-style flow initiator that issues a forged `code` POST without `state` to `/signin-oidc` and reports the response code family.",
-     "The single highest-yield CSRF chain in the OIDC ecosystem; not currently open-source."
-    ],
-    "head": null
-   },
-   {
-    "name": "G5",
-    "cells": [
-     "SameSite/Secure-attribute matrix",
-     "none",
-     "Walk the `Set-Cookie` headers reporting `[name, value, HttpOnly-flag, Secure-flag, SameSite, Path, Domain]`. OWASP ZAP has a partial version; this is a focused httpx alternative.",
-     "Pre-auth automatic; complements the live F9."
-    ],
-    "head": null
-   },
-   {
-    "name": "G6",
-    "cells": [
-     "Cookie fixator",
-     "none required (the browser does it); build a proxy that sets the missing-Secure verification cookie at login.",
-     "A test-only \"set the cookie anyway\" tap used at first auth.",
-     "Only useful to record the cookie's actual flag-set behaviour."
-    ],
-    "head": null
-   },
-   {
-    "name": "G7",
-    "cells": [
-     "Entra-resilient OIDC attacker",
-     "none",
-     "Build a Python MITM-side OIDC issuer using a known test client_id and the SLCM-issued redirect_uri list to forge a code-bearing POST.",
-     "Risk-sensitive; needs the scope letter."
-    ],
-    "head": null
-   }
-  ],
+  "no_tool_gaps": [],
   "build_candidates": [],
   "verdict": "The MUJ SLCM campaign should continue to be HELD at BLOCKED-AUTH. The pre-auth recon chain has produced a complete technique universe, a tool inventory of 25 entries that materially exercise the class, and a defensible detection counterpart map -- and none of those steps require crossing the agency ",
   "chars": 40569
@@ -2736,78 +2646,6 @@
      "Workaround"
     ],
     "head": null
-   },
-   {
-    "name": "GT-1",
-    "cells": [
-     "**No public Sigma rule for ASP.NET upload request boundaries** (multipart with `.aspx` filename in `Content-Disposition`)",
-     "Sigma web-shell rule fire on filesystem creation events, not on the request [10]; boundary-side coverage would need a SIEM-side IDS schema with full request body, which most SOC pipelines lack",
-     "Build with the Build Candidates below"
-    ],
-    "head": null
-   },
-   {
-    "name": "GT-2",
-    "cells": [
-     "**No Burp extension that tests the ASP.NET `Web.config` upload trick**",
-     "HackTricks notes the trick on ASP servers, but no off-the-shelf fuzzer automates Web.config upload-pattern replay",
-     "Manual Repeater-only"
-    ],
-    "head": null
-   },
-   {
-    "name": "GT-3",
-    "cells": [
-     "**Burp Upload Scanner / File Upload Traverser cannot run pre-auth on a GET-only surface**",
-     "Both rely on multipart POST/PUT for the planted-filename probe [23]; MUJ method policy POST=411, PUT=411 [Recap]",
-     "Run after scope letter; replay GET-induced 411 against POST corpora in lab to triage disparity"
-    ],
-    "head": null
-   },
-   {
-    "name": "GT-4",
-    "cells": [
-     "**No tool that detects the IIS-10-specific path normalization gap within one semantic request**",
-     "The StackOverflow example is illustrative [4] but no generalised automated fuzzer splits the \"pre-normalize\" payload from the \"post-normalize\" canonical to report a vulnerability",
-     "Build Candidates GT-BC1 (see below)"
-    ],
-    "head": null
-   },
-   {
-    "name": "GT-5",
-    "cells": [
-     "**No public polyglot PDF generator that produces an ASPX-valid PDF**",
-     "PDF polyglots are typically JSP/PHP-targeted; ASPX requires `_ViewState`-aware logic that no public tool emits",
-     "Build Candidates GT-BC2 (see below)"
-    ],
-    "head": null
-   },
-   {
-    "name": "GT-6",
-    "cells": [
-     "**No generalised like-for-like scanner that compares the IIS 8.3 short-name with the actual file extension**",
-     "irsdl and bitquark only enumerate short names; mapping back to full names is manual",
-     "Build Candidates GT-BC3 (see below)"
-    ],
-    "head": null
-   },
-   {
-    "name": "GT-7",
-    "cells": [
-     "**No ASP.NET MVC 5.3-specific static-rule analysis tool**",
-     "The MVC controller surface analysis is manual (decompile / ILSpy); no public tool grey-box-fuzzes MVC 5.3 controllers",
-     "Manual + Roslyn analyzer as Build Candidates GT-BC4"
-    ],
-    "head": null
-   },
-   {
-    "name": "GT-8",
-    "cells": [
-     "**No defensive Sigma rule that fires on UploadScanner target identifiers**",
-     "Boundary-side detection is still SOC-implementation territory",
-     "Build Candidates GT-BC1"
-    ],
-    "head": null
    }
   ],
   "build_candidates": [],
@@ -2907,15 +2745,6 @@
   ],
   "no_tool_gaps": [],
   "build_candidates": [
-   {
-    "name": "Candidate",
-    "cells": [
-     "Purpose",
-     "Minimum design",
-     "Priority"
-    ],
-    "head": null
-   },
    {
     "name": "Authorization Matrix Runner",
     "cells": [
@@ -3285,15 +3114,6 @@
   ],
   "no_tool_gaps": [
    {
-    "name": "Gap",
-    "cells": [
-     "Why mainstream tools fail",
-     "Build candidate",
-     "Effort estimate"
-    ],
-    "head": null
-   },
-   {
     "name": "Anti-forgery regression (HttpOnly cookie without Secure)",
     "cells": [
      "No mainstream scanner emits a per-cookie report for Secure/HttpOnly/SameSite because this is a header-set issue rather than a runtime query-cost issue",
@@ -3501,15 +3321,6 @@
    }
   ],
   "no_tool_gaps": [
-   {
-    "name": "Gap",
-    "cells": [
-     "Why existing tools do not close it",
-     "Build candidate",
-     "Minimum safe output"
-    ],
-    "head": null
-   },
    {
     "name": "Token-boundary classifier",
     "cells": [
@@ -4002,15 +3813,6 @@
   ],
   "no_tool_gaps": [],
   "build_candidates": [
-   {
-    "name": "Candidate",
-    "cells": [
-     "Proposed function",
-     "Guardrails",
-     "Proposed output"
-    ],
-    "head": null
-   },
    {
     "name": "`azure-claimability-readonly`",
     "cells": [
@@ -4629,16 +4431,6 @@
   "no_tool_gaps": [],
   "build_candidates": [
    {
-    "name": "Candidate",
-    "cells": [
-     "Input and operation",
-     "Output",
-     "Safety design",
-     "Priority"
-    ],
-    "head": null
-   },
-   {
     "name": "**SLCM Azure Lineage Packager**",
     "cells": [
      "Owner-entered resource IDs plus passive DNS/certificate/public-code evidence; correlates rather than brute-forces",
@@ -4725,16 +4517,6 @@
  "w5-g-19-the-entra-and-m365-identity-control-plane": {
   "rows": [],
   "no_tool_gaps": [
-   {
-    "name": "Gap",
-    "cells": [
-     "Why existing tools fall short",
-     "Build candidate",
-     "Safety properties",
-     "Output"
-    ],
-    "head": null
-   },
    {
     "name": "Three-tenant directional trust diff",
     "cells": [
@@ -4994,15 +4776,6 @@
    }
   ],
   "no_tool_gaps": [
-   {
-    "name": "Gap",
-    "cells": [
-     "Why existing tools are insufficient",
-     "Build candidate",
-     "Minimum safe design"
-    ],
-    "head": null
-   },
    {
     "name": "Three-stage `enc` semantics",
     "cells": [
@@ -5335,15 +5108,6 @@
   ],
   "no_tool_gaps": [],
   "build_candidates": [
-   {
-    "name": "Candidate",
-    "cells": [
-     "Minimum viable behavior",
-     "Why existing tools do not close it",
-     "Safe development path"
-    ],
-    "head": null
-   },
    {
     "name": "**Indian obligation compiler**",
     "cells": [
@@ -6093,16 +5857,6 @@
   "no_tool_gaps": [],
   "build_candidates": [
    {
-    "name": "Candidate",
-    "cells": [
-     "Build objective",
-     "Minimum design",
-     "Safe implementation boundary",
-     "Success evidence"
-    ],
-    "head": null
-   },
-   {
     "name": "Evidence intake pack",
     "cells": [
      "Make every run reproducible",
@@ -6361,15 +6115,6 @@
   ],
   "no_tool_gaps": [
    {
-    "name": "Gap",
-    "cells": [
-     "Why existing tools do not close it",
-     "Consequence for MUJ SLCM",
-     "Priority"
-    ],
-    "head": null
-   },
-   {
     "name": "No human-vector baseline",
     "cells": [
      "The supplied campaign is ABSENT; tools can generate events but cannot create historical user behavior.",
@@ -6452,15 +6197,6 @@
    }
   ],
   "build_candidates": [
-   {
-    "name": "Candidate",
-    "cells": [
-     "Safe design",
-     "Output",
-     "Guardrail"
-    ],
-    "head": null
-   },
    {
     "name": "Zero-secret simulation orchestrator",
     "cells": [
@@ -6730,107 +6466,7 @@
    }
   ],
   "no_tool_gaps": [],
-  "build_candidates": [
-   {
-    "name": "Priority",
-    "cells": [
-     "Candidate",
-     "Minimum design",
-     "Exit criterion"
-    ],
-    "head": null
-   },
-   {
-    "name": "P0",
-    "cells": [
-     "ReTestSpec",
-     "YAML or JSON fields for finding ID, endpoint, method, input class, auth state, expected status, allowed headers, cookie assertions, body markers, normalization rules, rate limit, and stop condition.",
-     "Every one of the ten findings has a versioned test case that can run against a local fixture."
-    ],
-    "head": null
-   },
-   {
-    "name": "P0",
-    "cells": [
-     "Safe HTTP runner",
-     "Explicit host allowlist, method allowlist, request cap, delay, timeout, no-follow-redirect option, no mutation by default, secret redaction, and emergency stop.",
-     "A dry run produces no live request; an authorized run cannot leave the allowlist."
-    ],
-    "head": null
-   },
-   {
-    "name": "P0",
-    "cells": [
-     "Response fingerprint engine",
-     "Compare status, content type, selected headers, cookie flags, stable body hash, body size, and disclosure markers while ignoring documented dynamic fields.",
-     "The runner correctly distinguishes the MVC and IIS families without declaring a size-only oracle."
-    ],
-    "head": null
-   },
-   {
-    "name": "P0",
-    "cells": [
-     "Evidence packager",
-     "Bundle redacted request/response, tool version, runner version, timestamp, target, source IP, deployment ID, test case hash, result, and reviewer.",
-     "A reviewer can reproduce the decision from the pack without receiving secrets."
-    ],
-    "head": null
-   },
-   {
-    "name": "P1",
-    "cells": [
-     "Two-account auth fixture",
-     "Store account references outside code, isolate sessions, map role and owned canary record, and assert no cross-account data.",
-     "CSRF, session, and authorization tests run only on approved canaries and fail closed on missing fixtures."
-    ],
-    "head": null
-   },
-   {
-    "name": "P1",
-    "cells": [
-     "ASP.NET error regression pack",
-     "Local test routes that throw representative exceptions, test `customErrors`, verify generic responses, and verify diagnostic logs without returning details.",
-     "MUJ-01, MUJ-02, and MUJ-06 have deterministic local and authorized-live assertions."
-    ],
-    "head": null
-   },
-   {
-    "name": "P1",
-    "cells": [
-     "TLS/header snapshot",
-     "Run pinned testssl.sh and SSLyze versions, capture JSON/CSV, and compare protocol/header policy against an approved manifest.",
-     "TLS and HSTS results are diffable and policy-linked, not merely scanner-colored."
-    ],
-    "head": null
-   },
-   {
-    "name": "P1",
-    "cells": [
-     "Dependency/deployed-asset manifest",
-     "Generate CycloneDX for .NET and JavaScript, record script content hashes, and compare repository, build, and live manifests.",
-     "MUJ-09 has evidence that the deployed scripts match the approved build."
-    ],
-    "head": null
-   },
-   {
-    "name": "P2",
-    "cells": [
-     "SARIF/DefectDojo adapter",
-     "Normalize tool identifiers, stable endpoint/control keys, import/reimport rules, and finding lifecycle states.",
-     "Reimport does not create duplicates or silently close a changed finding."
-    ],
-    "head": null
-   },
-   {
-    "name": "P2",
-    "cells": [
-     "CI policy gate",
-     "Run passive checks on every build, require manual approval for production retests, and fail on unreviewed regressions.",
-     "A clean build cannot bypass evidence or deploy without a recorded security result."
-    ],
-    "head": null
-   }
-  ],
+  "build_candidates": [],
   "verdict": "**Verdict: CAMPAIGN STATUS TO BEAT remains ABSENT.** The available facts show a useful initial non-destructive baseline, but they do not yet constitute a retest harness or a university-acceptable closure system. The immediate decision is to build the P0 ReTestSpec, safe runner, response fingerprint ",
   "chars": 58206
  }
