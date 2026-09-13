@@ -1,0 +1,77 @@
+{
+ "*.jaipur.manipal.edu": [],
+ "MUJONE.JAIPUR.MANIPAL.EDU": [
+  "52.172.36.15"
+ ],
+ "admissions.jaipur.manipal.edu": [
+  "jaipurmanipal.nopaperforms.com.",
+  "prodvpc-web-lb4-593721465.ap-south-1.elb.amazonaws.com.",
+  "13.200.213.174",
+  "43.204.126.76",
+  "13.126.77.53"
+ ],
+ "apply.jaipur.manipal.edu": [],
+ "dms.jaipur.manipal.edu": [
+  "1.186.160.28"
+ ],
+ "dmsmuj.jaipur.manipal.edu": [
+  "1.186.160.19"
+ ],
+ "helpdesk.jaipur.manipal.edu": [],
+ "idp.jaipur.manipal.edu": [
+  "1.186.160.23"
+ ],
+ "jaipur.manipal.edu": [
+  "3.108.105.201"
+ ],
+ "lcs.jaipur.manipal.edu": [
+  "a.impartus.com.",
+  "nginx-prod-ecs-7617c47746b5c358.elb.ap-south-1.amazonaws.com.",
+  "43.204.209.105",
+  "43.204.79.200",
+  "3.111.72.242"
+ ],
+ "muj.slcm.jaipur.manipal.edu": [
+  "20.244.94.89"
+ ],
+ "mujerp.jaipur.manipal.edu": [
+  "20.244.0.229"
+ ],
+ "mujone.jaipur.manipal.edu": [
+  "52.172.36.15"
+ ],
+ "mujslcm.jaipur.manipal.edu": [
+  "98.70.14.50"
+ ],
+ "mycampus.jaipur.manipal.edu": [
+  "edtech366.azurewebsites.net."
+ ],
+ "npfslcm.jaipur.manipal.edu": [
+  "20.244.94.89"
+ ],
+ "pms.jaipur.manipal.edu": [
+  "1.186.160.23"
+ ],
+ "rms.jaipur.manipal.edu": [
+  "202.131.155.153"
+ ],
+ "testerp.jaipur.manipal.edu": [
+  "202.131.155.152"
+ ],
+ "testmycampus.jaipur.manipal.edu": [
+  "edtech366.azurewebsites.net."
+ ],
+ "www.MUJONE.JAIPUR.MANIPAL.EDU": [],
+ "www.admissions.jaipur.manipal.edu": [],
+ "www.dms.jaipur.manipal.edu": [],
+ "www.dmsmuj.jaipur.manipal.edu": [],
+ "www.jaipur.manipal.edu": [
+  "jaipur.manipal.edu.",
+  "3.108.105.201"
+ ],
+ "www.lcs.jaipur.manipal.edu": [],
+ "www.muj.slcm.jaipur.manipal.edu": [],
+ "www.mujone.jaipur.manipal.edu": [],
+ "www.mujslcm.jaipur.manipal.edu": [],
+ "www.rms.jaipur.manipal.edu": []
+}

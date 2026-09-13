@@ -1,0 +1,13 @@
+HTTP/2 200 
+cache-control: public
+content-type: image/x-icon
+expires: Sun, 13 Sep 2026 09:54:30 GMT
+last-modified: Sun, 17 Mar 2024 13:32:48 GMT
+accept-ranges: bytes
+etag: "1DA786F99ED0000"
+server: Microsoft-IIS/10.0
+x-aspnet-version: 4.0.30319
+x-powered-by: ASP.NET
+date: Sun, 13 Sep 2026 05:10:41 GMT
+content-length: 32038
+

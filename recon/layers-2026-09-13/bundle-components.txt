@@ -1,0 +1,5 @@
+Idle Timer v1. 1.0
+Waypoints - 4. 0.1
+autosize 4. 0.2
+bootstrap-timepicker v0. 5.2
+nouislider - 13. 1.5

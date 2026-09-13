@@ -1,0 +1,455 @@
+{
+ "target": "mujslcm.jaipur.manipal.edu",
+ "when": "2026-09-13T10:45:37.024260",
+ "rows": [
+  {
+   "label": "method-GET",
+   "status": "200",
+   "len": 20045,
+   "set_cookie": [
+    "__RequestVerificationToken=1ZZwW3X35DcoYvRznnnMz1r3c1PBar16c4C8QE80Iub3sYkNedfiyQlJBwu-HXTDdZ-_KpypAjK47epXpkB6xEQ880N0PUspzZTuV-fw72k1; path=/; HttpOnly\r"
+   ],
+   "allow": [],
+   "server": "Microsoft-IIS/10.0",
+   "x_powered_by": "ASP.NET",
+   "x_aspnetmvc": "5.3",
+   "all_headers": [
+    "cache-control",
+    "content-length",
+    "content-type",
+    "date",
+    "server",
+    "set-cookie",
+    "x-aspnet-version",
+    "x-aspnetmvc-version",
+    "x-frame-options",
+    "x-powered-by"
+   ]
+  },
+  {
+   "label": "method-HEAD",
+   "status": "404",
+   "len": 20045,
+   "set_cookie": [],
+   "allow": [],
+   "server": "Microsoft-IIS/10.0",
+   "x_powered_by": "ASP.NET",
+   "x_aspnetmvc": null,
+   "all_headers": [
+    "content-length",
+    "content-type",
+    "date",
+    "server",
+    "x-powered-by"
+   ]
+  },
+  {
+   "label": "method-POST",
+   "status": "411",
+   "len": 338,
+   "set_cookie": [],
+   "allow": [],
+   "server": "Microsoft-HTTPAPI/2.0",
+   "x_powered_by": null,
+   "x_aspnetmvc": null,
+   "all_headers": [
+    "content-length",
+    "content-type",
+    "date",
+    "server"
+   ]
+  },
+  {
+   "label": "method-OPTIONS",
+   "status": "404",
+   "len": 1216,
+   "set_cookie": [],
+   "allow": [],
+   "server": "Microsoft-IIS/10.0",
+   "x_powered_by": "ASP.NET",
+   "x_aspnetmvc": null,
+   "all_headers": [
+    "content-length",
+    "content-type",
+    "date",
+    "server",
+    "x-powered-by"
+   ]
+  },
+  {
+   "label": "method-TRACE",
+   "status": "404",
+   "len": 1216,
+   "set_cookie": [],
+   "allow": [],
+   "server": "Microsoft-IIS/10.0",
+   "x_powered_by": "ASP.NET",
+   "x_aspnetmvc": null,
+   "all_headers": [
+    "content-length",
+    "content-type",
+    "date",
+    "server",
+    "x-powered-by"
+   ]
+  },
+  {
+   "label": "method-PUT",
+   "status": "411",
+   "len": 338,
+   "set_cookie": [],
+   "allow": [],
+   "server": "Microsoft-HTTPAPI/2.0",
+   "x_powered_by": null,
+   "x_aspnetmvc": null,
+   "all_headers": [
+    "content-length",
+    "content-type",
+    "date",
+    "server"
+   ]
+  },
+  {
+   "label": "method-DELETE",
+   "status": "404",
+   "len": 1216,
+   "set_cookie": [],
+   "allow": [],
+   "server": "Microsoft-IIS/10.0",
+   "x_powered_by": "ASP.NET",
+   "x_aspnetmvc": null,
+   "all_headers": [
+    "content-length",
+    "content-type",
+    "date",
+    "server",
+    "x-powered-by"
+   ]
+  },
+  {
+   "label": "method-PATCH",
+   "status": "404",
+   "len": 1216,
+   "set_cookie": [],
+   "allow": [],
+   "server": "Microsoft-IIS/10.0",
+   "x_powered_by": "ASP.NET",
+   "x_aspnetmvc": null,
+   "all_headers": [
+    "content-length",
+    "content-type",
+    "date",
+    "server",
+    "x-powered-by"
+   ]
+  },
+  {
+   "label": "method-PROPFIND",
+   "status": "404",
+   "len": 1216,
+   "set_cookie": [],
+   "allow": [],
+   "server": "Microsoft-IIS/10.0",
+   "x_powered_by": "ASP.NET",
+   "x_aspnetmvc": null,
+   "all_headers": [
+    "content-length",
+    "content-type",
+    "date",
+    "server",
+    "x-powered-by"
+   ]
+  },
+  {
+   "label": "method-SEARCH",
+   "status": "404",
+   "len": 1216,
+   "set_cookie": [],
+   "allow": [],
+   "server": "Microsoft-IIS/10.0",
+   "x_powered_by": "ASP.NET",
+   "x_aspnetmvc": null,
+   "all_headers": [
+    "content-length",
+    "content-type",
+    "date",
+    "server",
+    "x-powered-by"
+   ]
+  },
+  {
+   "label": "path-web.config",
+   "status": "404",
+   "len": 1216,
+   "set_cookie": [],
+   "allow": [],
+   "server": "Microsoft-IIS/10.0",
+   "x_powered_by": "ASP.NET",
+   "x_aspnetmvc": null,
+   "all_headers": [
+    "content-length",
+    "content-type",
+    "date",
+    "server",
+    "x-powered-by"
+   ]
+  },
+  {
+   "label": "path-app_offline.htm",
+   "status": "302",
+   "len": 125,
+   "set_cookie": [],
+   "allow": [],
+   "server": "Microsoft-IIS/10.0",
+   "x_powered_by": "ASP.NET",
+   "x_aspnetmvc": null,
+   "all_headers": [
+    "content-length",
+    "content-type",
+    "date",
+    "location",
+    "server",
+    "x-powered-by"
+   ]
+  },
+  {
+   "label": "path-Global.asax",
+   "status": "404",
+   "len": 1216,
+   "set_cookie": [],
+   "allow": [],
+   "server": "Microsoft-IIS/10.0",
+   "x_powered_by": "ASP.NET",
+   "x_aspnetmvc": null,
+   "all_headers": [
+    "content-length",
+    "content-type",
+    "date",
+    "server",
+    "x-powered-by"
+   ]
+  },
+  {
+   "label": "path-packages.config",
+   "status": "404",
+   "len": 1216,
+   "set_cookie": [],
+   "allow": [],
+   "server": "Microsoft-IIS/10.0",
+   "x_powered_by": "ASP.NET",
+   "x_aspnetmvc": null,
+   "all_headers": [
+    "content-length",
+    "content-type",
+    "date",
+    "server",
+    "x-powered-by"
+   ]
+  },
+  {
+   "label": "path-bin",
+   "status": "404",
+   "len": 1216,
+   "set_cookie": [],
+   "allow": [],
+   "server": "Microsoft-IIS/10.0",
+   "x_powered_by": "ASP.NET",
+   "x_aspnetmvc": null,
+   "all_headers": [
+    "content-length",
+    "content-type",
+    "date",
+    "server",
+    "x-powered-by"
+   ]
+  },
+  {
+   "label": "path-App_Data",
+   "status": "404",
+   "len": 1216,
+   "set_cookie": [],
+   "allow": [],
+   "server": "Microsoft-IIS/10.0",
+   "x_powered_by": "ASP.NET",
+   "x_aspnetmvc": null,
+   "all_headers": [
+    "content-length",
+    "content-type",
+    "date",
+    "server",
+    "x-powered-by"
+   ]
+  },
+  {
+   "label": "path-Views",
+   "status": "404",
+   "len": 2733,
+   "set_cookie": [],
+   "allow": [],
+   "server": "Microsoft-IIS/10.0",
+   "x_powered_by": "ASP.NET",
+   "x_aspnetmvc": null,
+   "all_headers": [
+    "cache-control",
+    "content-length",
+    "content-type",
+    "date",
+    "server",
+    "x-aspnet-version",
+    "x-powered-by"
+   ]
+  },
+  {
+   "label": "path-Scripts",
+   "status": "403",
+   "len": 1204,
+   "set_cookie": [],
+   "allow": [],
+   "server": "Microsoft-IIS/10.0",
+   "x_powered_by": "ASP.NET",
+   "x_aspnetmvc": null,
+   "all_headers": [
+    "content-length",
+    "content-type",
+    "date",
+    "server",
+    "x-powered-by"
+   ]
+  },
+  {
+   "label": "path-Home_Error",
+   "status": "302",
+   "len": 125,
+   "set_cookie": [],
+   "allow": [],
+   "server": "Microsoft-IIS/10.0",
+   "x_powered_by": "ASP.NET",
+   "x_aspnetmvc": null,
+   "all_headers": [
+    "content-length",
+    "content-type",
+    "date",
+    "location",
+    "server",
+    "x-powered-by"
+   ]
+  },
+  {
+   "label": "path-Account_Login",
+   "status": "302",
+   "len": 125,
+   "set_cookie": [],
+   "allow": [],
+   "server": "Microsoft-IIS/10.0",
+   "x_powered_by": "ASP.NET",
+   "x_aspnetmvc": null,
+   "all_headers": [
+    "content-length",
+    "content-type",
+    "date",
+    "location",
+    "server",
+    "x-powered-by"
+   ]
+  },
+  {
+   "label": "path-.git_config",
+   "status": "302",
+   "len": 125,
+   "set_cookie": [],
+   "allow": [],
+   "server": "Microsoft-IIS/10.0",
+   "x_powered_by": "ASP.NET",
+   "x_aspnetmvc": null,
+   "all_headers": [
+    "content-length",
+    "content-type",
+    "date",
+    "location",
+    "server",
+    "x-powered-by"
+   ]
+  },
+  {
+   "label": "path-favicon.ico",
+   "status": "200",
+   "len": 31015,
+   "set_cookie": [],
+   "allow": [],
+   "server": "Microsoft-IIS/10.0",
+   "x_powered_by": "ASP.NET",
+   "x_aspnetmvc": null,
+   "all_headers": [
+    "accept-ranges",
+    "cache-control",
+    "content-length",
+    "content-type",
+    "date",
+    "etag",
+    "expires",
+    "last-modified",
+    "server",
+    "x-aspnet-version",
+    "x-powered-by"
+   ]
+  },
+  {
+   "label": "F1-invalid-base64",
+   "status": "500",
+   "len": 4942,
+   "set_cookie": [],
+   "allow": [],
+   "server": "Microsoft-IIS/10.0",
+   "x_powered_by": "ASP.NET",
+   "x_aspnetmvc": null,
+   "all_headers": [
+    "cache-control",
+    "content-length",
+    "content-type",
+    "date",
+    "server",
+    "x-aspnet-version",
+    "x-powered-by"
+   ]
+  },
+  {
+   "label": "F8-valid-base64-garbage",
+   "status": "500",
+   "len": 4942,
+   "set_cookie": [],
+   "allow": [],
+   "server": "Microsoft-IIS/10.0",
+   "x_powered_by": "ASP.NET",
+   "x_aspnetmvc": null,
+   "all_headers": [
+    "cache-control",
+    "content-length",
+    "content-type",
+    "date",
+    "server",
+    "x-aspnet-version",
+    "x-powered-by"
+   ]
+  },
+  {
+   "label": "POST-empty-no-token",
+   "status": "500",
+   "len": 8200,
+   "set_cookie": [],
+   "allow": [],
+   "server": "Microsoft-IIS/10.0",
+   "x_powered_by": "ASP.NET",
+   "x_aspnetmvc": null,
+   "all_headers": [
+    "cache-control",
+    "content-length",
+    "content-type",
+    "date",
+    "server",
+    "x-aspnet-version",
+    "x-powered-by"
+   ]
+  }
+ ],
+ "note": "single requests 1.6s apart; fixed lists; no auth; no exploitation; no state change"
+}

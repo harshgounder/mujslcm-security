@@ -1,0 +1,4 @@
+tls1_2: New, TLSv1.2, Cipher is ECDHE-RSA-AES256-GCM-SHA384
+tls1_3: New, (NONE), Cipher is (NONE)
+tls1_1: 40175159A37F0000:error:0A0000BF:SSL routines:tls_setup_handshake:no protocols available:ssl/statem/statem_lib.c:155:
+tls1: 40D72B79417F0000:error:0A0000BF:SSL routines:tls_setup_handshake:no protocols available:ssl/statem/statem_lib.c:155:

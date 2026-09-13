@@ -1,0 +1,149 @@
+{
+ "target": "mujslcm.jaipur.manipal.edu",
+ "when": "2026-09-13T10:41:18.226650",
+ "probes": [
+  {
+   "probe": "home-headers.txt",
+   "url": "https://mujslcm.jaipur.manipal.edu/",
+   "method": "GET",
+   "bytes": 441,
+   "rc": 0
+  },
+  {
+   "probe": "home.html",
+   "url": "https://mujslcm.jaipur.manipal.edu/",
+   "method": "GET",
+   "bytes": 20507,
+   "rc": 0
+  },
+  {
+   "probe": "enc-trigger.txt",
+   "url": "https://mujslcm.jaipur.manipal.edu/Home/Index?enc=zz",
+   "method": "GET",
+   "bytes": 5257,
+   "rc": 0
+  },
+  {
+   "probe": "robots.txt",
+   "url": "https://mujslcm.jaipur.manipal.edu/robots.txt",
+   "method": "GET",
+   "bytes": 187,
+   "rc": 0
+  },
+  {
+   "probe": "security.txt",
+   "url": "https://mujslcm.jaipur.manipal.edu/security.txt",
+   "method": "GET",
+   "bytes": 187,
+   "rc": 0
+  },
+  {
+   "probe": "well-known-security.txt",
+   "url": "https://mujslcm.jaipur.manipal.edu/.well-known/security.txt",
+   "method": "GET",
+   "bytes": 187,
+   "rc": 0
+  },
+  {
+   "probe": "trace-axd.txt",
+   "url": "https://mujslcm.jaipur.manipal.edu/trace.axd",
+   "method": "GET",
+   "bytes": 218,
+   "rc": 0
+  },
+  {
+   "probe": "elmah-axd.txt",
+   "url": "https://mujslcm.jaipur.manipal.edu/elmah.axd",
+   "method": "GET",
+   "bytes": 150,
+   "rc": 0
+  },
+  {
+   "probe": "favicon.ico",
+   "url": "https://mujslcm.jaipur.manipal.edu/favicon.ico",
+   "method": "GET",
+   "bytes": 339,
+   "rc": 0
+  },
+  {
+   "probe": "sitemap.xml",
+   "url": "https://mujslcm.jaipur.manipal.edu/sitemap.xml",
+   "method": "GET",
+   "bytes": 187,
+   "rc": 0
+  },
+  {
+   "probe": "options.txt",
+   "url": "https://mujslcm.jaipur.manipal.edu/",
+   "method": "GET",
+   "bytes": 150,
+   "rc": 0
+  },
+  {
+   "probe": "oidc-jaipur.manipal.edu.json",
+   "url": "https://login.microsoftonline.com/jaipur.manipal.edu/v2.0/.well-known/openid-configuration",
+   "method": "GET",
+   "bytes": 1964,
+   "rc": 0
+  },
+  {
+   "probe": "oidc-muj.manipal.edu.json",
+   "url": "https://login.microsoftonline.com/muj.manipal.edu/v2.0/.well-known/openid-configuration",
+   "method": "GET",
+   "bytes": 1964,
+   "rc": 0
+  },
+  {
+   "probe": "oidc-manipal.edu.json",
+   "url": "https://login.microsoftonline.com/manipal.edu/v2.0/.well-known/openid-configuration",
+   "method": "GET",
+   "bytes": 1964,
+   "rc": 0
+  },
+  {
+   "probe": "getuserrealm.xml",
+   "url": "https://login.microsoftonline.com/getuserrealm.srf?login=probe@mujslcm.jaipur.manipal.edu&xml=1",
+   "method": "GET",
+   "bytes": 447,
+   "rc": 0
+  },
+  {
+   "probe": "autodiscover-head.txt",
+   "url": "https://autodiscover.mujslcm.jaipur.manipal.edu/autodiscover/autodiscover.xml",
+   "method": "GET",
+   "bytes": 0,
+   "rc": 6
+  }
+ ],
+ "dns": {
+  "A": "98.70.14.50",
+  "AAAA": "",
+  "CNAME": "",
+  "NS": "",
+  "SOA": "",
+  "MX": "",
+  "TXT": "",
+  "CAA": "",
+  "DMARC _dmarc": "",
+  "MTA-STS": "",
+  "autodiscover CNAME": "",
+  "enterpriseregistration": "",
+  "enterpriseenrollment": "",
+  "lyncdisc": "",
+  "sipfed": "",
+  "DKIM selector1": "",
+  "DKIM selector2": ""
+ },
+ "tls_protocols": {
+  "tls1_2": "New, TLSv1.2, Cipher is ECDHE-RSA-AES256-GCM-SHA384",
+  "tls1_3": "New, (NONE), Cipher is (NONE)",
+  "tls1_1": "40175159A37F0000:error:0A0000BF:SSL routines:tls_setup_handshake:no protocols available:ssl/statem/statem_lib.c:155:",
+  "tls1": "40D72B79417F0000:error:0A0000BF:SSL routines:tls_setup_handshake:no protocols available:ssl/statem/statem_lib.c:155:"
+ },
+ "ports": {
+  "80": "closed/filtered",
+  "443": "open",
+  "8080": "closed/filtered"
+ },
+ "note": "single requests, 1.5s apart, no auth, no scanners, no sibling hosts"
+}

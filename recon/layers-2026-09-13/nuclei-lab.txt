@@ -1,0 +1,34 @@
+
+                     __     _
+   ____  __  _______/ /__  (_)
+  / __ \/ / / / ___/ / _ \/ /
+ / / / / /_/ / /__/ /  __/ /
+/_/ /_/\__,_/\___/_/\___/_/   v3.11.1
+
+		projectdiscovery.io
+
+[INF] nuclei-templates are not installed, installing...
+[INF] Your current nuclei-templates  are outdated. Latest is v10.4.8
+[WRN] Found 239 templates with runtime error (use -validate flag for further examination)
+[INF] Current nuclei version: v3.11.1 (latest)
+[INF] Current nuclei-templates version:  (outdated)
+[INF] New templates added in latest release: 0
+[INF] Templates loaded for current scan: 1654
+[INF] Executing 1654 signed templates from projectdiscovery/nuclei-templates
+[INF] Targets loaded for current scan: 1
+[INF] Templates clustered: 672 (Reduced 629 Requests)
+[INF] Using Interactsh Server: oast.pro
+[http-missing-security-headers:referrer-policy] [http] [info] http://127.0.0.1:8899/
+[http-missing-security-headers:cross-origin-opener-policy] [http] [info] http://127.0.0.1:8899/
+[http-missing-security-headers:cross-origin-resource-policy] [http] [info] http://127.0.0.1:8899/
+[http-missing-security-headers:content-security-policy] [http] [info] http://127.0.0.1:8899/
+[http-missing-security-headers:x-content-type-options] [http] [info] http://127.0.0.1:8899/
+[http-missing-security-headers:cross-origin-embedder-policy] [http] [info] http://127.0.0.1:8899/
+[http-missing-security-headers:strict-transport-security] [http] [info] http://127.0.0.1:8899/
+[http-missing-security-headers:permissions-policy] [http] [info] http://127.0.0.1:8899/
+[http-missing-security-headers:x-frame-options] [http] [info] http://127.0.0.1:8899/
+[http-missing-security-headers:x-permitted-cross-domain-policies] [http] [info] http://127.0.0.1:8899/
+[tech-detect:simplehttp] [http] [info] http://127.0.0.1:8899/
+[tech-detect:python] [http] [info] http://127.0.0.1:8899/
+[INF] Scan completed in 3m. 12 matches found.
+[INF] HTTP connections: 2114 total, 2114 new, 0 reused (0.0%)

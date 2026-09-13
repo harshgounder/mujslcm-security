@@ -1,0 +1,14 @@
+/keen/themes/keen/theme/demo1/dist/assets/css/pages/login/login-v1.css
+/keen/themes/keen/theme/demo1/dist/assets/plugins/global/plugins.bundle.css
+/keen/themes/keen/theme/demo1/dist/assets/css/style.bundle.css
+/keen/themes/keen/theme/demo1/dist/assets/css/skins/header/base/light.css
+/keen/themes/keen/theme/demo1/dist/assets/css/skins/header/menu/light.css
+/keen/themes/keen/theme/demo1/dist/assets/css/skins/brand/navy.css
+/keen/themes/keen/theme/demo1/dist/assets/css/skins/aside/navy.css
+/Scripts/jquery-1.10.2.min.js
+/Scripts/jquery.validate.min.js
+/Scripts/jquery.validate.unobtrusive.min.js
+/keen/themes/keen/theme/demo1/dist/assets/media/logos/logo-4.png
+/keen/themes/keen/theme/demo1/dist/assets/plugins/global/plugins.bundle.js
+/keen/themes/keen/theme/demo1/dist/assets/js/scripts.bundle.js
+/keen/themes/keen/theme/demo1/dist/assets/js/pages/custom/user/login.js

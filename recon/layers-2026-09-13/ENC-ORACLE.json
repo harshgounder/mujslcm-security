@@ -1,0 +1,134 @@
+{
+ "target": "mujslcm.jaipur.manipal.edu",
+ "when": "2026-09-13T10:46:42.978929",
+ "rows": [
+  {
+   "label": "no enc param",
+   "status": "200",
+   "bytes": 20045,
+   "exceptions": [],
+   "hint": ""
+  },
+  {
+   "label": "enc empty",
+   "status": "500",
+   "bytes": 5509,
+   "exceptions": [
+    "Security.Cryptography.CryptographicException"
+   ],
+   "hint": "Error in '/' Application."
+  },
+  {
+   "label": "enc 1 char",
+   "status": "500",
+   "bytes": 4942,
+   "exceptions": [
+    "FormatException"
+   ],
+   "hint": "Error in '/' Application."
+  },
+  {
+   "label": "enc 2 chars",
+   "status": "500",
+   "bytes": 4942,
+   "exceptions": [
+    "FormatException"
+   ],
+   "hint": "Error in '/' Application."
+  },
+  {
+   "label": "enc 3 chars (bad pad)",
+   "status": "500",
+   "bytes": 4942,
+   "exceptions": [
+    "FormatException"
+   ],
+   "hint": "Error in '/' Application."
+  },
+  {
+   "label": "enc valid 1 group",
+   "status": "500",
+   "bytes": 5084,
+   "exceptions": [
+    "Security.Cryptography.CryptographicException"
+   ],
+   "hint": "Error in '/' Application."
+  },
+  {
+   "label": "enc valid 2 groups",
+   "status": "500",
+   "bytes": 5084,
+   "exceptions": [
+    "Security.Cryptography.CryptographicException"
+   ],
+   "hint": "Error in '/' Application."
+  },
+  {
+   "label": "enc 32 chars no pad",
+   "status": "500",
+   "bytes": 5084,
+   "exceptions": [
+    "Security.Cryptography.CryptographicException"
+   ],
+   "hint": "Error in '/' Application."
+  },
+  {
+   "label": "enc 24 chars padded",
+   "status": "500",
+   "bytes": 4942,
+   "exceptions": [
+    "FormatException"
+   ],
+   "hint": "Error in '/' Application."
+  },
+  {
+   "label": "enc non-multiple-of-4",
+   "status": "500",
+   "bytes": 4942,
+   "exceptions": [
+    "FormatException"
+   ],
+   "hint": "Error in '/' Application."
+  },
+  {
+   "label": "enc url-safe chars",
+   "status": "500",
+   "bytes": 5532,
+   "exceptions": [
+    "FormatException"
+   ],
+   "hint": "Error in '/' Application."
+  },
+  {
+   "label": "enc whitespace",
+   "status": "500",
+   "bytes": 5532,
+   "exceptions": [
+    "FormatException"
+   ],
+   "hint": "Error in '/' Application."
+  },
+  {
+   "label": "GET /",
+   "status": "200",
+   "bytes": 20045,
+   "exceptions": [],
+   "hint": ""
+  },
+  {
+   "label": "HEAD /",
+   "status": "404",
+   "bytes": 0,
+   "exceptions": [],
+   "hint": ""
+  },
+  {
+   "label": "OPTIONS *",
+   "status": "404",
+   "bytes": 1216,
+   "exceptions": [],
+   "hint": "Error"
+  }
+ ],
+ "note": "enc oracle re-characterised live; single requests 1.6s apart; no credentials, no state change, no exploitation"
+}

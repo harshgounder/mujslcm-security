@@ -1,0 +1,22 @@
+ERROR:wafw00f:Something went wrong Exceeded 30 redirects.
+
+                   [1;97m______
+                  [1;97m/      \
+                 [1;97m(  Woof! )
+                  [1;97m\  ____/                      [1;91m)
+                  [1;97m,,                           [1;91m) ([1;93m_
+             [1;93m.-. [1;97m-    [1;92m_______                 [1;91m( [1;93m|__|
+            [1;93m()``; [1;92m|==|_______)                [1;91m.)[1;93m|__|
+            [1;93m/ ('        [1;92m/|\                  [1;91m(  [1;93m|__|
+        [1;93m(  /  )       [1;92m / | \                  [1;91m. [1;93m|__|
+         [1;93m\(_)_))      [1;92m/  |  \                   [1;93m|__|[0m
+
+                    [1;96m~ WAFW00F : [1;94mv2.4.2 ~[1;97m
+    The Web Application Firewall Fingerprinting Toolkit
+    [0m
+[*] Checking https://mujslcm.jaipur.manipal.edu
+[+] Generic Detection results:
+[*] The site https://mujslcm.jaipur.manipal.edu seems to be behind a WAF or some sort of security solution
+[~] Reason: The server returns a different response code when an attack string is used.
+Normal response code is "200", while the response code to cross-site scripting attack is "500"
+[~] Number of requests: 4

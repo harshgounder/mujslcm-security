@@ -1,0 +1,6 @@
+ 0 s:CN=mujslcm.jaipur.manipal.edu
+   i:C=CA, O=Entrust Limited, CN=Entrust DV TLS Issuing RSA CA 2
+ 1 s:C=CA, O=Entrust Limited, CN=Entrust DV TLS Issuing RSA CA 2
+   i:C=GB, O=Sectigo Limited, CN=Sectigo Public Server Authentication Root R46
+ 2 s:C=GB, O=Sectigo Limited, CN=Sectigo Public Server Authentication Root R46
+   i:C=US, ST=New Jersey, L=Jersey City, O=The USERTRUST Network, CN=USERTrust RSA Certification Authority

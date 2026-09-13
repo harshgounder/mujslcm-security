@@ -1,0 +1,6 @@
+subject=CN=mujslcm.jaipur.manipal.edu
+issuer=C=CA, O=Entrust Limited, CN=Entrust DV TLS Issuing RSA CA 2
+notBefore=Dec 22 00:00:00 2025 GMT
+notAfter=Dec 21 23:59:59 2026 GMT
+X509v3 Extended Key Usage: 
+    TLS Web Server Authentication

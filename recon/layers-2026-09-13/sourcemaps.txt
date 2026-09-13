@@ -1,0 +1,10 @@
+[
+ [
+  "/Scripts/jquery-1.10.2.min.js.map",
+  "302"
+ ],
+ [
+  "/keen/themes/keen/theme/demo1/dist/assets/plugins/global/plugins.bundle.js.map",
+  "404"
+ ]
+]

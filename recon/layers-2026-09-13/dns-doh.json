@@ -1,0 +1,28 @@
+{
+ "mujslcm.jaipur.manipal.edu|A": [
+  "98.70.14.50"
+ ],
+ "mujslcm.jaipur.manipal.edu|AAAA": [],
+ "mujslcm.jaipur.manipal.edu|CNAME": [],
+ "mujslcm.jaipur.manipal.edu|NS": [],
+ "mujslcm.jaipur.manipal.edu|SOA": [],
+ "mujslcm.jaipur.manipal.edu|MX": [],
+ "mujslcm.jaipur.manipal.edu|TXT": [],
+ "mujslcm.jaipur.manipal.edu|CAA": [],
+ "mujslcm.jaipur.manipal.edu|HTTPS": [],
+ "_dmarc.mujslcm.jaipur.manipal.edu|TXT": [],
+ "_mta-sts.mujslcm.jaipur.manipal.edu|TXT": [],
+ "_smtp._tls.mujslcm.jaipur.manipal.edu|TXT": [],
+ "autodiscover.mujslcm.jaipur.manipal.edu|CNAME": [],
+ "enterpriseregistration.mujslcm.jaipur.manipal.edu|CNAME": [],
+ "enterpriseenrollment.mujslcm.jaipur.manipal.edu|CNAME": [],
+ "lyncdiscover.mujslcm.jaipur.manipal.edu|CNAME": [],
+ "selector1._domainkey.mujslcm.jaipur.manipal.edu|CNAME": [],
+ "selector2._domainkey.mujslcm.jaipur.manipal.edu|CNAME": [],
+ "msoid.mujslcm.jaipur.manipal.edu|CNAME": [],
+ "sip.mujslcm.jaipur.manipal.edu|CNAME": [],
+ "www.mujslcm.jaipur.manipal.edu|CNAME": [],
+ "mail.mujslcm.jaipur.manipal.edu|CNAME": [],
+ "vpn.mujslcm.jaipur.manipal.edu|CNAME": [],
+ "portal.mujslcm.jaipur.manipal.edu|CNAME": []
+}

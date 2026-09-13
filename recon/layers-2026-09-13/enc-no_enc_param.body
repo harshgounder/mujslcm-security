@@ -1,0 +1,463 @@
+
+
+<html lang="en">
+<!-- begin::Head -->
+<head>
+    <noscript>
+        <style>
+            body * { /*hides all elements inside the body*/
+                display: none;
+            }
+
+            h1 { /* even if this h1 is inside head tags it will be first hidden, so we have to display it again after all body elements are hidden*/
+                display: block;
+                background-color: red;
+                color: white;
+            }
+        </style>
+        <h1>JavaScript is not enabled, please check your browser settings.</h1>
+    </noscript>
+
+    <meta charset="utf-8" />
+    <title>Manipal University</title>
+    <meta name="description" content="User login example">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!--begin::Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700">        <!--end::Fonts -->
+    <!--begin::Page Custom Styles(used by this page) -->
+    <link href="/keen/themes/keen/theme/demo1/dist/assets/css/pages/login/login-v1.css" rel="stylesheet" type="text/css" />
+    <!--end::Page Custom Styles -->
+    <!--begin::Global Theme Styles(used by all pages) -->
+    <link href="/keen/themes/keen/theme/demo1/dist/assets/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css" />
+    <link href="/keen/themes/keen/theme/demo1/dist/assets/css/style.bundle.css" rel="stylesheet" type="text/css" />
+    <!--end::Global Theme Styles -->
+    <!--begin::Layout Skins(used by all pages) -->
+
+    <link href="/keen/themes/keen/theme/demo1/dist/assets/css/skins/header/base/light.css" rel="stylesheet" type="text/css" />
+    <link href="/keen/themes/keen/theme/demo1/dist/assets/css/skins/header/menu/light.css" rel="stylesheet" type="text/css" />
+    <link href="/keen/themes/keen/theme/demo1/dist/assets/css/skins/brand/navy.css" rel="stylesheet" type="text/css" />
+    <link href="/keen/themes/keen/theme/demo1/dist/assets/css/skins/aside/navy.css" rel="stylesheet" type="text/css" />        <!--end::Layout Skins -->
+    
+
+    <!-- Hotjar Tracking Code for keenthemes.com -->
+    
+    <script src="/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="/Scripts/jquery.validate.min.js"></script>
+    <script src="/Scripts/jquery.validate.unobtrusive.min.js"></script>
+
+    
+    <script type="text/javascript">
+
+        var valStr = "";
+
+        $(document).ready(function () {
+            hdnEmailFor = $('#hdnEmailFor');
+            hdnLoginFor = $('#hdnLoginFor');
+            ddlemailFor = $('#ddlemailFor');
+
+            if ('0' == "1") {
+                OnemailFor();
+                $('#ddlemailFor').change(OnemailFor);
+            }
+            else {
+                HideShowLogin('2');
+
+                // Only bind click events to buttons that exist
+                if ($('#login_submit').length) {
+                    $('#login_submit').click(onsubmitClick);
+                }
+                if ($('#login_submitStudent').length) {
+                    $('#login_submitStudent').click(onsubmitStudentClick);
+                }
+                if ($('#login_submitParent').length) {
+                    $('#login_submitParent').click(onsubmitParentClick);
+                }
+                if ($('#login_hideStudent').length) {
+                    $('#login_hideStudent').click(onhideStudentClick);
+                }
+                if ($('#login_hideParent').length) {
+                    $('#login_hideParent').click(onhideParentClick);
+                }
+            }
+
+            // Username domain cleaning and filtering
+            $('#txtUserName').on('input', function() {
+                filterUsernameInput();
+            });
+
+            $('#txtUserName').on('keypress', function(event) {
+                return preventDomainInput(event);
+            });
+
+            $('#txtUserName').on('paste', function() {
+                setTimeout(function() {
+                    cleanUsernameField();
+                    filterUsernameInput();
+                }, 10);
+            });
+
+            // Clean username on page load
+            setTimeout(function() {
+                cleanUsernameField();
+            }, 200);
+
+            DisableRightClick();
+        });
+
+        function onhideParentClick() {
+            $('#spnEmailID').show();
+            $('#login_submitStudent').show();
+            $('#login_hideStudent').show();
+            $('#show_hide_password').show();
+
+            $('#login_submitParent').hide();
+            $('#login_hideParent').hide();
+        }
+
+        function onhideStudentClick() {
+            $('#spnEmailID').hide();
+            $('#login_submitStudent').hide();
+            $('#login_hideStudent').hide();
+            $('#show_hide_password').hide();
+
+            $('#login_submitParent').show();
+            $('#login_hideParent').show();
+        }
+
+        function DisableRightClick() {
+            if (document.layers) {
+                document.captureEvents(Event.MOUSEDOWN);
+                document.onmousedown = function () {
+                    return false;
+                };
+            }
+            else {
+                document.onmouseup = function (e) {
+                    if (e != null && e.type == "mouseup") {
+                        if (e.which == 2 || e.which == 3) {
+                            return false;
+                        }
+                    }
+                };
+            }
+
+            document.oncontextmenu = function () {
+                return false;
+            };
+
+            window.onkeydown = function (event) {
+                var charCode = (event.which) ? event.which : event.keyCode;
+                if (charCode == 13) {
+                    event.preventDefault();
+                }
+            };
+        }
+
+        function DisableBackButton() {
+            window.history.forward()
+        }
+
+        function onsubmitClick() {
+            $('#hdnLoginFor').val("1");
+            hdnEmailFor.val("@jaipur.manipal.edu");
+            if ('0' == "1") {
+                ddlemailFor.val("J");
+            }
+        }
+
+        function onsubmitStudentClick() {
+            $('#hdnLoginFor').val("2");
+            hdnEmailFor.val("@muj.manipal.edu");
+            if ('0' == "1") {
+                ddlemailFor.val("M");
+            }
+        }
+
+        function onsubmitParentClick() {
+            $('#hdnLoginFor').val("3");
+            hdnEmailFor.val("");
+        }
+
+        function HideShowLogin(type) {
+            // Hide elements only if they exist
+            if ($('#dvFacultyLogin').length) {
+                $('#dvFacultyLogin').hide();
+            }
+            if ($('#dvStudentLogin').length) {
+                $('#dvStudentLogin').hide();
+            }
+
+            if (type == 1) {
+                if ($('#dvFacultyLogin').length) {
+                    $('#dvFacultyLogin').show();
+                }
+                if ($('#spnEmailID').length) {
+                    $('#spnEmailID').html("@jaipur.manipal.edu");
+                }
+            }
+            else {
+                if ($('#dvStudentLogin').length) {
+                    $('#dvStudentLogin').show();
+                }
+                if ($('#spnEmailID').length) {
+                    $('#spnEmailID').html("@muj.manipal.edu");
+                }
+
+                if(type == 2) {
+                    onhideParentClick();
+                }
+                else {
+                    onhideStudentClick();
+                }
+            }
+        }
+
+        function OnemailFor() {
+            if (ddlemailFor.val() == "M") {
+                hdnEmailFor.val("@muj.manipal.edu");
+                $('#hdnLoginFor').val("2");
+            }
+            else {
+                hdnEmailFor.val("@jaipur.manipal.edu");
+                $('#hdnLoginFor').val("1");
+            }
+        }
+
+        // Clean username field by removing domain if present
+        function cleanUsernameField() {
+            var usernameField = $('#txtUserName');
+            var currentUsername = usernameField.val();
+
+            if (currentUsername && currentUsername.includes('@')) {
+                // Remove @ and anything after it, and specific domain patterns
+                var cleanUsername = currentUsername
+                    .replace(/@.*$/i, '') // Remove @ and everything after
+                    .replace(/\.edu/gi, '') // Remove ".edu" text
+                    .replace(/\.com/gi, '') // Remove ".com" text
+                    .replace(/manipal\.edu/gi, '') // Remove specific domain
+                    .replace(/jaipur\.manipal\.edu/gi, '') // Remove specific domain
+                    .replace(/muj\.manipal\.edu/gi, ''); // Remove specific domain
+                    // Don't remove all dots - allow them for username format like name.registration_no
+
+                // More targeted removal - only remove domain-specific words in context
+                if (cleanUsername.toLowerCase().includes('manipal') &&
+                    (currentUsername.toLowerCase().includes('.edu') || currentUsername.includes('@'))) {
+                    cleanUsername = cleanUsername.replace(/manipal/gi, '');
+                }
+
+                if (cleanUsername.toLowerCase().includes('jaipur') &&
+                    (currentUsername.toLowerCase().includes('manipal') || currentUsername.includes('@'))) {
+                    cleanUsername = cleanUsername.replace(/jaipur/gi, '');
+                }
+
+                // Only update if the username actually changed
+                if (cleanUsername !== currentUsername) {
+                    usernameField.val(cleanUsername);
+
+                    // Restore cursor position (adjust if content was removed)
+                    var cursorPosition = usernameField[0].selectionStart;
+                    var newPosition = Math.min(cursorPosition, cleanUsername.length);
+                    usernameField[0].setSelectionRange(newPosition, newPosition);
+                }
+            }
+        }
+
+        // Real-time input filtering to prevent domain entry
+        function filterUsernameInput() {
+            var usernameField = $('#txtUserName');
+            var currentValue = usernameField.val();
+            var cursorPosition = usernameField[0].selectionStart;
+
+            // Remove @ and anything after it, and specific domain patterns
+            var filteredValue = currentValue
+                .replace(/@.*$/i, '') // Remove @ and everything after
+                .replace(/\.edu/gi, '') // Remove ".edu" text
+                .replace(/\.com/gi, '') // Remove ".com" text
+                .replace(/manipal\.edu/gi, '') // Remove specific domain
+                .replace(/jaipur\.manipal\.edu/gi, '') // Remove specific domain
+                .replace(/muj\.manipal\.edu/gi, ''); // Remove specific domain
+                // Don't remove all dots - allow them for username format like name.registration_no
+
+            // More targeted removal - only remove domain-specific words in context
+            if (filteredValue.toLowerCase().includes('manipal') &&
+                (currentValue.toLowerCase().includes('.edu') || currentValue.includes('@'))) {
+                filteredValue = filteredValue.replace(/manipal/gi, '');
+            }
+
+            if (filteredValue.toLowerCase().includes('jaipur') &&
+                (currentValue.toLowerCase().includes('manipal') || currentValue.includes('@'))) {
+                filteredValue = filteredValue.replace(/jaipur/gi, '');
+            }
+
+            // Only update if the value changed
+            if (filteredValue !== currentValue) {
+                usernameField.val(filteredValue);
+
+                // Restore cursor position (adjust if content was removed)
+                var newPosition = Math.min(cursorPosition, filteredValue.length);
+                usernameField[0].setSelectionRange(newPosition, newPosition);
+            }
+        }
+
+        // Prevent typing domain-related characters
+        function preventDomainInput(event) {
+            var charCode = event.which || event.keyCode;
+            var char = String.fromCharCode(charCode);
+            var currentValue = $('#txtUserName').val();
+
+            // Allow control keys (backspace, delete, tab, etc.)
+            if (charCode < 32 || charCode === 127) {
+                return true;
+            }
+
+            // Block @ symbol entirely
+            if (char === '@') {
+                event.preventDefault();
+                return false;
+            }
+
+            // Allow dots in general (for username format like name.registration_no)
+            // but block specific domain patterns
+            var potentialValue = (currentValue + char).toLowerCase();
+
+            // Block specific domain-related sequences
+            if (potentialValue.includes('@') ||
+                potentialValue.endsWith('.edu') ||
+                potentialValue.endsWith('.com') ||
+                potentialValue.includes('manipal.edu') ||
+                potentialValue.includes('jaipur.manipal') ||
+                potentialValue.includes('muj.manipal') ||
+                (currentValue.toLowerCase().includes('manipal') && char === '.' &&
+                 (potentialValue.endsWith('manipal.') || potentialValue.includes('manipal.edu'))) ||
+                (currentValue.toLowerCase().includes('jaipur') && char === '.' &&
+                 potentialValue.includes('jaipur.manipal')) ||
+                (currentValue.toLowerCase().includes('muj') && char === '.' &&
+                 potentialValue.includes('muj.manipal'))) {
+                event.preventDefault();
+                return false;
+            }
+
+            return true;
+        }
+
+
+    </script>
+
+</head>
+<!-- end::Head -->
+<!-- begin::Body -->
+
+
+<body onload="noBack();" onpageshow="if (event.persisted) noBack();" class="kt-login-v1--enabled kt-quick-panel--right kt-demo-panel--right kt-offcanvas-panel--right kt-header--fixed kt-header-mobile--fixed kt-subheader--enabled kt-subheader--transparent kt-aside--enabled kt-aside--fixed kt-page--loading" style="background-image: url(../keen/themes/keen/theme/demo1/dist/assets/media/misc/collage.png); background-size: cover; background-position: left top">
+
+    <div class="container">
+        <div class="login-panel">
+            <div class="row">
+                <div class="col-md-5">
+                    <div class="text-center mt-5 pl-2 pr-2">
+
+                        <img src="/keen/themes/keen/theme/demo1/dist/assets/media/logos/logo-4.png" class="img-fluid" />
+                        <h5 class="mt-5 mb-5" style="color: #6f6f6f;"><strong>WELCOME TO MUJ PORTAL</strong></h5>
+                        <h2 class="mt-5" style="color: #c06135">Sign In</h2>
+                    </div>
+                    <!--begin::Form-->
+                    
+<form action="/" autocomplete="off" class="kt-login-v1__form kt-form" id="kt_login_form" method="post"><input name="__RequestVerificationToken" type="hidden" value="oFXwd32fmoSGj-mjmWL5oCUe9hYEiUtMYZIyK8re5T3RHKen1OB0rkhhZqsoSaR5g8Idva1IdZPu8uKmvl67js1Z7XrGFl-3xiaJEXWueko1" /><input id="hdnEmailFor" name="EmailFor" type="hidden" value="" /><input id="hdnLoginFor" name="LoginFor" type="hidden" value="" />                        <div class="input-group-append mb-3">
+                            <input autocomplete="off" class="form-control" data-val="true" data-val-length="User Name must be minimum 2 and maximum 50 character long" data-val-length-max="50" data-val-length-min="2" data-val-required="Please enter your User Name" id="txtUserName" name="UserName" placeholder="Username" tabIndex="1" type="text" value="" />
+                                <span class="input-group" id="spnEmailID" style="margin-top:4px; font-size:20px;">
+                                </span>
+
+                        </div>
+<span class="field-validation-valid text-danger" data-valmsg-for="UserName" data-valmsg-replace="true"></span>                        <div class="form-group position-relative" id="show_hide_password">
+                            <input class="form-control" id="txtPassword" name="Password" placeholder="Password" tabIndex="2" type="password" value="" />
+                            <div class="position-absolute" style="right: 20px;top: 15px;">
+                                <span toggle="#password-field" class="fa fa-fw fa-eye field_icon toggle-password"></span>
+                            </div>
+                        </div>
+<span class="field-validation-valid text-danger" data-valmsg-for="Password" data-valmsg-replace="true"></span>                            <div class="kt-login-v1__actions text-center mt-3 mb-4" id="dvStudentLogin">
+                                <button type="submit" class="btn btn-brand btn-elevate btn-pill" id="login_submitStudent">Sign In &nbsp;&nbsp;<i class="fa fa-arrow-right"></i></button>
+                                <button type="button" class="btn btn-brand btn-elevate btn-pill" id="login_hideStudent">Parent Login &nbsp;&nbsp;<i class="fa fa-arrow-right"></i></button>
+                                <button type="submit" class="btn btn-brand btn-elevate btn-pill" id="login_submitParent" style="display:none;">Sign In &nbsp;&nbsp;<i class="fa fa-arrow-right"></i></button>
+                                <button type="button" class="btn btn-brand btn-elevate btn-pill" id="login_hideParent" style="display:none;">Student Login &nbsp;&nbsp;<i class="fa fa-arrow-right"></i></button>
+                            </div>
+                        <div>
+                <a href="https://passwordreset.microsoftonline.com/" target="_blank">Forgot Password?</a>
+            </div>
+</form>
+                    
+                    <!--end::Form-->
+
+                </div>
+                <div class="col-md-7" style="background-image: url(../keen/themes/keen/theme/demo1/dist/assets/media/misc/bg_1.jpg); background-size: cover;"> </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- begin::Global Config(global config for global JS sciprts) -->
+    <script>
+        menuId = "6";
+
+        var KTAppOptions = {
+            "colors": {
+                "state": {
+                    "brand": "#5d78ff",
+                    "metal": "#c4c5d6",
+                    "light": "#ffffff",
+                    "accent": "#00c5dc",
+                    "primary": "#5867dd",
+                    "success": "#34bfa3",
+                    "info": "#36a3f7",
+                    "warning": "#ffb822",
+                    "danger": "#fd3995",
+                    "focus": "#9816f4"
+                },
+                "base": {
+                    "label": [
+                        "#c5cbe3",
+                        "#a1a8c3",
+                        "#3d4465",
+                        "#3e4466"
+                    ],
+                    "shape": [
+                        "#f0f3ff",
+                        "#d9dffa",
+                        "#afb4d4",
+                        "#646c9a"
+                    ]
+                }
+            }
+        };
+
+        window.history.forward();
+        function noBack() {
+            window.history.forward();
+        }
+
+        $(document).on('click', '.toggle-password', function () {
+
+            $(this).toggleClass("fa-eye fa-eye-slash");
+
+            var input = $("#txtPassword");
+            input.attr('type') === 'password' ? input.attr('type', 'text') : input.attr('type', 'password')
+        });
+
+
+    </script>
+
+    <!-- end::Global Config -->
+    <!--begin::Global Theme Bundle(used by all pages) -->
+    <script src="/keen/themes/keen/theme/demo1/dist/assets/plugins/global/plugins.bundle.js" type="text/javascript"></script>
+    <script src="/keen/themes/keen/theme/demo1/dist/assets/js/scripts.bundle.js" type="text/javascript"></script>
+    <!--end::Global Theme Bundle -->
+    <!--begin::Page Scripts(used by this page) -->
+    <script src="/keen/themes/keen/theme/demo1/dist/assets/js/pages/custom/user/login.js" type="text/javascript"></script>
+    <!--end::Page Scripts -->
+
+</body>
+<!-- end::Body -->
+</html>

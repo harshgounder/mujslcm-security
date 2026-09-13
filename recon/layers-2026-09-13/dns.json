@@ -1,0 +1,19 @@
+{
+ "A": "98.70.14.50",
+ "AAAA": "",
+ "CNAME": "",
+ "NS": "",
+ "SOA": "",
+ "MX": "",
+ "TXT": "",
+ "CAA": "",
+ "DMARC _dmarc": "",
+ "MTA-STS": "",
+ "autodiscover CNAME": "",
+ "enterpriseregistration": "",
+ "enterpriseenrollment": "",
+ "lyncdisc": "",
+ "sipfed": "",
+ "DKIM selector1": "",
+ "DKIM selector2": ""
+}

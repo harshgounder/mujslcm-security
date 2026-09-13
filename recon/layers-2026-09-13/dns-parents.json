@@ -1,0 +1,121 @@
+{
+ "jaipur.manipal.edu": {
+  "A": [
+   "3.108.105.201"
+  ],
+  "MX": [
+   "0 jaipur-manipal-edu.mail.protection.outlook.com."
+  ],
+  "TXT": [
+   "\"M0A1N83143\"",
+   "\"MS=ms43985219\"",
+   "\"MS=ms92065525\"",
+   "\"include:a._spf.brightspace.com\"",
+   "\"v=spf1 include:spf.protection.outlook.com include:a._spf.brightspace.com -all\"",
+   "\"ip4:103.139.159.150/32 include:sendgrid.net include:spf.protection.outlook.com -all\\\"\"",
+   "\"ZoTEBF3VhiGyGAcRPJMM5pfep23hFYYxbv9r5wZTkzFf8/mBOa7+5x9bqFETtucRLzJ305opaDIMec6uVrN+Tg==\"",
+   "\"cisco-ci-domain-verification=4af88c586a9cc46e628896aa75e025d0487ff3f3d173d26440d0f45f3a47316b\"",
+   "\"cisco-ci-domain-verification=6d3b3886f99537decdc290d4e022a056e6c53c91ff70e356a7d672abdfd51da8\""
+  ],
+  "NS": [],
+  "SOA": [],
+  "CAA": [],
+  "_dmarc.jaipur.manipal.edu": [
+   "\"v=DMARC1; p=none; rua=mailto:dmarc@jaipur.manipal.edu\""
+  ],
+  "_mta-sts.jaipur.manipal.edu": [],
+  "autodiscover.jaipur.manipal.edu": [
+   "autodiscover.outlook.com."
+  ],
+  "enterpriseregistration.jaipur.manipal.edu": [
+   "enterpriseregistration.windows.net."
+  ],
+  "selector1._domainkey.jaipur.manipal.edu": [
+   "selector1-jaipur-manipal-edu._domainkey.mujcampus.onmicrosoft.com."
+  ],
+  "selector2._domainkey.jaipur.manipal.edu": [
+   "selector2-jaipur-manipal-edu._domainkey.mujcampus.onmicrosoft.com."
+  ]
+ },
+ "muj.manipal.edu": {
+  "A": [],
+  "MX": [
+   "0 muj-manipal-edu.mail.protection.outlook.com."
+  ],
+  "TXT": [
+   "\"v=spf1 include:spf.protection.outlook.com -all\"",
+   "\"v=msv1t=137fb9c7ccb74a9d4cb847f28d2bd1\""
+  ],
+  "NS": [],
+  "SOA": [],
+  "CAA": [],
+  "_dmarc.muj.manipal.edu": [],
+  "_mta-sts.muj.manipal.edu": [],
+  "autodiscover.muj.manipal.edu": [
+   "autodiscover.outlook.com."
+  ],
+  "enterpriseregistration.muj.manipal.edu": [
+   "enterpriseregistration.windows.net."
+  ],
+  "selector1._domainkey.muj.manipal.edu": [
+   "selector1-muj-manipal-edu._domainkey.mujmanipal.onmicrosoft.com."
+  ],
+  "selector2._domainkey.muj.manipal.edu": [
+   "selector2-muj-manipal-edu._domainkey.mujmanipal.onmicrosoft.com."
+  ]
+ },
+ "manipal.edu": {
+  "A": [
+   "18.160.46.127",
+   "18.160.46.45",
+   "18.160.46.89",
+   "18.160.46.123"
+  ],
+  "MX": [
+   "0 manipal-edu.mail.protection.outlook.com."
+  ],
+  "TXT": [
+   "\"M0A1N83143\"",
+   "\"MS=ms69551107\"",
+   "\"MS=DD36745426AEE7728156FE48A65C9E5A5433C4AE\"",
+   "\"v=spf1 ip4:167.89.84.13/32 include:spf.protection.outlook.com include:a._spf.brightspace.com include:sendgrid.net include:_spf.salesforce.com  -all\"",
+   "\"MS=ms39222887\"",
+   "\"google-site-verification=tGPwlUgGXwUETPMPn2CoANAWnZe1xoOb2B-rhr-qJTg\"",
+   "\"CcSFFEaqEKRitKeC8cWPFNS2jyt2X0F0Xjm6RMgFQ/YZf3/jewYZRf+Nzk/FEocjwqUNrgz2v4UiOw5zAlUIlQ==\"",
+   "\"MS=ms89874958\"",
+   "\"facebook-domain-verification=1lz697duzltnopa7loaq8kkdsp46uv\"",
+   "\"amazonses:qpPDThBm7Ne/VFxwajZrSPLpv0eTwrf/eWRcyj6tOIw=\"",
+   "\"google-site-verification=iaTpo0jacfzDUIgG7kP80g9047w-o4WzOgss13uqD7I\"",
+   "\"amazonses:N5fE6XRP3JpYCgHFjzBqV07wZVzaFBN5Ch+6MTFwniU\"",
+   "\"ms-domain-verification=b01fc2e3-3f5e-4948-8c4a-f791763bf963\"",
+   "\"google-site-verification=PxGAgnZ-EGLbyahxwG6Ginnzlm9MvEficKBfA-V5PzM\"",
+   "\"openai-domain-verification=dv-qlFdPOuE7IehvbQ0cwvaRpRc\""
+  ],
+  "NS": [
+   "ns1-36.azure-dns.com.",
+   "ns2-36.azure-dns.net.",
+   "ns3-36.azure-dns.org.",
+   "ns4-36.azure-dns.info."
+  ],
+  "SOA": [
+   "ns1-36.azure-dns.com. awsdns-hostmaster.amazon.com. 1 7200 900 1209600 86400"
+  ],
+  "CAA": [],
+  "_dmarc.manipal.edu": [
+   "\"v=DMARC1; p=reject; pct=100; rua=mailto:dmarc@manipal.edu\""
+  ],
+  "_mta-sts.manipal.edu": [],
+  "autodiscover.manipal.edu": [
+   "autodiscover.outlook.com."
+  ],
+  "enterpriseregistration.manipal.edu": [
+   "enterpriseregistration.windows.net."
+  ],
+  "selector1._domainkey.manipal.edu": [
+   "selector1-manipal-edu._domainkey.learnermanipal.onmicrosoft.com."
+  ],
+  "selector2._domainkey.manipal.edu": [
+   "selector2-manipal-edu._domainkey.learnermanipal.onmicrosoft.com."
+  ]
+ }
+}

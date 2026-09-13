@@ -1,0 +1,107 @@
+{
+ "target": "mujslcm.jaipur.manipal.edu",
+ "when": "2026-09-13T10:58:07.897604",
+ "rows": [
+  {
+   "label": "Host evil.example (raw H1)",
+   "status": "200",
+   "bytes": 20045,
+   "location": "",
+   "exceptions": [],
+   "etag": null,
+   "cache_control": "private",
+   "x_frame_options": "SAMEORIGIN",
+   "host_header_seen": false
+  },
+  {
+   "label": "Host evil.example absolute-uri",
+   "status": "200",
+   "bytes": 20045,
+   "location": "",
+   "exceptions": [],
+   "etag": null,
+   "cache_control": "private",
+   "x_frame_options": "SAMEORIGIN",
+   "host_header_seen": false
+  },
+  {
+   "label": "X-Forwarded-Host injection",
+   "status": "200",
+   "bytes": 20045,
+   "location": "",
+   "exceptions": [],
+   "etag": null,
+   "cache_control": "private",
+   "x_frame_options": "SAMEORIGIN",
+   "host_header_seen": false
+  },
+  {
+   "label": "XFF 127.0.0.1 + Host localhost",
+   "status": "500",
+   "bytes": 4942,
+   "location": "",
+   "exceptions": [
+    "FormatException"
+   ],
+   "etag": null,
+   "cache_control": "private",
+   "x_frame_options": null,
+   "host_header_seen": false
+  },
+  {
+   "label": "X-Original-URL /trace.axd",
+   "status": "200",
+   "bytes": 20045,
+   "location": "",
+   "exceptions": [],
+   "etag": null,
+   "cache_control": "private",
+   "x_frame_options": "SAMEORIGIN",
+   "host_header_seen": false
+  },
+  {
+   "label": "GET jquery-1.10.2.min.js",
+   "status": "200",
+   "bytes": 94140,
+   "location": "",
+   "exceptions": [],
+   "etag": "\"1DBC87EF2A69700\"",
+   "cache_control": "public",
+   "x_frame_options": null,
+   "host_header_seen": false
+  },
+  {
+   "label": "404 /Views/",
+   "status": "404",
+   "bytes": 2733,
+   "location": "",
+   "exceptions": [],
+   "etag": null,
+   "cache_control": "private",
+   "x_frame_options": null,
+   "host_header_seen": false
+  },
+  {
+   "label": "404 /Home/NoSuchAction",
+   "status": "404",
+   "bytes": 1216,
+   "location": "",
+   "exceptions": [],
+   "etag": null,
+   "cache_control": null,
+   "x_frame_options": null,
+   "host_header_seen": false
+  },
+  {
+   "label": "POST empty with valid token",
+   "status": "200",
+   "bytes": 20167,
+   "location": "",
+   "exceptions": [],
+   "etag": null,
+   "cache_control": "private",
+   "x_frame_options": "SAMEORIGIN",
+   "host_header_seen": false
+  }
+ ]
+}

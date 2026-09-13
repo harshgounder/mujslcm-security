@@ -1,0 +1,11 @@
+Starting Nmap 7.98 ( https://nmap.org ) at 2026-09-13 05:17 +0000
+Nmap scan report for mujslcm.jaipur.manipal.edu (98.70.14.50)
+Host is up (0.041s latency).
+
+PORT     STATE    SERVICE    VERSION
+80/tcp   filtered http
+443/tcp  open     ssl/https?
+8080/tcp filtered http-proxy
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 34.37 seconds

@@ -13,6 +13,7 @@
 | G auth suite + letter | DONE | 6 scripts verified, template ready |
 | H kit (README/INDEX/TRACKER/LOG/CPROMPT) | DONE | this commit |
 | I wave 5 research | QUEUED | decision A |
+| K layer mapping (live) | DONE | 46 targeted requests, tools: curl, wafw00f, testssl, nmap, openssl, DoH, crt.sh. Scanner class held back, lab run only |
 | J authorized execution | BLOCKED | needs signed letter + 2 test accounts |
 
 ## Fleet ledger (single source: wave*-runs.json + ledger/)
@@ -37,6 +38,7 @@
 | F9 | Anti-CSRF cookie HttpOnly, no Secure | P4 | VERIFIED |
 | F10 | Edge posture battery all clean | INFO | VERIFIED |
 | E1 | Route oracle error (302 != exists) | FIXED | found by reaudit, cascade-corrected |
+| L1 | Layer map: live layer stack L0-L13 with round-1 to round-3 evidence | INFO | VERIFIED-LIVE 2026-09-13, findings/LAYER-MAP.md |
 
 Clean tests (no issue): no user enumeration, anti-CSRF filter active,
 server-side validation active, verb lockout, no WebDAV, no tilde 8.3,

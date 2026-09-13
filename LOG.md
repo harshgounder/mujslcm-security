@@ -133,3 +133,16 @@ Mistakes are logged in full, they are part of the asset.
   in a 404-retry loop on the wave-4 relaunch), updated the kit menu
   (A-F freshest), regenerated INDEX.md, committed, pushed, verified
   remote == local. NOTHING RUNNING. Window closed.
+
+## 2026-09-13: layer mapping pass (live)
+- Scope: mujslcm only, single low-rate requests, nothing state-changing.
+- Scripts: scripts/layer-probe.py, layer-probe2.py, layer-battery.py, enc-oracle.py, layer-round3.py
+- Evidence: recon/layers-2026-09-13/ (54 files), summarised in findings/LAYER-MAP.md
+- Result: full layer stack L0-L13; estate has three hosting planes (Azure, AWS, on-prem);
+  18 of 30 certificate names resolve, including idp, pms, testerp, testmycampus
+- New: enc is a three-stage oracle; wafw00f's WAF verdict is a false positive from request validation;
+  TLS 1.3 is offered (testssl's bundled OpenSSL 1.0.2 cannot test it)
+- Corrections logged as E2, E3, E4 in the layer map.
+- Tooling: wafw00f 2.4.2, testssl.sh 3.3dev, dockerised nmap 7.98, projectdiscovery nuclei 3.11.1
+  (local lab only, 12 findings, 2114 requests), openssl 3.x, Cloudflare DoH, crt.sh
+- Held back on purpose: no scanners, no fuzzing, no auth attempts at the target (standing order 3.1).
